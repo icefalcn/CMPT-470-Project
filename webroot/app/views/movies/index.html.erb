@@ -1,0 +1,47 @@
+
+
+
+
+<div class="main_body">
+
+        <div class="create_movie">
+        <%= form_for(@movie) do |f| %>  
+          <div class="field"> 
+            <%= f.label :"Create a moive" %> <br>
+            <%= f.text_area :title, placeholder:  "placeholder text" %> <br>  
+            <%= f.text_area :image, :placeholder =>  "image url" %>  <br>
+            <%= f.text_area :release_year,:placeholder =>  "year" %>  <br>
+            <%= f.text_area :plot,:placeholder => "plot"  %>  <br>
+          </div> 
+          <div class="actions"> 
+            <%= f.submit "Create" %> 
+          </div> 
+        <% end %>
+        </div> 
+
+<br>
+  <div class="container">
+  <h2>Popular Films</h2>
+    <% @movies.each do |m| %>
+    <div class="movie">
+      <%= image_tag m.image %>
+      <h3><%= m.title %></h3>
+      <p> <%= m.release_year %> </p>
+      <%= link_to "Learn more", movie_path(m) %> 
+      <!--<%= link_to "Learn more", '/movies/2' %> 
+      <a href="/movies/2">Learn more</a>-->
+    </div>
+    <% end %>
+    
+
+
+
+
+
+
+
+
+
+      
+  </div>
+</div>
