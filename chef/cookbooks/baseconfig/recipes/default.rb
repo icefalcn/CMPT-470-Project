@@ -42,7 +42,7 @@ execute 'postgres_user' do
 end
 
 execute 'create_db' do
-  command "echo 'CREATE TABLE contacts( fname varchar NOT NULL, lname varchar NOT NULL, email varchar NOT NULL, pnum varchar NOT NULL, notes text NOT NULL, created_at datetime NOT NULL, updated_at datetime NOT NULL);' | sudo -u vagrant psql mydb"
+  command "echo 'CREATE TABLE Movie (movieID serial NOT NULL, title varchar NOT NULL, author varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID));CREATE TABLE WatchList (wlID serial NOT NULL, movieID int NOT NULL, PRIMARY KEY(wlID), FOREIGN KEY (movieID) REFERENCES Movie (movieID)); CREATE TABLE Customers (username varchar NOT NULL, password varchar NOT NULL, name varchar NOT NULL, address varchar NOT NULL, emailAdd varchar NOT NULL, wlID int, PRIMARY KEY(username), FOREIGN KEY (wlID) REFERENCES WatchList (wlID));' | sudo -u vagrant psql mydb"
 end
 
 execute 'bundle_inst' do
