@@ -1,0 +1,11 @@
+I"¢(function() {
+  var ready;
+
+  ready = function() {
+    return $("#menu1").click($(".menu_btn2").slideToggle());
+  };
+
+  $(document).ready(ready);
+
+}).call(this);
+:ET
