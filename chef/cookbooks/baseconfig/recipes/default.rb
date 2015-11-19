@@ -37,6 +37,10 @@ execute 'install passenger' do
   command 'gem install passenger'
 end
 
+execute 'install bootstrap' do
+  command 'gem install bootstrap-sass -v 3.3.5.1'
+end
+
 execute 'assests' do
   cwd '/home/vagrant/project/webroot'
   command 'bundle exec rake assets:precompile RAILS_ENV=production'
