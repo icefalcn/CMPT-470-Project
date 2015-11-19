@@ -1,8 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style type="text/css">
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+  margin: 20px;
+}
+.containerframe-red
+{
+  color:#f44336;
+}
+</style>
+</head>
 
 
-
-
+<body>
 <div class="main_body">
+
+	<div id="myCarousel" class="carousel slide" style=" width: 1080px; height: 480px;" >
+   <!-- Carousel indicators -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+   </ol>   
+   <!-- Carousel items -->
+   <div class="carousel-inner">
+      <div class="item active">
+      <a href="http://localhost:3000/movies">
+         <img src="http://i.telegraph.co.uk/multimedia/archive/03235/bond_3235796b.jpg" alt="First slide" style=" width: 720x; height: 480px;" >
+         </a>
+      </div>
+      <div class="item">
+        <a href="http://localhost:3000/movies">     
+         <img src="http://i.telegraph.co.uk/multimedia/archive/03235/bond_3235796b.jpg" alt="Second slide" style=" width: 720px; height: 480px;">
+        </a>
+      </div>
+      <div class="item">
+        <a href="http://localhost:3000/movies">
+         <img src="http://i.telegraph.co.uk/multimedia/archive/03235/bond_3235796b.jpg" alt="Third slide" style=" width: 720px; height: 480px;"> 
+        </a>
+      </div>
+      <div class="item">
+        <a href="http://localhost:3000/movies">
+         <img src="http://i.telegraph.co.uk/multimedia/archive/03235/bond_3235796b.jpg" alt="Fourth slide" style=" width: 720px; height: 480px;"> 
+        </a>
+      </div>
+      <div class="item">
+        <a href="http://localhost:3000/movies">
+         <img src="http://i.telegraph.co.uk/multimedia/archive/03235/bond_3235796b.jpg" alt="Fifth slide" style=" width: 720px; height: 480px;"> 
+        </a>
+      </div>
+   </div>
+   <!-- Carousel nav -->
+   <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+   <a class="carousel-control right" href="#myCarousel" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div> 
+
 
         <div class="create_movie">
         <%= form_for(@movie) do |f| %>  
@@ -45,3 +118,4 @@
       
   </div>
 </div>
+</body>
