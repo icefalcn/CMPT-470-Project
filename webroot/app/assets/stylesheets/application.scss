@@ -19,20 +19,20 @@
   padding: 0;
 }
 */
-body; html {
-  background: #000;
-  font-family: Oxygen; sans-serif;
+html {
+  /*background: #000;*/
+  font-family: Oxygen, sans-serif;
 }
 .top {
   position:fixed;
   width   :100% ;
-  height  :20%;
+  height  :150px ;
   border-color: #C1E0FF ;
   border-width:3px ;
   border-style:solid;
   z-index: 1;
   /*background:black;*/
-  background:url(/images/header.jpg) center;
+  background:url(http://i.imgur.com/l44AuaX.jpg) center;
 }
 .banner{
   position:absolute;

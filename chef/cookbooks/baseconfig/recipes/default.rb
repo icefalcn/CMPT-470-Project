@@ -37,6 +37,12 @@ execute 'install passenger' do
   command 'gem install passenger'
 end
 
+execute 'assests' do
+  cwd '/home/vagrant/project/webroot'
+  command 'bundle exec rake assets:precompile RAILS_ENV=production'
+  user 'vagrant'
+end
+
 execute 'postgres_user' do
   command 'echo "CREATE DATABASE mydb; CREATE USER vagrant; GRANT ALL PRIVILEGES ON DATABASE mydb TO vagrant;" | sudo -u postgres psql'
 end
