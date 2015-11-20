@@ -135,6 +135,15 @@ margin-right:auto;
 background-color: black;
 border-color: black;
 }
+.lists{ float:left; width:100%; }
+.lists div
+{ 
+  float:left;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;  
+}
+
 .border_shadow{
 box-shadow: 1px 0px 15px black;
 }
