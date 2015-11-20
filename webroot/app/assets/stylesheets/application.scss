@@ -29,14 +29,12 @@ body{
   background-repeat: no-repeat;
 }
 .top {
-  position:fixed;
-  width   :100% ;
-  height  :100px ;
-  border-color: #C1E0FF ;
-  border-width:3px ;
-  border-style:solid;
+  position:relative;
+  width   :65em ;
+  height  :7em ;
+  margin-left: auto; 
+  margin-right: auto;
   z-index: 1;
-  /*background:black;*/
   background:url(http://i.imgur.com/l44AuaX.jpg) center;
 }
 .banner{
@@ -71,6 +69,11 @@ body{
     border-width: 1px; 
     border-style: solid;
 }
+
+.search_btn{
+  text-align: center;
+}
+
 .login{
   margin    : 0;
   padding   : 0;
@@ -104,40 +107,23 @@ body{
       /*position    :absolute;*/
       right     :200;
 }
-<<<<<<< HEAD
 .central{
-  width:1080px;
+  width:65em;
   height: 100%;
   margin-left: auto; 
   margin-right: auto;
   background-color: white;
 }
+.navbar{
+width: 65em;
+margin-left: auto;
+margin-right:auto;
+background-color: black;
+border-color: black;
+}
 .border_shadow{
 box-shadow: 1px 0px 15px black;
 }
-
-=======
-
-.carousel{
-    background: #2f4357;
-    margin-top: 20px;
-}
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
-}
-.bs-example{
-    margin: 20px;
-}
-.containerframe-red{
-    color:#f44336;
-}
->>>>>>> 79e9c5cd96b29444186d70eaf4b3c6c810bec4bf
-
-
-
-
-
-
   /*  .top {
     background: #333;
     font-family: Oxygen; sans-serif;
@@ -159,6 +145,16 @@ box-shadow: 1px 0px 15px black;
 
 .header img {
   margin: 20px 0;
+}
+
+.carousel{
+    background: #333333;
+}
+.carousel .item img{
+    margin: 0 auto;
+}
+.bs-example{
+  margin: 20px;
 }
 
 .container {
