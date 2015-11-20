@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  producer: MyString
+  genre: MyString
+  year: MyString
+  rating: 1
+  urlink: MyString
+  synopsys: MyText
+
+two:
+  title: MyString
+  producer: MyString
+  genre: MyString
+  year: MyString
+  rating: 1
+  urlink: MyString
+  synopsys: MyText
