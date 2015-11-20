@@ -21,6 +21,7 @@ package "nodejs"
 package "libpq-dev"
 package "ri1.9.1"
 package 'rbenv'
+package 'curl'
 
 cookbook_file "ntp.conf" do
   path "/etc/ntp.conf"
@@ -41,12 +42,6 @@ execute 'install bootstrap' do
   command 'gem install bootstrap-sass -v 3.3.5.1'
 end
 
-execute 'assests' do
-  cwd '/home/vagrant/project/webroot'
-  command 'bundle exec rake assets:precompile RAILS_ENV=production'
-  user 'vagrant'
-end
-
 execute 'postgres_user' do
   command 'echo "CREATE DATABASE mydb; CREATE USER vagrant; GRANT ALL PRIVILEGES ON DATABASE mydb TO vagrant;" | sudo -u postgres psql'
 end
@@ -61,16 +56,27 @@ execute 'bundle_inst' do
     user 'vagrant'
 end
 
+cookbook_file "000-default.conf" do
+  path "/etc/apache2/sites-enabled/000-default.conf"
+end
+
 execute 'migrate' do
   cwd '/home/vagrant/project/webroot/bin'
   command 'rake db:migrate RAILS_ENV=production'
   user 'vagrant'
 end
 
-cookbook_file "000-default.conf" do
-  path "/etc/apache2/sites-enabled/000-default.conf"
+execute 'assests' do
+  cwd '/home/vagrant/project/webroot'
+  command 'bundle exec rake assets:precompile RAILS_ENV=production'
+  user 'vagrant'
 end
 
 execute 'apache2_restart' do
   command 'service apache2 restart'
+end
+
+execute 'grab data' do
+  cwd '/home/vagrant/project/webroot'
+  command 'curl http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09 >> upcoming.json'
 end

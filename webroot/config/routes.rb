@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   #root 'movie#index'
 
-  get 'movies' => 'movies#index'
+  get 'index' => 'movies#index'
   get 'movies/search' => 'movies#search'
   get 'movies/:id' => 'movies#show', as: :movie
   post 'movies/search' => 'movies#search'
