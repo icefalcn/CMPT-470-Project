@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #root 'movie#index'
-
+  root :to => redirect('/index')
   get 'index' => 'movies#index'
   get 'movies/search' => 'movies#search'
   get 'movies/:id' => 'movies#show', as: :movie
