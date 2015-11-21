@@ -144,6 +144,29 @@ border-color: black;
   justify-content: space-between;  
 }
 
+div #headings{
+  float:left;
+}
+
+ul#genres li {
+    display:inline;
+}
+div#Action{
+  margin-left: 2em;
+}
+div#Comedy{
+  margin-left: 2em;
+}
+div#Animation{
+  margin-left: 2em;
+}
+div#Romance{
+  margin-left: 2em;
+}
+
+.lists img{
+    vertical-align: middle;
+}
 .border_shadow{
 box-shadow: 1px 0px 15px black;
 }
