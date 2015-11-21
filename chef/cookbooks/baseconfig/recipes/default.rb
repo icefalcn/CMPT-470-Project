@@ -80,7 +80,27 @@ execute 'apache2_restart' do
   command 'service apache2 restart'
 end
 
-execute 'grab data' do
+execute 'clear upcoming' do
+  cwd '/home/vagrant/project/webroot'
+  command 'rm upcoming.json'
+end
+
+execute 'clear current' do
+  cwd '/home/vagrant/project/webroot'
+  command 'rm current.json'
+end
+
+execute 'grab current' do
+  cwd '/home/vagrant/project/webroot'
+  command 'curl http://api.themoviedb.org/3/movie/now_playing?api_key=10795773f625eb5f6b31994bf9953e09 >> current.json'
+end
+
+execute 'grab upcoming' do
   cwd '/home/vagrant/project/webroot'
   command 'curl http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09 >> upcoming.json'
+end
+
+execute 'fill db' do
+  cwd '/home/vagrant/project/webroot'
+  command 'ruby filldb.rb -V'
 end
