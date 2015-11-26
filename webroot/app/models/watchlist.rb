@@ -1,4 +1,4 @@
 class Watchlist < ActiveRecord::Base
-	has_many :movies
-	belongs_to :customers
+	belongs_to :movies
+	belongs_to :user
 end
