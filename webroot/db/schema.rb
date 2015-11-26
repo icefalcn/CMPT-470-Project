@@ -11,34 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115012023) do
-
-  create_table "actors", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "image"
-    t.string   "bio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20151120035107) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
-    t.string   "image"
-    t.string   "release_year"
-    t.string   "plot"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "producer"
+    t.string   "genre"
+    t.string   "year"
+    t.integer  "rating"
+    t.string   "urlink"
+    t.text     "synopsys"
   end
-
-  create_table "parts", force: :cascade do |t|
-    t.integer  "movie_id"
-    t.integer  "actor_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "parts", ["actor_id"], name: "index_parts_on_actor_id"
-  add_index "parts", ["movie_id"], name: "index_parts_on_movie_id"
 
 end

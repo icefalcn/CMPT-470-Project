@@ -49,7 +49,7 @@ end
 
 #need to fix watchlist/customer table creation
 execute 'create_db' do
-  command "echo 'CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL, producer varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID));CREATE TABLE WatchList (wlID serial NOT NULL, movieID int NOT NULL, PRIMARY KEY(wlID), FOREIGN KEY (movieID) REFERENCES Movie (movieID)); CREATE TABLE Customers (username varchar NOT NULL, password varchar NOT NULL, name varchar NOT NULL, address varchar NOT NULL, emailAdd varchar NOT NULL, wlID int, PRIMARY KEY(username), FOREIGN KEY (wlID) REFERENCES WatchList (wlID));' | sudo -u vagrant psql mydb"
+  command "echo 'CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL, producer varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID));CREATE TABLE WatchList (wlID serial NOT NULL, movieID int NOT NULL, PRIMARY KEY(wlID), FOREIGN KEY (movieID) REFERENCES Movies (movieID)); CREATE TABLE Customers (username varchar NOT NULL, password varchar NOT NULL, name varchar NOT NULL, address varchar NOT NULL, emailAdd varchar NOT NULL, wlID int unique, PRIMARY KEY(username), FOREIGN KEY (wlID) REFERENCES WatchList (wlID));' | sudo -u vagrant psql mydb"
 end
 
 #execute 'insert_movie' do
@@ -100,6 +100,10 @@ end
 execute 'grab upcoming' do
   cwd '/home/vagrant/project/webroot'
   command 'curl -o upcoming.json http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09'
+end
+
+execute 'reset db' do
+  command 'echo "delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
 end
 
 execute 'fill db' do

@@ -1,0 +1,29 @@
+<div class="main_body">
+
+  <div class="container">
+
+
+    <h2>Search results:</h2>
+    <% @movies.each do |m| %>
+      <div class="movie">
+        <%= image_tag m.image %>
+        <h3><%= m.title %></h3>
+        <p> <%= m.release_year %> </p>
+        <%= link_to "Learn more", movie_path(m) %> 
+        <!--<%= link_to "Learn more", '/movies/2' %> 
+        <a href="/movies/2">Learn more</a>-->
+      </div>
+    <% end %>
+
+
+
+
+
+
+
+
+
+
+      
+  </div>
+</div>

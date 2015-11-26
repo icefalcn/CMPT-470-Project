@@ -1,50 +1,38 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
-    @movie = Movie.new 
+    @movies = Movies.all
+    #@movie = Movie.find(params[:id])
   end
-
+  
   def search
-  	if params[:search]
-      @movies = Movie.search(params[:search]).order("title DESC")
-    # else
-    #   @movies = Movie.all
+    if params[:search]
+      @movies = Movies.search(params[:search]).order("title DESC")
     end
-   end
- 
+  end
+  
   def show
-    @movie = Movie.find(params[:id])
-    @actors = @movie.actors
+    @movie = Movies.find(params[:movieID])
+    @title = @movie.title
+    @genre = @movie.genre
+    @rating = @movie.rating
+    @synopsys = @movie.synopsys   
   end
   
-  def create 
-	  @movie = Movie.new(movie_params) 
-	  if @movie.save 
-	    redirect_to '/movies' 
-	  else 
-	    render 'movies' 
-	  end 
+  def edit
+    @movie = Movies.find(params[:id])
   end
   
-  def edit 
-  	@movie = Movie.find(params[:id])  #find by id then display the single moive
-  end
-
   def update
-    @movie = Movie.find(params[:id])
+    @movie = Movies.find(params[:id])
       if @movie.update(movie_params)
         redirect_to @movie
       else
         render 'edit'
       end
   end
-
-
-  private 
-  def movie_params 
-    params.require(:movie).permit(:title,:image,:release_year,:plot) 
+  
+  private
+  def movie_params
+    params.requires(:movie).permit(:title, :producer, :genre, :year, :rating, :urlink, :synopsys)
   end
-
-
-
 end

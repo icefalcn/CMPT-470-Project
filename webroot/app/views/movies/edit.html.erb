@@ -4,15 +4,21 @@
     <%= image_tag @movie.image %>
 
     <%= form_for(@movie) do |f| %>
-      <%= f.label :"Create a moive" %> <br>
+      <%= f.label :"Edit Movie info:" %> <br>
             Title:<br>
             <%= f.text_area :title %> <br>
-            Image url:<br>
-            <%= f.text_area :image %>  <br>
-            Release_year:<br>
-            <%= f.text_area :release_year %>  <br>
-            Plot:<br>
-            <%= f.text_area :plot %>  <br>
+            Producer:<br>
+            <%= f.text_area :producer %> <br>
+            Genre:<br>
+            <%= f.text_area :genre %> <br>
+            Year:<br>
+            <%= f.text_area :year %> <br>
+            Rating:<br>
+            <%= f.text_area :rating %>  <br>
+            URLink url:<br>
+            <%= f.text_area :urlink %>  <br>
+            Synopsys:<br>
+            <%= f.text_area :synopsys %>  <br>
 
 
       <%= f.submit "anytext_for_update_btn", :class => "btn" %>   
