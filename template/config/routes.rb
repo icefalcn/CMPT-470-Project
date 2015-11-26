@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root 'main#index'
   get 'movies' => 'movies#index'
+
+  
+  get 'movies/search' => 'movies#search'
+  get 'movies/:id' => 'movies#show', as: :movie
+  post 'movies/search' => 'movies#search'
   #get 'main/index'
   #get '/movies' => 'movies#index'
 

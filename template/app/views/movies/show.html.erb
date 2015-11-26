@@ -1,4 +1,182 @@
-<p>
-	<strong>Title</strong>
-	<%= @movie.title%>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Movie Database</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!--
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+</head>
+
+
+<body>
+
+
+
+
+
+<div class="central border_shadow" >
+  <div id="movie_show">
+
+    <div id="trailer_panel">
+      <div id="trailer_top_panel">
+        <div id="movie_info"> <h3 class="movie-title">
+          <%= @movie.title %>  </h3>
+        </div>
+        <div id="share">
+          <ul id="share_list_ul">
+          Share:
+            <li>youtube</li>
+            <li>FB</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </div>
+      <div id="trailer_middle_panel">
+        <div id="vote_panel">
+          <div id="upvote_panel" align="center">
+          <img src="/images/upvote.png" style="width: 80%;  height: 80%;" >
+          </div> 
+          <div id="downvote_panel" align="center">
+          <img src="/images/downvote.png" style=" width: 80%; height: 80%;" >
+          </div> 
+        </div> 
+        <div id="youtube_panel">
+          <iframe class = "youtube_list_main" height="100%" width="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div> <%# middle end%>
+      <div id="trailer_bottom_panel">
+        <ul id="youtube_list_ul">
+<!-- 
+          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbb</li>
+          <li>aaaaaaaaaaaaaaaaaaaaaacvcvcvcvcvcvvccvvcaaaaaaaaaaaaaaaaa</li>
+          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+          <li>fddvsvsvdslkfjskghs</li> -->
+          <li><iframe class = "22" height="50%" src="http://img.youtube.com/vi/yQ5U8suTUw0/0.jpg"></iframe></li>
+
+
+
+<!-- 
+          ="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="1" ></iframe></li>
+          <li><iframe class = "22" height="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="2" allowfullscreen></iframe></li> -->
+          <li><iframe class="youtube_list" height="100%" src="//www.youtube.com/embed/TSm82j_MFzY" frameborder="0" allowfullscreen></iframe></li>
+          <li><iframe class="youtube_list" height="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe></li>
+          <li><iframe class = "22" height="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe></li>
+        </ul>
+        <!-- ?controls=2 -->
+
+
+      </div>
+
+
+      
+    </div>
+    #comment section below#   
+  </div>
+
+
+
+
+
+      <!-- 
+
+       <iframe class = "youtube container-red" width="560" height="315" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
+
+
+      <div class="movie">
+        <%= image_tag @movie.image %>
+        <h3 class="movie-title">  <%= @movie.title %>  </h3>
+        <p class="movie-release-year"> <%= @movie.release_year %> </p>
+        <p class="movie-plot"> <%= @movie.plot %>  </p><br>
+        <%= link_to "Edit movie", edit_movie_path(@movie) %>
+      </div>
+       
+    
+       
+      <h2>Cast</h2>
+      <% @actors.each do |a| %>
+      <div class="actor">
+        <%= image_tag a.image %>
+        <h3 class="actor-name"><%= a.first_name %>_ <%= a.first_name %> </h3>
+        <p class="actor-bio"> <%= a.bio %> </p>
+      </div>
+      <% end %>
+      -->
+    
+  
+</div>
+
+
+
+
+</body>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    // alert("loaded1111"); working
+
+    // $('#trailer_bottom_panel').hover(function(e) {   working
+//           alert("vals1111");
+
+//              }, function() {
+//           alert("vals2222");
+//         });
+
+
+  $(".youtube_list").on('click',function(e){
+        // var vals = $(this).html();
+        alert("vals");
+         // $(".youtube_list_main").html(vals);
+         // e.preventDefault();
+  });
+
+  $("iframe").on('click',function(e){
+        // var vals = $(this).html();
+        alert("vals");
+         // $(".youtube_list_main").html(vals);
+         // e.preventDefault();
+  });
+
+  $("iframe").click(function(){
+    alert("The paragraph was clicked.");
+  });
+
+//not working
+  $("iframe").load(function(){$(this).contents().find("body").on('mouseenter', function(event) { 
+
+
+      alert("vals2222");
+
+
+
+
+
+     });
+  });
+
+
+
+
+  });
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
