@@ -12,6 +12,7 @@ package "ruby1.9.1-dev"
 package "ruby-dev"
 package "zlib1g-dev"
 package "postgresql"
+package "postgresql-contrib"
 package "wget"
 package "ntp"
 package "sqlite3"
@@ -46,8 +47,9 @@ execute 'postgres_user' do
   command "echo \"CREATE DATABASE mydb; CREATE USER vagrant WITH PASSWORD 'vagrant'; GRANT ALL PRIVILEGES ON DATABASE mydb TO vagrant;\" | sudo -u postgres psql"
 end
 
+#need to fix watchlist/customer table creation
 execute 'create_db' do
-  command "echo 'CREATE TABLE Movie (movieID serial NOT NULL, title varchar NOT NULL, author varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID));CREATE TABLE WatchList (wlID serial NOT NULL, movieID int NOT NULL, PRIMARY KEY(wlID), FOREIGN KEY (movieID) REFERENCES Movie (movieID)); CREATE TABLE Customers (username varchar NOT NULL, password varchar NOT NULL, name varchar NOT NULL, address varchar NOT NULL, emailAdd varchar NOT NULL, wlID int, PRIMARY KEY(username), FOREIGN KEY (wlID) REFERENCES WatchList (wlID));' | sudo -u vagrant psql mydb"
+  command "echo 'CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL, producer varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID));CREATE TABLE WatchList (wlID serial NOT NULL, movieID int NOT NULL, PRIMARY KEY(wlID), FOREIGN KEY (movieID) REFERENCES Movie (movieID)); CREATE TABLE Customers (username varchar NOT NULL, password varchar NOT NULL, name varchar NOT NULL, address varchar NOT NULL, emailAdd varchar NOT NULL, wlID int, PRIMARY KEY(username), FOREIGN KEY (wlID) REFERENCES WatchList (wlID));' | sudo -u vagrant psql mydb"
 end
 
 #execute 'insert_movie' do
@@ -64,11 +66,11 @@ cookbook_file "000-default.conf" do
   path "/etc/apache2/sites-enabled/000-default.conf"
 end
 
-execute 'migrate' do
-  cwd '/home/vagrant/project/webroot/bin'
-  command 'rake db:migrate RAILS_ENV=production'
-  user 'vagrant'
-end
+#execute 'migrate' do
+#  cwd '/home/vagrant/project/webroot/bin'
+#  command 'rake db:migrate RAILS_ENV=production'
+#  user 'vagrant'
+#end
 
 execute 'assests' do
   cwd '/home/vagrant/project/webroot'
@@ -80,24 +82,24 @@ execute 'apache2_restart' do
   command 'service apache2 restart'
 end
 
-execute 'clear upcoming' do
-  cwd '/home/vagrant/project/webroot'
-  command 'rm upcoming.json'
-end
+#execute 'clear upcoming' do
+# cwd '/home/vagrant/project/webroot'
+#  command 'rm upcoming.json'
+#end
 
-execute 'clear current' do
-  cwd '/home/vagrant/project/webroot'
-  command 'rm current.json'
-end
+#execute 'clear current' do
+#  cwd '/home/vagrant/project/webroot'
+#  command 'rm current.json'
+#end
 
 execute 'grab current' do
   cwd '/home/vagrant/project/webroot'
-  command 'curl http://api.themoviedb.org/3/movie/now_playing?api_key=10795773f625eb5f6b31994bf9953e09 >> current.json'
+  command 'curl -o current.json http://api.themoviedb.org/3/movie/now_playing?api_key=10795773f625eb5f6b31994bf9953e09'
 end
 
 execute 'grab upcoming' do
   cwd '/home/vagrant/project/webroot'
-  command 'curl http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09 >> upcoming.json'
+  command 'curl -o upcoming.json http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09'
 end
 
 execute 'fill db' do

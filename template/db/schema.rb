@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 20151120035107) do
     t.integer  "rating"
     t.string   "urlink"
     t.text     "synopsys"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

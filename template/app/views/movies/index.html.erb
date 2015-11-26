@@ -1,0 +1,8 @@
+<div class ="main">
+	<% @movies.each do |movie| %>
+		<p><%= movie.title %></p>
+		<img src="<%= movie.urlink %>">
+		<p><%= movie.synopsys %></p>
+		<br>
+	<% end %>
+</div>

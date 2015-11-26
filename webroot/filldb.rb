@@ -9,7 +9,7 @@ current = File.read('/home/vagrant/project/webroot/current.json')
 current_hash = JSON.parse(current)
 
 conn = PG::connect(host: "localhost", user: "vagrant", password: "vagrant", dbname: "mydb")
-conn.prepare('insert_movie', 'insert into movie(title, author, genre, year, rating, urlink, synopsys) values ($1, $2, $3, $4, $5, $6, $7)')
+conn.prepare('insert_movie', 'insert into movies(title, author, genre, year, rating, urlink, synopsys) values ($1, $2, $3, $4, $5, $6, $7)')
 upcoming_hash["results"].each do |movie|
 	title =movie["title"]
 	if movie["release_date"].nil?

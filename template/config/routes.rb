@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  get 'main/index'
-  get '/movies' => 'movies#index'
+  root 'main#index'
+  get 'movies' => 'movies#index'
+  #get 'main/index'
+  #get '/movies' => 'movies#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   resources :movies
-   resources :users
-   root 'main#index'
+   #resources :movies
+   #resources :users
+   #root 'main#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
