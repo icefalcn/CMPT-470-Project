@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def register
   end
   
-  def create
+  def edit
   end
   
 end

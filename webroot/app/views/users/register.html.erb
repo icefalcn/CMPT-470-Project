@@ -1,30 +1,7 @@
-<%= form_for :user, url: users_path do |f| %>
-  <p>
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </p>
- 
-  <p>
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </p>
-  
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  
-  <p>
-    <%= f.label :address %><br>
-    <%= f.text_field :adress %>
-  </p>
-  
-  <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+<%= simple_form_for (@user. html: {class: 'form-horizontal'}) do |f| %>
+  <%= f.input :username, label: 'Your username please', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :password, input_html: { minlength: 8}, hint: 'No special characters, minimal length 8.' %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+  <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
+  <%= f.button :submit %>
 <% end %>
