@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # root 'movie#index'
+  resources :users
   root :to => redirect('/index')
   get 'index' => 'movies#index'
   get 'movies/search' => 'movies#search'
@@ -16,7 +17,10 @@ Rails.application.routes.draw do
   get 'actors' => 'actors#index'
   get 'actors/:id' => 'actors#show', as: :actor
 
-
+  get '/login' => 'users#login'
+  post '/login' => 'movies#index'
+  get 'register' => 'users#register'
+  post '/register' => 'users#login'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

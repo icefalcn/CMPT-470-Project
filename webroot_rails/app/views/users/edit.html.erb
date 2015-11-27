@@ -1,0 +1,8 @@
+<%= simple_form_for @user, 
+    :url => url_for(:action => 'edit'),
+    :method => 'post' do |f| %>
+  <%= f.input :username, disabled: true, hint: 'You cannot change your username.' %>
+  <%= f.input :password, input_html: { minlength: 8}, hint: 'No special characters, minimal length 8.' %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+  <%= f.button :submit %>
+<% end %>
