@@ -1,6 +1,6 @@
 <div class="central border_shadow">
   <div style="position:relative;width=67.5empx; height:38em; background-color: #333333;">
-  	<div id="myCarousel" class="carousel slide" style=" width: 55em; height: 36.7; margin:auto; top :1.65em" >
+    <div id="myCarousel" class="carousel slide" style=" width: 55em; height: 36.7; margin:auto; top :1.65em" >
      <!-- Carousel indicators -->
      <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -61,143 +61,15 @@
     
     <div id="Action" class="posters">
       <ol>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
+        <% @movies.each do |movie| %>
+         <li>
+            <p><%= movie.title %></p>           
+            <a href="place holder"><img src ="<%= movie.urlink %>" style= "witdth:10em; height: 15em"></a>
+         </li>
+        <% end %>
       </ol>
     </div>
 
-    <div id="Comedy">
-      <ol>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-      </ol>
-    </div>
-
-    <div id= "Animation">
-      <ol>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-      </ol>
-    </div>
-
-    <div id="Romance">
-      <ol>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-       <li>
-         <p>Movie Title Goes Here</p>           
-         <a href="place holder">
-          <img src ="placeholder" style= "witdth:10em; height: 15em">
-         </a>
-       </li>
-      </ol>
-    </div>
     <script>
     for(var i=0;i<5;i++){
       var text = "ol li:nth-child("+i+")";
