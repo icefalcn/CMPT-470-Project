@@ -1033,3 +1033,344 @@ I, [2015-11-26T22:30:32.394530 #373]  INFO -- :   Rendered /var/lib/gems/1.9.1/g
 I, [2015-11-26T22:30:32.398456 #373]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
 I, [2015-11-26T22:30:32.402035 #373]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
 I, [2015-11-26T22:30:32.402287 #373]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.5ms)
+I, [2015-11-27T01:09:50.902935 #1047]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:09:50 +0000
+I, [2015-11-27T01:09:50.945455 #1055]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:09:50 +0000
+I, [2015-11-27T01:09:50.977800 #1047]  INFO -- : Processing by MainController#index as HTML
+I, [2015-11-27T01:09:51.020768 #1055]  INFO -- : Processing by MainController#index as HTML
+I, [2015-11-27T01:09:51.071175 #1047]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.8ms)
+I, [2015-11-27T01:09:51.074287 #1047]  INFO -- : Completed 200 OK in 93ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+I, [2015-11-27T01:09:51.080130 #1055]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.9ms)
+I, [2015-11-27T01:09:51.083111 #1055]  INFO -- : Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+I, [2015-11-27T01:09:51.698811 #1055]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:09:51 +0000
+F, [2015-11-27T01:09:51.700155 #1055] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:09:51.713572 #1055]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+I, [2015-11-27T01:09:51.718723 #1055]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+I, [2015-11-27T01:09:51.722750 #1055]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+I, [2015-11-27T01:09:51.727016 #1055]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-11-27T01:09:51.727277 #1055]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.0ms)
+I, [2015-11-27T01:13:37.375017 #1638]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:13:37 +0000
+I, [2015-11-27T01:13:37.414254 #1638]  INFO -- : Processing by MainController#index as HTML
+I, [2015-11-27T01:13:37.472642 #1638]  INFO -- :   Rendered main/index.html.erb within layouts/application (12.0ms)
+I, [2015-11-27T01:13:37.473048 #1638]  INFO -- : Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+F, [2015-11-27T01:13:37.474388 #1638] FATAL -- : 
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class ="main">
+    2:   <% @movies.each do |movie| %>
+    3:     <p><%= movie.title %></p>
+    4:     <img src="<%= movie.urlink %>">
+    5:     <p><%= movie.synopsys %></p>
+  app/views/main/index.html.erb:2:in `_app_views_main_index_html_erb___537205666340738175_32902700'
+
+
+I, [2015-11-27T01:13:37.620206 #1638]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+I, [2015-11-27T01:13:37.625185 #1638]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+I, [2015-11-27T01:13:37.629534 #1638]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2015-11-27T01:13:37.629767 #1638]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.1ms)
+I, [2015-11-27T01:21:47.372457 #1663]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:21:47 +0000
+I, [2015-11-27T01:21:47.414057 #1663]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:21:47.464900 #1663] DEBUG -- :   [1m[36mMovies Load (2.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+I, [2015-11-27T01:21:47.525457 #1663]  INFO -- :   Rendered main/index.html.erb within layouts/application (64.2ms)
+I, [2015-11-27T01:21:47.527732 #1663]  INFO -- : Completed 200 OK in 113ms (Views: 98.3ms | ActiveRecord: 7.7ms)
+I, [2015-11-27T01:25:12.784589 #1640]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:25:12 +0000
+I, [2015-11-27T01:25:12.827034 #1640]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:25:12.877635 #1640] DEBUG -- :   [1m[36mMovies Load (2.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+I, [2015-11-27T01:25:12.940030 #1640]  INFO -- :   Rendered main/index.html.erb within layouts/application (66.1ms)
+I, [2015-11-27T01:25:12.942619 #1640]  INFO -- : Completed 200 OK in 115ms (Views: 99.3ms | ActiveRecord: 8.4ms)
+I, [2015-11-27T01:25:13.224452 #1640]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:25:13 +0000
+F, [2015-11-27T01:25:13.226352 #1640] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:25:13.251919 #1640]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+I, [2015-11-27T01:25:13.263044 #1640]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+I, [2015-11-27T01:25:13.271830 #1640]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+I, [2015-11-27T01:25:13.281492 #1640]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-11-27T01:25:13.281926 #1640]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.9ms)
+I, [2015-11-27T01:27:21.223186 #1641]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:27:21 +0000
+I, [2015-11-27T01:27:21.265437 #1641]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:27:21.316127 #1641] DEBUG -- :   [1m[36mMovies Load (1.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+I, [2015-11-27T01:27:21.378277 #1641]  INFO -- :   Rendered main/index.html.erb within layouts/application (65.7ms)
+I, [2015-11-27T01:27:21.380690 #1641]  INFO -- : Completed 200 OK in 115ms (Views: 101.4ms | ActiveRecord: 6.5ms)
+I, [2015-11-27T01:27:21.581396 #1641]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:27:21 +0000
+F, [2015-11-27T01:27:21.583459 #1641] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:27:21.617708 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+I, [2015-11-27T01:27:21.630073 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+I, [2015-11-27T01:27:21.639038 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+I, [2015-11-27T01:27:21.648415 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+I, [2015-11-27T01:27:21.648958 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.6ms)
+I, [2015-11-27T01:31:02.783698 #1641]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:31:02 +0000
+I, [2015-11-27T01:31:02.830332 #1641]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:31:02.895216 #1641] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."movieid" IN (NULL, NULL)[0m
+I, [2015-11-27T01:31:02.896412 #1641]  INFO -- : Completed 404 Not Found in 66ms (ActiveRecord: 8.3ms)
+F, [2015-11-27T01:31:02.897493 #1641] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find all Movies with 'movieid': (all, {:order=>"id desc", :limit=>5}) (found 0 results, but was looking for 2)):
+  app/controllers/main_controller.rb:3:in `index'
+
+
+I, [2015-11-27T01:31:02.969699 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+I, [2015-11-27T01:31:02.977291 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+I, [2015-11-27T01:31:02.981221 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+I, [2015-11-27T01:31:02.981461 #1641]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+I, [2015-11-27T01:33:01.309502 #1672]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:33:01 +0000
+I, [2015-11-27T01:33:01.350636 #1672]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:33:01.369319 #1672] DEBUG -- :   [1m[36mMovies Load (1.8ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:33:01.458455 #1672]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.0ms)
+I, [2015-11-27T01:33:01.460555 #1672]  INFO -- : Completed 200 OK in 110ms (Views: 38.9ms | ActiveRecord: 7.4ms)
+I, [2015-11-27T01:33:01.642193 #1672]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:33:01 +0000
+F, [2015-11-27T01:33:01.644598 #1672] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:33:01.662379 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-11-27T01:33:01.669325 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+I, [2015-11-27T01:33:01.673999 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-11-27T01:33:01.678995 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+I, [2015-11-27T01:33:01.679481 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.5ms)
+I, [2015-11-27T01:35:10.211580 #1642]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:35:10 +0000
+I, [2015-11-27T01:35:10.254874 #1642]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:35:10.272498 #1642] DEBUG -- :   [1m[36mMovies Load (2.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:35:10.363646 #1642]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.4ms)
+I, [2015-11-27T01:35:10.365742 #1642]  INFO -- : Completed 200 OK in 110ms (Views: 40.0ms | ActiveRecord: 7.9ms)
+I, [2015-11-27T01:36:07.602422 #1642]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:36:07 +0000
+I, [2015-11-27T01:36:07.604014 #1642]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:36:07.605680 #1642] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5
+I, [2015-11-27T01:36:07.607576 #1642]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.4ms)
+I, [2015-11-27T01:36:07.608989 #1642]  INFO -- : Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+I, [2015-11-27T01:37:36.348817 #1642]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:37:36 +0000
+I, [2015-11-27T01:37:36.349919 #1642]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:37:36.351599 #1642] DEBUG -- :   [1m[36mMovies Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:37:36.352837 #1642]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.3ms)
+I, [2015-11-27T01:37:36.353762 #1642]  INFO -- : Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+I, [2015-11-27T01:40:25.782461 #1642]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:40:25 +0000
+I, [2015-11-27T01:40:25.783658 #1642]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:40:25.785228 #1642] DEBUG -- :   [1m[35mMovies Load (0.6ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5
+I, [2015-11-27T01:40:25.786312 #1642]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.2ms)
+I, [2015-11-27T01:40:25.787346 #1642]  INFO -- : Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+I, [2015-11-27T01:41:09.608898 #1642]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:41:09 +0000
+I, [2015-11-27T01:41:09.654437 #1642]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:41:09.673796 #1642] DEBUG -- :   [1m[36mMovies Load (1.9ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:41:09.767586 #1642]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.7ms)
+I, [2015-11-27T01:41:09.770106 #1642]  INFO -- : Completed 200 OK in 115ms (Views: 39.7ms | ActiveRecord: 7.3ms)
+I, [2015-11-27T01:41:09.914224 #1642]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:41:09 +0000
+F, [2015-11-27T01:41:09.915522 #1642] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:41:09.932190 #1642]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+I, [2015-11-27T01:41:09.938589 #1642]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+I, [2015-11-27T01:41:09.943819 #1642]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+I, [2015-11-27T01:41:09.950332 #1642]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+I, [2015-11-27T01:41:09.950918 #1642]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.3ms)
+I, [2015-11-27T01:42:34.615423 #1672]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:42:34 +0000
+I, [2015-11-27T01:42:34.653041 #1672]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:42:34.673531 #1672] DEBUG -- :   [1m[36mMovies Load (2.6ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:42:34.768099 #1672]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.6ms)
+I, [2015-11-27T01:42:34.770252 #1672]  INFO -- : Completed 200 OK in 117ms (Views: 42.3ms | ActiveRecord: 8.3ms)
+I, [2015-11-27T01:42:34.893585 #1672]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:42:34 +0000
+F, [2015-11-27T01:42:34.895015 #1672] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:42:34.910934 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-11-27T01:42:34.917278 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+I, [2015-11-27T01:42:34.921623 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-11-27T01:42:34.931713 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+I, [2015-11-27T01:42:34.932089 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.5ms)
+I, [2015-11-27T01:42:34.992393 #1672]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:42:34 +0000
+F, [2015-11-27T01:42:34.995717 #1672] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:42:35.061801 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.8ms)
+I, [2015-11-27T01:42:35.075595 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+I, [2015-11-27T01:42:35.079540 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+I, [2015-11-27T01:42:35.083296 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-11-27T01:42:35.083743 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.3ms)
+I, [2015-11-27T01:44:09.815023 #1672]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:44:09 +0000
+I, [2015-11-27T01:44:09.816556 #1672]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:44:09.818492 #1672] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5
+I, [2015-11-27T01:44:09.819794 #1672]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.1ms)
+I, [2015-11-27T01:44:09.821334 #1672]  INFO -- : Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+I, [2015-11-27T01:44:10.070829 #1672]  INFO -- : Started GET "/placeholder" for 10.0.2.2 at 2015-11-27 01:44:10 +0000
+F, [2015-11-27T01:44:10.072668 #1672] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/placeholder"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-11-27T01:44:10.086967 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-11-27T01:44:10.092144 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+I, [2015-11-27T01:44:10.095954 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-11-27T01:44:10.100818 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-11-27T01:44:10.101131 #1672]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.6ms)
+I, [2015-11-27T01:44:55.462531 #1671]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:44:55 +0000
+I, [2015-11-27T01:44:55.503020 #1671]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:44:55.519187 #1671] DEBUG -- :   [1m[36mMovies Load (1.9ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:44:55.613956 #1671]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.9ms)
+I, [2015-11-27T01:44:55.616073 #1671]  INFO -- : Completed 200 OK in 112ms (Views: 39.1ms | ActiveRecord: 7.7ms)
+I, [2015-11-27T01:47:18.138512 #1671]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:47:18 +0000
+I, [2015-11-27T01:47:18.181526 #1671]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:47:18.199832 #1671] DEBUG -- :   [1m[36mMovies Load (1.7ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:47:18.295482 #1671]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-11-27T01:47:18.297588 #1671]  INFO -- : Completed 200 OK in 116ms (Views: 41.2ms | ActiveRecord: 9.6ms)
+I, [2015-11-27T01:48:41.644579 #1641]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-11-27 01:48:41 +0000
+I, [2015-11-27T01:48:41.685514 #1641]  INFO -- : Processing by MainController#index as HTML
+D, [2015-11-27T01:48:41.701982 #1641] DEBUG -- :   [1m[36mMovies Load (2.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."movieid" DESC LIMIT 5[0m
+I, [2015-11-27T01:48:41.793720 #1641]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.9ms)
+I, [2015-11-27T01:48:41.796013 #1641]  INFO -- : Completed 200 OK in 110ms (Views: 37.7ms | ActiveRecord: 7.9ms)
