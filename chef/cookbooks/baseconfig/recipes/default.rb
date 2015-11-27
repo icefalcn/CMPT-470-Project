@@ -49,7 +49,7 @@ end
 
 #need to fix watchlist/customer table creation
 execute 'create_db' do
-  command "echo 'CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL, producer varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE Users (cid serial not null, username varchar unique, password varchar, primary key(cid)); CREATE TABLE WatchList (cid int, movieid int, foreign key(cid) references users(cid), foreign key(movieid) references movies(movieid));' | sudo -u vagrant psql mydb"
+  command "echo 'CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, emailaddr varchar, primary key(uid)); CREATE TABLE WatchList (uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid));' | sudo -u vagrant psql mydb"
 end
 
 #execute 'insert_movie' do
@@ -100,6 +100,11 @@ end
 execute 'grab upcoming' do
   cwd '/home/vagrant/project/webroot'
   command 'curl -o upcoming.json http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09'
+end
+
+execute 'grab genres' do
+  cwd '/home/vagrant/project/webroot'
+  command 'curl -o genre.json http://api.themoviedb.org/3/genre/movie/list?api_key=10795773f625eb5f6b31994bf9953e09'
 end
 
 execute 'reset db' do
