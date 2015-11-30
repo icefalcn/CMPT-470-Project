@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   post 'movies/search' => 'movies#search'
   post 'movies' => 'movies#create'
   
+  post 'movies/:id/upvote' => 'movies#upvote'
+  post 'movies/:id/downvote' => 'movies#downvote'
 
   get '/movies/:id/edit' => 'movies#edit', as: :edit_movie 
   patch '/movies/:id' => 'movies#update'
-
+  # post '/movies/:id' => 'movies#update'
 
 
   get 'actors' => 'actors#index'
