@@ -2548,3 +2548,11 @@ D, [2015-12-01T05:07:04.833077 #3928] DEBUG -- :   [1m[36mMovies Load (1.4ms)
 D, [2015-12-01T05:07:04.835560 #3928] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
 I, [2015-12-01T05:07:05.175203 #3928]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.1ms)
 I, [2015-12-01T05:07:05.178965 #3928]  INFO -- : Completed 200 OK in 459ms (Views: 341.8ms | ActiveRecord: 21.5ms)
+I, [2015-12-01T05:13:25.426899 #5534]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 05:13:25 +0000
+I, [2015-12-01T05:13:25.482979 #5534]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T05:13:25.497352 #5534] DEBUG -- :   [1m[36mMovies Load (6.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T05:13:25.567994 #5534] DEBUG -- :   [1m[35mMovies Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T05:13:25.571159 #5534] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T05:13:25.573387 #5534] DEBUG -- :   [1m[35mMovies Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T05:13:25.772720 #5534]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.1ms)
+I, [2015-12-01T05:13:25.778165 #5534]  INFO -- : Completed 200 OK in 294ms (Views: 203.8ms | ActiveRecord: 14.0ms)
