@@ -23,7 +23,7 @@
  
 
     <div class="top border_shadow">
-      <a href="/index"> <img class="banner" src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo.svg"></a>
+      <a href="/index"> <img class="banner" src="<%= asset_path 'logo.png' %>"></a>
       <div class="search_bar">
           <%= form_tag('/movies/search', :method => "get", class: "navbar-form", id: "search-form") do %>
             <div class="input-append">
@@ -69,7 +69,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -98,6 +97,9 @@
                         </ul>
                     </li>
                 </ul>
+		<ul class="nav navbar-nav">
+		    <li><a href="#">Login</a></li>
+		</ul>
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>

@@ -2193,3 +2193,358 @@ D, [2015-11-30T01:40:13.011452 #23337] DEBUG -- :   [1m[36mMovies Load (0.2ms)
 D, [2015-11-30T01:40:13.012424 #23337] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
 I, [2015-11-30T01:40:13.049867 #23337]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
 I, [2015-11-30T01:40:13.053037 #23337]  INFO -- : Completed 200 OK in 105ms (Views: 39.9ms | ActiveRecord: 4.6ms)
+I, [2015-12-01T02:55:05.676250 #19562]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 02:55:05 +0000
+I, [2015-12-01T02:55:05.882234 #19562]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T02:55:05.897318 #19562] DEBUG -- :   [1m[36mMovies Load (2.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T02:55:06.039793 #19562] DEBUG -- :   [1m[35mMovies Load (1.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T02:55:06.041899 #19562] DEBUG -- :   [1m[36mMovies Load (1.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T02:55:06.044298 #19562] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T02:55:06.477481 #19562]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-12-01T02:55:06.482099 #19562]  INFO -- : Completed 200 OK in 598ms (Views: 435.9ms | ActiveRecord: 70.7ms)
+I, [2015-12-01T03:08:49.588719 #21307]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:08:49 +0000
+I, [2015-12-01T03:08:49.676124 #21307]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:08:49.691121 #21307] DEBUG -- :   [1m[36mMovies Load (6.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:08:49.763425 #21307] DEBUG -- :   [1m[35mMovies Load (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:08:49.769657 #21307] DEBUG -- :   [1m[36mMovies Load (6.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:08:49.773347 #21307] DEBUG -- :   [1m[35mMovies Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T03:08:49.967656 #21307]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.0ms)
+I, [2015-12-01T03:08:49.987905 #21307]  INFO -- : Completed 200 OK in 311ms (Views: 211.6ms | ActiveRecord: 18.0ms)
+I, [2015-12-01T03:08:50.188234 #21307]  INFO -- : Started GET "/images/logo" for 10.0.2.2 at 2015-12-01 03:08:50 +0000
+F, [2015-12-01T03:08:50.191112 #21307] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/logo"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-01T03:08:50.237591 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+I, [2015-12-01T03:08:50.250740 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+I, [2015-12-01T03:08:50.257204 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.4ms)
+I, [2015-12-01T03:08:50.267342 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+I, [2015-12-01T03:08:50.268331 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.8ms)
+I, [2015-12-01T03:08:50.436499 #21307]  INFO -- : Started GET "/images/logo" for 10.0.2.2 at 2015-12-01 03:08:50 +0000
+F, [2015-12-01T03:08:50.438443 #21307] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/images/logo"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-01T03:08:50.452054 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-12-01T03:08:50.457470 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+I, [2015-12-01T03:08:50.465200 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+I, [2015-12-01T03:08:50.471818 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+I, [2015-12-01T03:08:50.473233 #21307]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.1ms)
+I, [2015-12-01T03:17:27.675944 #22266]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:17:27 +0000
+I, [2015-12-01T03:17:27.728778 #22266]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:17:27.745274 #22266] DEBUG -- :   [1m[36mMovies Load (9.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:17:27.824956 #22266] DEBUG -- :   [1m[35mMovies Load (1.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:17:27.826864 #22266] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:17:27.829451 #22266] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T03:17:28.038932 #22266]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-12-01T03:17:28.044975 #22266]  INFO -- : Completed 200 OK in 315ms (Views: 214.0ms | ActiveRecord: 19.3ms)
+I, [2015-12-01T03:20:57.003327 #23188]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:20:57 +0000
+I, [2015-12-01T03:20:57.083793 #23188]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:20:57.102975 #23188] DEBUG -- :   [1m[36mMovies Load (5.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:20:57.194763 #23188] DEBUG -- :   [1m[35mMovies Load (1.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:20:57.198409 #23188] DEBUG -- :   [1m[36mMovies Load (1.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:20:57.201258 #23188] DEBUG -- :   [1m[35mMovies Load (1.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T03:20:57.418450 #23188]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.1ms)
+I, [2015-12-01T03:20:57.422183 #23188]  INFO -- : Completed 200 OK in 336ms (Views: 219.8ms | ActiveRecord: 16.0ms)
+I, [2015-12-01T03:30:20.771124 #24792]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:30:20 +0000
+I, [2015-12-01T03:30:20.830892 #24792]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:30:20.843932 #24792] DEBUG -- :   [1m[36mMovies Load (3.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:30:20.920523 #24792] DEBUG -- :   [1m[35mMovies Load (2.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:30:20.925084 #24792] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:30:20.927749 #24792] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T03:30:21.129413 #24792]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.1ms)
+I, [2015-12-01T03:30:21.132894 #24792]  INFO -- : Completed 200 OK in 301ms (Views: 203.9ms | ActiveRecord: 12.8ms)
+I, [2015-12-01T03:37:32.789971 #24792]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-01 03:37:32 +0000
+I, [2015-12-01T03:37:32.795539 #24792]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-01T03:37:32.796195 #24792]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-01T03:37:33.059463 #24792] DEBUG -- :   [1m[36mMovies Load (14.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title DESC[0m
+I, [2015-12-01T03:37:33.064921 #24792]  INFO -- :   Rendered movies/search.html.erb within layouts/application (21.4ms)
+I, [2015-12-01T03:37:33.066304 #24792]  INFO -- : Completed 200 OK in 266ms (Views: 250.4ms | ActiveRecord: 14.6ms)
+I, [2015-12-01T03:38:03.335194 #24792]  INFO -- : Started GET "/movies/7" for 10.0.2.2 at 2015-12-01 03:38:03 +0000
+I, [2015-12-01T03:38:03.337630 #24792]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-01T03:38:03.338125 #24792]  INFO -- :   Parameters: {"movieID"=>"7"}
+D, [2015-12-01T03:38:03.448715 #24792] DEBUG -- :   [1m[35mMovies Load (7.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 7]]
+I, [2015-12-01T03:38:03.623253 #24792]  INFO -- :   Rendered movies/show.html.erb within layouts/application (2.6ms)
+I, [2015-12-01T03:38:03.624788 #24792]  INFO -- : Completed 200 OK in 281ms (Views: 174.8ms | ActiveRecord: 14.6ms)
+I, [2015-12-01T03:39:42.110236 #24792]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:39:42 +0000
+I, [2015-12-01T03:39:42.145208 #24792]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:39:42.344848 #24792] DEBUG -- :   [1m[36mMovies Load (152.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:39:42.359711 #24792] DEBUG -- :   [1m[35mMovies Load (10.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:39:42.378084 #24792] DEBUG -- :   [1m[36mMovies Load (16.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:39:42.381300 #24792] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T03:39:42.398968 #24792]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.6ms)
+I, [2015-12-01T03:39:42.402728 #24792]  INFO -- : Completed 200 OK in 256ms (Views: 18.4ms | ActiveRecord: 180.7ms)
+I, [2015-12-01T03:40:55.056135 #25889]  INFO -- : Started GET "/login" for 10.0.2.2 at 2015-12-01 03:40:55 +0000
+F, [2015-12-01T03:40:55.113313 #25889] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-01T03:40:55.178696 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (42.5ms)
+I, [2015-12-01T03:40:55.187076 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+I, [2015-12-01T03:40:55.192303 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-12-01T03:40:55.204362 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+I, [2015-12-01T03:40:55.205835 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.4ms)
+I, [2015-12-01T03:43:07.112700 #25889]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-01 03:43:07 +0000
+I, [2015-12-01T03:43:07.117846 #25889]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-01T03:43:07.120493 #25889]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-01T03:43:07.343514 #25889] DEBUG -- :   [1m[36mMovies Load (5.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-01T03:43:07.380299 #25889]  INFO -- :   Rendered movies/search.html.erb within layouts/application (43.6ms)
+I, [2015-12-01T03:43:07.383700 #25889]  INFO -- : Completed 200 OK in 263ms (Views: 248.8ms | ActiveRecord: 11.4ms)
+I, [2015-12-01T03:43:19.107534 #25889]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-01 03:43:19 +0000
+F, [2015-12-01T03:43:19.109457 #25889] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-01T03:43:19.120212 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+I, [2015-12-01T03:43:19.124210 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+I, [2015-12-01T03:43:19.128226 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+I, [2015-12-01T03:43:19.132284 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-12-01T03:43:19.132905 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.0ms)
+I, [2015-12-01T03:43:19.172657 #25889]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-01 03:43:19 +0000
+F, [2015-12-01T03:43:19.175790 #25889] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-01T03:43:19.187760 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+I, [2015-12-01T03:43:19.193227 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+I, [2015-12-01T03:43:19.197573 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+I, [2015-12-01T03:43:19.204289 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-12-01T03:43:19.205156 #25889]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.7ms)
+I, [2015-12-01T03:43:23.352013 #25889]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:43:23 +0000
+I, [2015-12-01T03:43:23.356720 #25889]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:43:23.360815 #25889] DEBUG -- :   [1m[35mMovies Load (1.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:43:23.363833 #25889] DEBUG -- :   [1m[36mMovies Load (1.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:43:23.365794 #25889] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:43:23.367659 #25889] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3[0m
+I, [2015-12-01T03:43:23.499995 #25889]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.6ms)
+I, [2015-12-01T03:43:23.501420 #25889]  INFO -- : Completed 200 OK in 144ms (Views: 132.9ms | ActiveRecord: 5.2ms)
+I, [2015-12-01T03:47:42.174502 #26904]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 03:47:42 +0000
+I, [2015-12-01T03:47:42.235522 #26904]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T03:47:42.250455 #26904] DEBUG -- :   [1m[36mMovies Load (5.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:47:42.327498 #26904] DEBUG -- :   [1m[35mMovies Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T03:47:42.329969 #26904] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T03:47:42.332342 #26904] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T03:47:42.647094 #26904]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.2ms)
+I, [2015-12-01T03:47:42.653339 #26904]  INFO -- : Completed 200 OK in 416ms (Views: 319.0ms | ActiveRecord: 13.5ms)
+I, [2015-12-01T04:00:24.787947 #28000]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:00:24 +0000
+I, [2015-12-01T04:00:24.897734 #28000]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:00:24.911666 #28000] DEBUG -- :   [1m[36mMovies Load (6.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:00:24.995305 #28000] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:00:24.997157 #28000] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:00:24.998968 #28000] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:00:25.382366 #28000]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.4ms)
+I, [2015-12-01T04:00:25.387630 #28000]  INFO -- : Completed 200 OK in 489ms (Views: 386.9ms | ActiveRecord: 13.9ms)
+I, [2015-12-01T04:05:32.184497 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:05:32 +0000
+I, [2015-12-01T04:05:32.247107 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:05:32.259882 #28913] DEBUG -- :   [1m[36mMovies Load (1.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:05:32.345097 #28913] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:05:32.347341 #28913] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:05:32.350201 #28913] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:05:32.684988 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-12-01T04:05:32.690074 #28913]  INFO -- : Completed 200 OK in 441ms (Views: 338.4ms | ActiveRecord: 10.4ms)
+I, [2015-12-01T04:07:18.928249 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:07:18 +0000
+I, [2015-12-01T04:07:18.931492 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:07:18.935722 #28913] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:07:18.938757 #28913] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:07:18.941601 #28913] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:07:18.946688 #28913] DEBUG -- :   [1m[35mMovies Load (3.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:07:18.948807 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.3ms)
+I, [2015-12-01T04:07:18.950746 #28913]  INFO -- : Completed 200 OK in 19ms (Views: 2.5ms | ActiveRecord: 6.6ms)
+I, [2015-12-01T04:10:17.394814 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:10:17 +0000
+I, [2015-12-01T04:10:17.396619 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:10:17.400400 #28913] DEBUG -- :   [1m[36mMovies Load (1.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:17.403819 #28913] DEBUG -- :   [1m[35mMovies Load (2.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:10:17.408992 #28913] DEBUG -- :   [1m[36mMovies Load (5.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:17.411128 #28913] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:10:17.412423 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.2ms)
+I, [2015-12-01T04:10:17.413785 #28913]  INFO -- : Completed 200 OK in 17ms (Views: 1.9ms | ActiveRecord: 9.8ms)
+I, [2015-12-01T04:10:21.278650 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:10:21 +0000
+I, [2015-12-01T04:10:21.280254 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:10:21.283429 #28913] DEBUG -- :   [1m[36mMovies Load (1.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:21.285055 #28913] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:10:21.287223 #28913] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:21.289112 #28913] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:10:21.290652 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.2ms)
+I, [2015-12-01T04:10:21.292060 #28913]  INFO -- : Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 4.2ms)
+I, [2015-12-01T04:10:26.156139 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:10:26 +0000
+I, [2015-12-01T04:10:26.159702 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:10:26.162687 #28913] DEBUG -- :   [1m[36mMovies Load (1.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:26.164550 #28913] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:10:26.166836 #28913] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:26.169158 #28913] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:10:26.170715 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.3ms)
+I, [2015-12-01T04:10:26.171931 #28913]  INFO -- : Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 4.6ms)
+I, [2015-12-01T04:10:39.439996 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:10:39 +0000
+I, [2015-12-01T04:10:39.443543 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:10:39.446714 #28913] DEBUG -- :   [1m[36mMovies Load (1.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:39.448853 #28913] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:10:39.451587 #28913] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:39.453968 #28913] DEBUG -- :   [1m[35mMovies Load (1.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:10:39.455211 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.4ms)
+I, [2015-12-01T04:10:39.456804 #28913]  INFO -- : Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 5.3ms)
+I, [2015-12-01T04:10:40.633139 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:10:40 +0000
+I, [2015-12-01T04:10:40.635444 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:10:40.638046 #28913] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:40.640847 #28913] DEBUG -- :   [1m[35mMovies Load (1.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:10:40.643439 #28913] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:40.646127 #28913] DEBUG -- :   [1m[35mMovies Load (1.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:10:40.648090 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.3ms)
+I, [2015-12-01T04:10:40.651060 #28913]  INFO -- : Completed 200 OK in 15ms (Views: 3.5ms | ActiveRecord: 4.7ms)
+I, [2015-12-01T04:10:41.902424 #28913]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:10:41 +0000
+I, [2015-12-01T04:10:41.904306 #28913]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:10:41.907948 #28913] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:41.910489 #28913] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:10:41.913055 #28913] DEBUG -- :   [1m[36mMovies Load (1.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:10:41.915593 #28913] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:10:41.917686 #28913]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.5ms)
+I, [2015-12-01T04:10:41.919754 #28913]  INFO -- : Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 4.7ms)
+I, [2015-12-01T04:10:43.632586 #28913]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-01 04:10:43 +0000
+I, [2015-12-01T04:10:43.635567 #28913]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-01T04:10:43.636209 #28913]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-01T04:10:43.875006 #28913] DEBUG -- :   [1m[36mMovies Load (3.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-01T04:10:43.882062 #28913]  INFO -- :   Rendered movies/search.html.erb within layouts/application (12.6ms)
+I, [2015-12-01T04:10:43.884291 #28913]  INFO -- : Completed 200 OK in 247ms (Views: 242.8ms | ActiveRecord: 3.5ms)
+I, [2015-12-01T04:10:45.317339 #28913]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-01 04:10:45 +0000
+I, [2015-12-01T04:10:45.322694 #28913]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-01T04:10:45.323706 #28913]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-01T04:10:45.328612 #28913] DEBUG -- :   [1m[35mMovies Load (1.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC
+I, [2015-12-01T04:10:45.333236 #28913]  INFO -- :   Rendered movies/search.html.erb within layouts/application (6.3ms)
+I, [2015-12-01T04:10:45.336255 #28913]  INFO -- : Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 1.3ms)
+I, [2015-12-01T04:14:33.399507 #29953]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:14:33 +0000
+I, [2015-12-01T04:14:33.465344 #29953]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:14:33.486336 #29953] DEBUG -- :   [1m[36mMovies Load (6.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:14:33.562262 #29953] DEBUG -- :   [1m[35mMovies Load (1.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:14:33.565703 #29953] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:14:33.568855 #29953] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:14:33.814645 #29953]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.6ms)
+I, [2015-12-01T04:14:33.819393 #29953]  INFO -- : Completed 200 OK in 350ms (Views: 249.1ms | ActiveRecord: 14.1ms)
+I, [2015-12-01T04:28:05.425075 #30895]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 04:28:05 +0000
+I, [2015-12-01T04:28:05.487981 #30895]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T04:28:05.504092 #30895] DEBUG -- :   [1m[36mMovies Load (3.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:28:05.588727 #30895] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T04:28:05.591045 #30895] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T04:28:05.595289 #30895] DEBUG -- :   [1m[35mMovies Load (2.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T04:28:05.960053 #30895]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.8ms)
+I, [2015-12-01T04:28:05.964723 #30895]  INFO -- : Completed 200 OK in 474ms (Views: 367.7ms | ActiveRecord: 13.0ms)
+I, [2015-12-01T04:49:18.299661 #1031]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-01 04:49:18 +0000
+I, [2015-12-01T04:49:18.384950 #1031]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-01T04:49:18.386354 #1031]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-01T04:49:18.792047 #1031] DEBUG -- :   [1m[36mMovies Load (6.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-01T04:49:18.901179 #1031]  INFO -- :   Rendered movies/search.html.erb within layouts/application (121.3ms)
+I, [2015-12-01T04:49:18.910726 #1031]  INFO -- : Completed 200 OK in 523ms (Views: 487.1ms | ActiveRecord: 29.5ms)
+I, [2015-12-01T04:55:28.433946 #1983]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-01 04:55:28 +0000
+I, [2015-12-01T04:55:28.509258 #1983]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-01T04:55:28.510056 #1983]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-01T04:55:28.716651 #1983] DEBUG -- :   [1m[36mMovies Load (4.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-01T04:55:28.795499 #1983]  INFO -- :   Rendered movies/search.html.erb within layouts/application (85.8ms)
+I, [2015-12-01T04:55:28.798975 #1983]  INFO -- : Completed 200 OK in 287ms (Views: 275.0ms | ActiveRecord: 9.7ms)
+I, [2015-12-01T05:01:38.493320 #2965]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 05:01:38 +0000
+I, [2015-12-01T05:01:38.571237 #2965]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T05:01:38.587375 #2965] DEBUG -- :   [1m[36mMovies Load (3.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T05:01:38.676262 #2965] DEBUG -- :   [1m[35mMovies Load (2.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T05:01:38.679385 #2965] DEBUG -- :   [1m[36mMovies Load (1.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T05:01:38.681739 #2965] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T05:01:38.943992 #2965]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.9ms)
+I, [2015-12-01T05:01:38.948557 #2965]  INFO -- : Completed 200 OK in 376ms (Views: 265.2ms | ActiveRecord: 14.8ms)
+I, [2015-12-01T05:07:04.641380 #3928]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-01 05:07:04 +0000
+I, [2015-12-01T05:07:04.718114 #3928]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-01T05:07:04.737191 #3928] DEBUG -- :   [1m[36mMovies Load (12.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T05:07:04.829831 #3928] DEBUG -- :   [1m[35mMovies Load (1.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-01T05:07:04.833077 #3928] DEBUG -- :   [1m[36mMovies Load (1.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-01T05:07:04.835560 #3928] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-01T05:07:05.175203 #3928]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.1ms)
+I, [2015-12-01T05:07:05.178965 #3928]  INFO -- : Completed 200 OK in 459ms (Views: 341.8ms | ActiveRecord: 21.5ms)

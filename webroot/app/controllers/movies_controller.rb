@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   
   def search
     if params[:search]
-      @movies = Movies.search(params[:search]).order("title DESC")
+      @movies = Movies.search(params[:search]).order("title ASC")
     end
   end
   

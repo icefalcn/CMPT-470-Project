@@ -1,15 +1,10 @@
-
-
 execute 'apt_update' do
   command 'apt-get update'
 end 
-
 # Base configuration recipe in Chef.
+package "ruby-dev"
 package "apache2"
 package "libapache2-mod-passenger"
-
-package "ruby1.9.1-dev"
-package "ruby-dev"
 package "zlib1g-dev"
 package "postgresql"
 package "postgresql-contrib"
@@ -39,9 +34,9 @@ execute 'install passenger' do
   command 'gem install passenger'
 end
 
-execute 'install bootstrap' do
-  command 'gem install bootstrap-sass -v 3.3.5.1'
-end
+#execute 'install bootstrap' do
+#  command 'gem install bootstrap-sass -v 3.3.5.1'
+#end
 
 execute 'postgres_user' do
   command "echo \"CREATE DATABASE mydb; CREATE USER vagrant WITH PASSWORD 'vagrant'; GRANT ALL PRIVILEGES ON DATABASE mydb TO vagrant;\" | sudo -u postgres psql"

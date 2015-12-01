@@ -39,8 +39,9 @@ body{
 }
 .banner{
   position:absolute;
-  /*width   :50%;*/
+  width   :20%;
   height  :85%;
+  padding-left: 2em;
   top     :0;
 
 }
@@ -311,6 +312,10 @@ background-color: #666666;
   width: 15em;
 }
 
+.movie>img {
+  width: 25%;
+  length: 25%;
+}
 
 
 
