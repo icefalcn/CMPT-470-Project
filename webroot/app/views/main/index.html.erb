@@ -54,21 +54,60 @@
 
     <ul id = "genres">
       <li style="font-size:1.5em; margin-left:3em;">Action</li>
-      <li style="font-size:1.5em; margin-left:6.5em;">Comedy</li>
-      <li style="font-size:1.5em; margin-left:5.5em;">Animation</li>
-      <li style="font-size:1.5em; margin-left:5.5em;">Romance</li>
+      <li style="font-size:1.5em; margin-left:6em;">Comedy</li>
+      <li style="font-size:1.5em; margin-left:5.3em;">Animation</li>
+      <li style="font-size:1.5em; margin-left:5em;">Romance</li>
     </ul>
     
     <div id="Action" class="posters">
       <ol>
-        <% @movies.each do |movie| %>
-         <li>
-            <p><%= movie.title %></p>           
-            <a href="place holder"><img src ="<%= movie.urlink %>" style= "witdth:10em; height: 15em"></a>
+        <% @action.each do |a| %>
+         <br><li>
+            <p><%= a.title %></p>          
+            <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+            <hr> 
          </li>
         <% end %>
       </ol>
     </div>
+
+    <div id="Comedy" class="posters">
+      <ol>
+        <% @comedy.each do |c| %>
+        <br><li>
+            <p><%= c.title %></p>           
+            <a href="place holder"><img src ="<%= c.urlink %>" style= "width:10em; height: 15em"></a><br>
+            <hr> 
+        </li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div id="Animation" class="posters">
+      <ol>
+        <% @animation.each do |am| %>
+         <br><li>
+            <p><%= am.title %></p>           
+            <a href="place holder"><img src ="<%= am.urlink %>" style= "width:10em; height: 15em"></a><br>
+            <hr> 
+         </li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div id="Romance" class="posters">
+      <ol>
+        <% @romance.each do |r| %>
+         <br><li>
+            <p><%= r.title %></p>           
+            <a href="place holder"><img src ="<%= r.urlink %>" style= "witdth:10em; height: 15em"></a><br>
+            <hr> 
+         </li>
+        <% end %>
+      </ol>
+    </div>
+
+
 
     <script>
     for(var i=0;i<5;i++){
