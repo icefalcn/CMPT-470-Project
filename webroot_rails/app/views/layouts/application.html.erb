@@ -32,7 +32,7 @@
  
 
     <div class="top border_shadow">
-      <a href="/index"> <img class="banner" src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo.svg"></a>
+      <a href="/index"><%= image_tag("logo", :alt => "rss feed",:class => "banner", :style => "position:relative") %>
       <div class="search_bar">
           <%= form_tag('/movies/search', :method => "get", class: "navbar-form", id: "search-form") do %>
             <div class="input-append">
