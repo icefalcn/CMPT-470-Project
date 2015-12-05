@@ -1,7 +1,12 @@
-<%= simple_form_for (@user. html: {class: 'form-horizontal'}) do |f| %>
+<div class="central">
+<%= simple_form_for @user, 
+    :url => url_for(:action => 'register'),
+    :method => 'post' do |f| %>
+		
   <%= f.input :username, label: 'Your username please', error: 'Username is mandatory, please specify one' %>
   <%= f.input :password, input_html: { minlength: 8}, hint: 'No special characters, minimal length 8.' %>
-  <%= f.input :email, placeholder: 'user@domain.com' %>
-  <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
+  <%= f.input :emailaddr, placeholder: 'user@domain.com' %>
+ 
   <%= f.button :submit %>
 <% end %>
+</div>

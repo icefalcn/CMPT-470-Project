@@ -3250,3 +3250,294 @@ D, [2015-12-05T00:07:40.403716 #26580] DEBUG -- :   [1m[36mMovies Load (0.4ms)
 D, [2015-12-05T00:07:40.404817 #26580] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
 I, [2015-12-05T00:07:40.427638 #26580]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.5ms)
 I, [2015-12-05T00:07:40.429471 #26580]  INFO -- : Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 1.6ms)
+I, [2015-12-05T01:14:53.607712 #19558]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 01:14:53 +0000
+I, [2015-12-05T01:14:53.669102 #19565]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 01:14:53 +0000
+I, [2015-12-05T01:14:53.761791 #19558]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T01:14:53.775764 #19558] DEBUG -- :   [1m[36mMovies Load (6.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+I, [2015-12-05T01:14:53.786257 #19565]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T01:14:53.798067 #19565] DEBUG -- :   [1m[36mMovies Load (2.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T01:14:53.928371 #19558] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T01:14:53.930644 #19558] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T01:14:53.932295 #19558] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T01:14:53.946347 #19565] DEBUG -- :   [1m[35mMovies Load (5.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T01:14:53.948198 #19565] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T01:14:53.954194 #19565] DEBUG -- :   [1m[35mMovies Load (5.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T01:14:54.331131 #19565]  INFO -- :   Rendered main/index.html.erb within layouts/application (9.0ms)
+I, [2015-12-05T01:14:54.336044 #19565]  INFO -- : Completed 200 OK in 549ms (Views: 380.9ms | ActiveRecord: 45.9ms)
+I, [2015-12-05T01:14:54.385826 #19558]  INFO -- :   Rendered main/index.html.erb within layouts/application (4.0ms)
+I, [2015-12-05T01:14:54.389039 #19558]  INFO -- : Completed 200 OK in 627ms (Views: 454.1ms | ActiveRecord: 60.0ms)
+I, [2015-12-05T01:21:05.876786 #21164]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 01:21:05 +0000
+I, [2015-12-05T01:21:05.975470 #21164]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-05 01:21:05 +0000
+I, [2015-12-05T01:21:05.979449 #21164]  INFO -- : Processing by MoviesController#index as HTML
+D, [2015-12-05T01:21:06.166960 #21164] DEBUG -- :   [1m[36mMovies Load (3.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+I, [2015-12-05T01:21:06.236452 #21164]  INFO -- :   Rendered movies/index.html.erb within layouts/application (75.0ms)
+I, [2015-12-05T01:21:06.240342 #21164]  INFO -- : Completed 200 OK in 260ms (Views: 245.7ms | ActiveRecord: 9.7ms)
+I, [2015-12-05T01:22:20.070547 #21164]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 01:22:20 +0000
+I, [2015-12-05T01:22:20.093197 #21164]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-05 01:22:20 +0000
+I, [2015-12-05T01:22:20.096632 #21164]  INFO -- : Processing by MoviesController#index as HTML
+D, [2015-12-05T01:22:20.100379 #21164] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT "movies".* FROM "movies"
+I, [2015-12-05T01:22:20.102037 #21164]  INFO -- :   Rendered movies/index.html.erb within layouts/application (2.8ms)
+I, [2015-12-05T01:22:20.104278 #21164]  INFO -- : Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+I, [2015-12-05T01:23:18.271042 #21164]  INFO -- : Started GET "/main" for 10.0.2.2 at 2015-12-05 01:23:18 +0000
+F, [2015-12-05T01:23:18.272729 #21164] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/main"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-05T01:23:18.290685 #21164]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+I, [2015-12-05T01:23:18.300901 #21164]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+I, [2015-12-05T01:23:18.306444 #21164]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+I, [2015-12-05T01:23:18.315088 #21164]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+I, [2015-12-05T01:23:18.317273 #21164]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.8ms)
+I, [2015-12-05T01:23:21.950600 #21164]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-05 01:23:21 +0000
+I, [2015-12-05T01:23:21.952689 #21164]  INFO -- : Processing by MoviesController#index as HTML
+D, [2015-12-05T01:23:21.956211 #21164] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+I, [2015-12-05T01:23:21.959073 #21164]  INFO -- :   Rendered movies/index.html.erb within layouts/application (4.2ms)
+I, [2015-12-05T01:23:21.960388 #21164]  INFO -- : Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.2ms)
+I, [2015-12-05T01:37:25.584269 #22160]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-05 01:37:25 +0000
+I, [2015-12-05T01:37:25.643510 #22160]  INFO -- : Processing by MoviesController#index as HTML
+D, [2015-12-05T01:37:25.840850 #22160] DEBUG -- :   [1m[36mMovies Load (1.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+I, [2015-12-05T01:37:25.907279 #22160]  INFO -- :   Rendered movies/index.html.erb within layouts/application (74.3ms)
+I, [2015-12-05T01:37:25.912039 #22160]  INFO -- : Completed 200 OK in 268ms (Views: 252.4ms | ActiveRecord: 6.3ms)
+I, [2015-12-05T01:37:38.949836 #22160]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 01:37:38 +0000
+F, [2015-12-05T01:37:38.976727 #22160] FATAL -- : 
+ActionController::RoutingError (uninitialized constant MovieController):
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-05T01:37:39.016653 #22160]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+I, [2015-12-05T01:37:39.033375 #22160]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+I, [2015-12-05T01:37:39.039146 #22160]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+I, [2015-12-05T01:37:39.046410 #22160]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-12-05T01:37:39.047375 #22160]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.0ms)
+I, [2015-12-05T01:42:47.115727 #23086]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 01:42:47 +0000
+I, [2015-12-05T01:42:47.172665 #23086]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T01:42:47.187056 #23086] DEBUG -- :   [1m[36mMovies Load (5.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T01:42:47.257723 #23086] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T01:42:47.259655 #23086] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T01:42:47.262358 #23086] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T01:42:47.456861 #23086]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.5ms)
+I, [2015-12-05T01:42:47.460941 #23086]  INFO -- : Completed 200 OK in 287ms (Views: 197.2ms | ActiveRecord: 13.8ms)
+I, [2015-12-05T01:43:36.059205 #23086]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-05 01:43:36 +0000
+I, [2015-12-05T01:43:36.063139 #23086]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-05T01:43:36.063572 #23086]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-05T01:43:36.188079 #23086] DEBUG -- :   [1m[36mMovies Load (2.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-05T01:43:36.280901 #23086]  INFO -- :   Rendered movies/search.html.erb within layouts/application (95.4ms)
+I, [2015-12-05T01:43:36.281710 #23086]  INFO -- : Completed 500 Internal Server Error in 217ms (ActiveRecord: 2.4ms)
+F, [2015-12-05T01:43:36.283217 #23086] FATAL -- : 
+ActionView::Template::Error (undefined method `m_path' for #<#<Class:0x00000003908500>:0x00000003f05cf0>):
+     9:         <%= image_tag m.urlink %>
+    10:         <h3><%= m.title %></h3>
+    11:         <p> <%= m.year %> </p>
+    12:         <%= link_to "Learn more", m_path(m.movieid) %> 
+    13:         <!--<%= link_to "Learn more", '/movies/2' %> 
+    14:         <a href="/movies/2">Learn more</a>-->
+    15:       </div>
+  app/views/movies/search.html.erb:12:in `block in _app_views_movies_search_html_erb__38824782912073996_35374440'
+  app/views/movies/search.html.erb:7:in `_app_views_movies_search_html_erb__38824782912073996_35374440'
+
+
+I, [2015-12-05T01:43:36.437797 #23086]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+I, [2015-12-05T01:43:36.449553 #23086]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+I, [2015-12-05T01:43:36.456461 #23086]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2015-12-05T01:43:36.457061 #23086]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.7ms)
+I, [2015-12-05T01:50:45.989207 #24102]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-05 01:50:45 +0000
+I, [2015-12-05T01:50:46.048161 #24102]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-05T01:50:46.052217 #24102]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-05T01:50:46.277538 #24102] DEBUG -- :   [1m[36mMovies Load (3.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-05T01:50:46.353759 #24102]  INFO -- :   Rendered movies/search.html.erb within layouts/application (81.9ms)
+I, [2015-12-05T01:50:46.356976 #24102]  INFO -- : Completed 200 OK in 303ms (Views: 286.9ms | ActiveRecord: 9.2ms)
+I, [2015-12-05T01:50:59.961591 #24102]  INFO -- : Started GET "/regiter" for 10.0.2.2 at 2015-12-05 01:50:59 +0000
+F, [2015-12-05T01:50:59.964775 #24102] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/regiter"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-05T01:50:59.985107 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+I, [2015-12-05T01:50:59.994875 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+I, [2015-12-05T01:51:00.001568 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-12-05T01:51:00.008231 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+I, [2015-12-05T01:51:00.009230 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.4ms)
+I, [2015-12-05T01:51:05.561808 #24102]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 01:51:05 +0000
+I, [2015-12-05T01:51:05.569023 #24102]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-12-05T01:51:05.621379 #24102]  INFO -- : Completed 500 Internal Server Error in 52ms (ActiveRecord: 5.7ms)
+F, [2015-12-05T01:51:05.623122 #24102] FATAL -- : 
+NoMethodError (undefined method `email' for #<User uid: nil, username: nil, password: nil, emailaddr: nil>):
+  app/controllers/users_controller.rb:5:in `register'
+
+
+I, [2015-12-05T01:51:05.764379 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+I, [2015-12-05T01:51:05.771216 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+I, [2015-12-05T01:51:05.776146 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+I, [2015-12-05T01:51:05.777075 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+I, [2015-12-05T01:51:46.581264 #24102]  INFO -- : Started GET "/login" for 10.0.2.2 at 2015-12-05 01:51:46 +0000
+I, [2015-12-05T01:51:46.583794 #24102]  INFO -- : Processing by UsersController#login as HTML
+I, [2015-12-05T01:51:46.892098 #24102]  INFO -- :   Rendered users/login.html.erb within layouts/application (114.5ms)
+I, [2015-12-05T01:51:46.893135 #24102]  INFO -- : Completed 500 Internal Server Error in 308ms (ActiveRecord: 0.0ms)
+F, [2015-12-05T01:51:46.894756 #24102] FATAL -- : 
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <%= simple_form_for @user, 
+    2:     :url => url_for(:action => 'login'),
+    3:     :method => 'post' do |f| %>
+    4: 		
+  app/views/users/login.html.erb:1:in `_app_views_users_login_html_erb___740811710196996868_48770640'
+
+
+I, [2015-12-05T01:51:47.042708 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+I, [2015-12-05T01:51:47.047290 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+I, [2015-12-05T01:51:47.051894 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-05T01:51:47.052849 #24102]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+I, [2015-12-05T01:58:39.535193 #25120]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 01:58:39 +0000
+I, [2015-12-05T01:58:39.591232 #25120]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-12-05T01:58:39.852447 #25120]  INFO -- :   Rendered users/register.html.erb within layouts/application (70.0ms)
+I, [2015-12-05T01:58:39.853302 #25120]  INFO -- : Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.0ms)
+F, [2015-12-05T01:58:39.855750 #25120] FATAL -- : 
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <%= simple_form_for @user, 
+    2:     :url => url_for(:action => 'register'),
+    3:     :method => 'post' do |f| %>
+    4: 		
+  app/views/users/register.html.erb:1:in `_app_views_users_register_html_erb__1151645728624120694_46325780'
+
+
+I, [2015-12-05T01:58:40.000293 #25120]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+I, [2015-12-05T01:58:40.019535 #25120]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+I, [2015-12-05T01:58:40.026931 #25120]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-12-05T01:58:40.027669 #25120]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.8ms)
+I, [2015-12-05T02:04:20.264811 #26054]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 02:04:20 +0000
+I, [2015-12-05T02:04:20.317922 #26054]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-12-05T02:04:20.393342 #26054]  INFO -- : Completed 500 Internal Server Error in 74ms (ActiveRecord: 5.4ms)
+F, [2015-12-05T02:04:20.395152 #26054] FATAL -- : 
+NoMethodError (undefined method `email' for #<User uid: nil, username: nil, password: nil, emailaddr: nil>):
+  app/controllers/users_controller.rb:5:in `register'
+
+
+I, [2015-12-05T02:04:20.496956 #26054]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+I, [2015-12-05T02:04:20.504488 #26054]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+I, [2015-12-05T02:04:20.509400 #26054]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+I, [2015-12-05T02:04:20.509966 #26054]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+I, [2015-12-05T02:07:54.571992 #26975]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 02:07:54 +0000
+I, [2015-12-05T02:07:54.629203 #26975]  INFO -- : Processing by UsersController#register as HTML
+D, [2015-12-05T02:07:54.649690 #26975] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+D, [2015-12-05T02:07:54.711033 #26975] DEBUG -- :   [1m[35m (0.6ms)[0m  ROLLBACK
+I, [2015-12-05T02:07:54.712260 #26975]  INFO -- : Completed 500 Internal Server Error in 82ms (ActiveRecord: 7.8ms)
+F, [2015-12-05T02:07:54.713933 #26975] FATAL -- : 
+NoMethodError (undefined method `email' for #<User uid: nil, username: nil, password: nil, emailaddr: nil>):
+  app/controllers/users_controller.rb:9:in `register'
+
+
+I, [2015-12-05T02:07:54.830091 #26975]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+I, [2015-12-05T02:07:54.836577 #26975]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+I, [2015-12-05T02:07:54.842061 #26975]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-05T02:07:54.842679 #26975]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.3ms)
+I, [2015-12-05T02:11:45.687325 #27871]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 02:11:45 +0000
+I, [2015-12-05T02:11:45.740469 #27871]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-12-05T02:11:46.144282 #27871]  INFO -- :   Rendered users/register.html.erb within layouts/application (194.4ms)
+I, [2015-12-05T02:11:46.145010 #27871]  INFO -- : Completed 500 Internal Server Error in 404ms (ActiveRecord: 6.6ms)
+F, [2015-12-05T02:11:46.146663 #27871] FATAL -- : 
+ActionView::Template::Error (undefined method `email' for #<User uid: nil, username: nil, password: nil, emailaddr: nil>):
+    4: 		
+    5:   <%= f.input :username, label: 'Your username please', error: 'Username is mandatory, please specify one' %>
+    6:   <%= f.input :password, input_html: { minlength: 8}, hint: 'No special characters, minimal length 8.' %>
+    7:   <%= f.input :email, placeholder: 'user@domain.com' %>
+    8:  
+    9:   <%= f.button :submit %>
+   10: <% end %>
+  app/views/users/register.html.erb:7:in `block in _app_views_users_register_html_erb__1904500683263330349_45393020'
+  app/views/users/register.html.erb:1:in `_app_views_users_register_html_erb__1904500683263330349_45393020'
+
+
+I, [2015-12-05T02:11:46.335328 #27871]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+I, [2015-12-05T02:11:46.346608 #27871]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+I, [2015-12-05T02:11:46.354876 #27871]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+I, [2015-12-05T02:11:46.355517 #27871]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+I, [2015-12-05T02:19:09.856739 #29493]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 02:19:09 +0000
+I, [2015-12-05T02:19:09.917753 #29493]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-12-05T02:19:10.268782 #29493]  INFO -- :   Rendered users/register.html.erb within layouts/application (135.1ms)
+I, [2015-12-05T02:19:10.271527 #29493]  INFO -- : Completed 200 OK in 353ms (Views: 336.6ms | ActiveRecord: 7.4ms)
+I, [2015-12-05T02:30:33.516816 #30615]  INFO -- : Started GET "/register" for 10.0.2.2 at 2015-12-05 02:30:33 +0000
+I, [2015-12-05T02:30:33.579692 #30615]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-12-05T02:30:33.920113 #30615]  INFO -- :   Rendered users/register.html.erb within layouts/application (129.8ms)
+I, [2015-12-05T02:30:33.923039 #30615]  INFO -- : Completed 200 OK in 343ms (Views: 322.7ms | ActiveRecord: 9.4ms)

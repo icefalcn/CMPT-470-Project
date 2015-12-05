@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  
+  post 'movies/:id/upvote' => 'movies#upvote'
+  post 'movies/:id/downvote' => 'movies#downvote'
+
+  get '/login' => 'users#login'
+  post '/login' => 'movies#index'
+  get 'register' => 'users#register', as: :user
+  post '/register' => 'users#login'
+
   root 'main#index'
   get 'movies' => 'movies#index'
 
