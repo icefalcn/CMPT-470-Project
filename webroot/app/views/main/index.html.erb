@@ -62,7 +62,7 @@
         <% @action.each do |a| %>
          <br><li>
             <p><%= a.title %></p>  
-            <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+	    <%= link_to(image_tag(a.urlink) , m_path(a.movieid)) %>
             <hr> 
          </li>
         <% end %>
@@ -74,7 +74,7 @@
         <% @comedy.each do |c| %>
         <br><li>
             <p><%= c.title %></p>           
-            <a href="place holder"><img src ="<%= c.urlink %>" style= "width:10em; height: 15em"></a><br>
+	    <%= link_to(image_tag(c.urlink) , m_path(c.movieid)) %>
             <hr> 
         </li>
         <% end %>
@@ -86,7 +86,7 @@
         <% @animation.each do |am| %>
          <br><li>
             <p><%= am.title %></p>           
-            <a href="place holder"><img src ="<%= am.urlink %>" style= "width:10em; height: 15em"></a><br>
+	    <%= link_to(image_tag(am.urlink) , m_path(am.movieid)) %>
             <hr> 
          </li>
         <% end %>
@@ -98,7 +98,7 @@
         <% @romance.each do |r| %>
          <br><li>
             <p><%= r.title %></p>           
-            <a href="place holder"><img src ="<%= r.urlink %>" style= "witdth:10em; height: 15em"></a><br>
+	    <%= link_to(image_tag(r.urlink) , m_path(r.movieid)) %>
             <hr> 
          </li>
         <% end %>
@@ -107,12 +107,7 @@
 
 
 
-    <script>
-    for(var i=0;i<5;i++){
-      var text = "ol li:nth-child("+i+")";
-      $(text).find("a").attr("href", "http://www.google.com/");
-    }
-    </script>
+    
   </div>
 </div>
 

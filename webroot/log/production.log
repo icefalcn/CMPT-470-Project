@@ -3541,3 +3541,343 @@ I, [2015-12-05T02:30:33.516816 #30615]  INFO -- : Started GET "/register" for 10
 I, [2015-12-05T02:30:33.579692 #30615]  INFO -- : Processing by UsersController#register as HTML
 I, [2015-12-05T02:30:33.920113 #30615]  INFO -- :   Rendered users/register.html.erb within layouts/application (129.8ms)
 I, [2015-12-05T02:30:33.923039 #30615]  INFO -- : Completed 200 OK in 343ms (Views: 322.7ms | ActiveRecord: 9.4ms)
+I, [2015-12-05T03:50:23.335281 #30615]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 03:50:23 +0000
+I, [2015-12-05T03:50:23.342771 #30615]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T03:50:23.356709 #30615] DEBUG -- :   [1m[36mMovies Load (4.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T03:50:23.395157 #30615] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T03:50:23.397563 #30615] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T03:50:23.399496 #30615] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T03:50:23.647171 #30615]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.4ms)
+I, [2015-12-05T03:50:23.651073 #30615]  INFO -- : Completed 200 OK in 306ms (Views: 250.3ms | ActiveRecord: 10.1ms)
+I, [2015-12-05T03:58:23.641035 #1369]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 03:58:23 +0000
+I, [2015-12-05T03:58:23.704197 #1369]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T03:58:23.722556 #1369] DEBUG -- :   [1m[36mMovies Load (8.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T03:58:23.803159 #1369] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T03:58:23.805037 #1369] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T03:58:23.806848 #1369] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T03:58:24.076767 #1369]  INFO -- :   Rendered main/index.html.erb within layouts/application (75.8ms)
+I, [2015-12-05T03:58:24.077728 #1369]  INFO -- : Completed 500 Internal Server Error in 373ms (ActiveRecord: 17.3ms)
+F, [2015-12-05T03:58:24.079250 #1369] FATAL -- : 
+ActionView::Template::Error (undefined method `link_to_img' for #<#<Class:0x000000046b5630>:0x000000049f5908>):
+    63:          <br><li>
+    64:             <p><%= a.title %></p>  
+    65:             <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to_img(a.urlink, m_path(a.movieid)) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb___3065848358664421673_33796660'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb___3065848358664421673_33796660'
+
+
+I, [2015-12-05T03:58:24.229581 #1369]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+I, [2015-12-05T03:58:24.237153 #1369]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+I, [2015-12-05T03:58:24.244437 #1369]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+I, [2015-12-05T03:58:24.245039 #1369]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
+I, [2015-12-05T04:01:57.167449 #2280]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:01:57 +0000
+I, [2015-12-05T04:01:57.220389 #2280]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:01:57.233784 #2280] DEBUG -- :   [1m[36mMovies Load (3.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:01:57.305960 #2280] DEBUG -- :   [1m[35mMovies Load (2.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:01:57.308345 #2280] DEBUG -- :   [1m[36mMovies Load (1.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:01:57.309948 #2280] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:01:57.574456 #2280]  INFO -- :   Rendered main/index.html.erb within layouts/application (72.6ms)
+I, [2015-12-05T04:01:57.575279 #2280]  INFO -- : Completed 500 Internal Server Error in 354ms (ActiveRecord: 13.0ms)
+F, [2015-12-05T04:01:57.577838 #2280] FATAL -- : 
+ActionView::Template::Error (undefined method `symbolize_keys' for "/movies/1":String):
+    63:          <br><li>
+    64:             <p><%= a.title %></p>  
+    65:             <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to image_tag(a.urlink, m_path(a.movieid)) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb___2850141526912690629_26865400'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb___2850141526912690629_26865400'
+
+
+I, [2015-12-05T04:01:57.698436 #2280]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+I, [2015-12-05T04:01:57.707316 #2280]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+I, [2015-12-05T04:01:57.745989 #2280]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (31.7ms)
+I, [2015-12-05T04:01:57.748916 #2280]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.6ms)
+I, [2015-12-05T04:07:10.475330 #3247]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:07:10 +0000
+I, [2015-12-05T04:07:10.529411 #3247]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:07:10.544440 #3247] DEBUG -- :   [1m[36mMovies Load (6.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:07:10.612656 #3247] DEBUG -- :   [1m[35mMovies Load (1.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:07:10.615399 #3247] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:07:10.618876 #3247] DEBUG -- :   [1m[35mMovies Load (1.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:07:10.878884 #3247]  INFO -- :   Rendered main/index.html.erb within layouts/application (72.5ms)
+I, [2015-12-05T04:07:10.881700 #3247]  INFO -- : Completed 500 Internal Server Error in 351ms (ActiveRecord: 15.3ms)
+F, [2015-12-05T04:07:10.884558 #3247] FATAL -- : 
+ActionView::Template::Error (undefined method `a_path' for #<#<Class:0x0000000439b7d8>:0x000000041de8f0>):
+    63:          <br><li>
+    64:             <p><%= a.title %></p>  
+    65:             <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to image_tag(a.urlink, a_path(a.movieid)) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb__4424153875421672531_37393360'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb__4424153875421672531_37393360'
+
+
+I, [2015-12-05T04:07:11.045775 #3247]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+I, [2015-12-05T04:07:11.055153 #3247]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+I, [2015-12-05T04:07:11.061193 #3247]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-05T04:07:11.061719 #3247]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+I, [2015-12-05T04:10:19.079102 #4154]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:10:19 +0000
+I, [2015-12-05T04:10:19.131410 #4154]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:10:19.147192 #4154] DEBUG -- :   [1m[36mMovies Load (7.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:10:19.220390 #4154] DEBUG -- :   [1m[35mMovies Load (1.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:10:19.224717 #4154] DEBUG -- :   [1m[36mMovies Load (1.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:10:19.226984 #4154] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:10:19.494171 #4154]  INFO -- :   Rendered main/index.html.erb within layouts/application (70.9ms)
+I, [2015-12-05T04:10:19.494964 #4154]  INFO -- : Completed 500 Internal Server Error in 361ms (ActiveRecord: 17.1ms)
+F, [2015-12-05T04:10:19.495649 #4154] FATAL -- : 
+ActionView::Template::Error (undefined method `symbolize_keys' for "/movies/1":String):
+    63:          <br><li>
+    64:             <p><%= a.title %></p>  
+    65:             <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to image_tag(a.urlink, m_path(a.movieid)) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb___2527353362460164587_39286420'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb___2527353362460164587_39286420'
+
+
+I, [2015-12-05T04:10:19.614719 #4154]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+I, [2015-12-05T04:10:19.623398 #4154]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+I, [2015-12-05T04:10:19.666680 #4154]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (38.2ms)
+I, [2015-12-05T04:10:19.667361 #4154]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+I, [2015-12-05T04:14:42.570875 #5092]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:14:42 +0000
+I, [2015-12-05T04:14:42.626116 #5092]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:14:42.641516 #5092] DEBUG -- :   [1m[36mMovies Load (6.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:14:42.711201 #5092] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:14:42.713048 #5092] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:14:42.715175 #5092] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:14:42.902141 #5092]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.0ms)
+I, [2015-12-05T04:14:42.903018 #5092]  INFO -- : Completed 500 Internal Server Error in 276ms (ActiveRecord: 15.1ms)
+F, [2015-12-05T04:14:42.904651 #5092] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/main/index.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+...image_tag(a.urlink, '/movies/'a.movieid) );@output_buffer.sa...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:66: syntax error, unexpected ')', expecting keyword_end
+....urlink, '/movies/'a.movieid) );@output_buffer.safe_append='
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;         @comedy.each do |c| 
+                                 ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:87: syntax error, unexpected keyword_do_block, expecting $end
+'.freeze;         @animation.each do |am| 
+                                    ^):
+  app/views/main/index.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:66: syntax error, unexpected ')', expecting keyword_end
+  app/views/main/index.html.erb:75: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/main/index.html.erb:87: syntax error, unexpected keyword_do_block, expecting $end
+
+
+I, [2015-12-05T04:14:43.095217 #5092]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.9ms)
+I, [2015-12-05T04:14:43.102695 #5092]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+I, [2015-12-05T04:14:43.109041 #5092]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+I, [2015-12-05T04:14:43.109675 #5092]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.7ms)
+I, [2015-12-05T04:23:21.749276 #6145]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:23:21 +0000
+I, [2015-12-05T04:23:21.820975 #6145]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:23:21.839331 #6145] DEBUG -- :   [1m[36mMovies Load (5.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:23:21.915095 #6145] DEBUG -- :   [1m[35mMovies Load (1.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:23:21.917997 #6145] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:23:21.920627 #6145] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:23:22.226726 #6145]  INFO -- :   Rendered main/index.html.erb within layouts/application (83.7ms)
+I, [2015-12-05T04:23:22.228719 #6145]  INFO -- : Completed 500 Internal Server Error in 405ms (ActiveRecord: 16.4ms)
+F, [2015-12-05T04:23:22.231157 #6145] FATAL -- : 
+ActionView::Template::Error (undefined method `a_path' for #<#<Class:0x0000000561fda0>:0x00000004fcecf8>):
+    63:          <br><li>
+    64:             <p><%= a.title %></p>  
+    65:             <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to image_tag(a.urlink, a_path(a.movieid)) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb___1017237699746411949_39977280'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb___1017237699746411949_39977280'
+
+
+I, [2015-12-05T04:23:22.391216 #6145]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+I, [2015-12-05T04:23:22.401331 #6145]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+I, [2015-12-05T04:23:22.409065 #6145]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-12-05T04:23:22.409921 #6145]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.7ms)
+I, [2015-12-05T04:27:05.180919 #7068]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:27:05 +0000
+I, [2015-12-05T04:27:05.251062 #7068]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:27:05.266842 #7068] DEBUG -- :   [1m[36mMovies Load (4.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:27:05.361967 #7068] DEBUG -- :   [1m[35mMovies Load (2.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:27:05.365359 #7068] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:27:05.368141 #7068] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:27:05.810225 #7068]  INFO -- :   Rendered main/index.html.erb within layouts/application (115.0ms)
+I, [2015-12-05T04:27:05.811485 #7068]  INFO -- : Completed 500 Internal Server Error in 559ms (ActiveRecord: 16.0ms)
+F, [2015-12-05T04:27:05.814466 #7068] FATAL -- : 
+ActionView::Template::Error (undefined method `symbolize_keys' for "/movies/1":String):
+    63:          <br><li>
+    64:             <p><%= m.title %></p>  
+    65:             <a href="place holder"><img src ="<%= m.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to image_tag(m.urlink, m_path(m.movieid)) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb___3616579885198259236_38114360'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb___3616579885198259236_38114360'
+
+
+I, [2015-12-05T04:27:05.951335 #7068]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+I, [2015-12-05T04:27:05.962029 #7068]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+I, [2015-12-05T04:27:06.005411 #7068]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (35.7ms)
+I, [2015-12-05T04:27:06.006288 #7068]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.5ms)
+I, [2015-12-05T04:33:27.558858 #8043]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:33:27 +0000
+I, [2015-12-05T04:33:27.609761 #8043]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:33:27.624723 #8043] DEBUG -- :   [1m[36mMovies Load (6.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:33:27.698418 #8043] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:33:27.700720 #8043] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:33:27.702938 #8043] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:33:27.969745 #8043]  INFO -- :   Rendered main/index.html.erb within layouts/application (71.9ms)
+I, [2015-12-05T04:33:27.970486 #8043]  INFO -- : Completed 500 Internal Server Error in 360ms (ActiveRecord: 15.6ms)
+F, [2015-12-05T04:33:27.972033 #8043] FATAL -- : 
+ActionView::Template::Error (undefined method `symbolize_keys' for "/movies/1":String):
+    63:          <br><li>
+    64:             <p><%= m.title %></p>  
+    65:             <a href="place holder"><img src ="<%= m.urlink %>" style= "width:10em; height: 15em;"></a><br>
+    66: 	    <%= link_to(image_tag(m.urlink , m_path(m.movieid))) %>
+    67:             <hr> 
+    68:          </li>
+    69:         <% end %>
+  app/views/main/index.html.erb:66:in `block in _app_views_main_index_html_erb__2067192640517619202_42744080'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb__2067192640517619202_42744080'
+
+
+I, [2015-12-05T04:33:28.087034 #8043]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-12-05T04:33:28.096832 #8043]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+I, [2015-12-05T04:33:28.138008 #8043]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-05T04:33:28.138739 #8043]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.6ms)
+I, [2015-12-05T04:37:49.799613 #8978]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:37:49 +0000
+I, [2015-12-05T04:37:49.852132 #8978]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:37:49.867493 #8978] DEBUG -- :   [1m[36mMovies Load (7.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:37:49.943176 #8978] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:37:49.945101 #8978] DEBUG -- :   [1m[36mMovies Load (1.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:37:49.946877 #8978] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:37:50.146331 #8978]  INFO -- :   Rendered main/index.html.erb within layouts/application (3.1ms)
+I, [2015-12-05T04:37:50.148587 #8978]  INFO -- : Completed 200 OK in 296ms (Views: 201.0ms | ActiveRecord: 15.2ms)
+I, [2015-12-05T04:44:42.179253 #9942]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:44:42 +0000
+I, [2015-12-05T04:44:42.232795 #9942]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:44:42.245326 #9942] DEBUG -- :   [1m[36mMovies Load (5.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:44:42.321008 #9942] DEBUG -- :   [1m[35mMovies Load (1.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:44:42.323342 #9942] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:44:42.325818 #9942] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:44:42.510055 #9942]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.0ms)
+I, [2015-12-05T04:44:42.510774 #9942]  INFO -- : Completed 500 Internal Server Error in 277ms (ActiveRecord: 15.0ms)
+F, [2015-12-05T04:44:42.512879 #9942] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/main/index.html.erb:68: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:120: syntax error, unexpected keyword_ensure, expecting ')'
+/home/vagrant/project/webroot/app/views/main/index.html.erb:122: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/main/index.html.erb:68: syntax error, unexpected keyword_end, expecting ')'
+  app/views/main/index.html.erb:120: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/main/index.html.erb:122: syntax error, unexpected keyword_end, expecting ')'
+
+
+I, [2015-12-05T04:44:42.644992 #9942]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+I, [2015-12-05T04:44:42.685437 #9942]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+I, [2015-12-05T04:44:42.695271 #9942]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-05T04:44:42.696104 #9942]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.7ms)
+I, [2015-12-05T04:53:01.729733 #10984]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:53:01 +0000
+I, [2015-12-05T04:53:01.787805 #10984]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:53:01.804340 #10984] DEBUG -- :   [1m[36mMovies Load (8.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:53:01.874430 #10984] DEBUG -- :   [1m[35mMovies Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:53:01.880411 #10984] DEBUG -- :   [1m[36mMovies Load (2.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:53:01.882289 #10984] DEBUG -- :   [1m[35mMovies Load (0.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:53:02.083419 #10984]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.1ms)
+I, [2015-12-05T04:53:02.086784 #10984]  INFO -- : Completed 200 OK in 297ms (Views: 203.2ms | ActiveRecord: 16.6ms)
+I, [2015-12-05T04:59:17.105309 #11987]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 04:59:17 +0000
+I, [2015-12-05T04:59:17.155529 #11987]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T04:59:17.168938 #11987] DEBUG -- :   [1m[36mMovies Load (4.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:59:17.238571 #11987] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T04:59:17.240602 #11987] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T04:59:17.242207 #11987] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T04:59:17.533703 #11987]  INFO -- :   Rendered main/index.html.erb within layouts/application (78.6ms)
+I, [2015-12-05T04:59:17.534523 #11987]  INFO -- : Completed 500 Internal Server Error in 378ms (ActiveRecord: 14.7ms)
+F, [2015-12-05T04:59:17.536038 #11987] FATAL -- : 
+ActionView::Template::Error (wrong number of arguments (3 for 2)):
+    62:         <% @action.each do |a| %>
+    63:          <br><li>
+    64:             <p><%= a.title %></p>  
+    65: 	    <%= link_to(image_tag(a.urlink, width="10em", height="15em") , m_path(a.movieid)) %>
+    66:             <hr> 
+    67:          </li>
+    68:         <% end %>
+  app/views/main/index.html.erb:65:in `block in _app_views_main_index_html_erb___3509949631988756180_36487420'
+  app/views/main/index.html.erb:62:in `each'
+  app/views/main/index.html.erb:62:in `_app_views_main_index_html_erb___3509949631988756180_36487420'
+
+
+I, [2015-12-05T04:59:17.653043 #11987]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+I, [2015-12-05T04:59:17.661602 #11987]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+I, [2015-12-05T04:59:17.702631 #11987]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (35.2ms)
+I, [2015-12-05T04:59:17.703419 #11987]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.9ms)
+I, [2015-12-05T05:02:53.138099 #12903]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 05:02:53 +0000
+I, [2015-12-05T05:02:53.196840 #12903]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T05:02:53.210690 #12903] DEBUG -- :   [1m[36mMovies Load (7.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:02:53.283394 #12903] DEBUG -- :   [1m[35mMovies Load (1.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T05:02:53.285471 #12903] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:02:53.287153 #12903] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T05:02:53.469200 #12903]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.9ms)
+I, [2015-12-05T05:02:53.472341 #12903]  INFO -- : Completed 200 OK in 275ms (Views: 184.0ms | ActiveRecord: 15.8ms)
+I, [2015-12-05T05:02:58.907948 #12903]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-05 05:02:58 +0000
+I, [2015-12-05T05:02:58.911453 #12903]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-05T05:02:58.912367 #12903]  INFO -- :   Parameters: {"movieID"=>"1"}
+D, [2015-12-05T05:02:58.967952 #12903] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1[0m  [["movieid", 1]]
+I, [2015-12-05T05:02:59.101069 #12903]  INFO -- :   Rendered movies/show.html.erb within layouts/application (0.9ms)
+I, [2015-12-05T05:02:59.102744 #12903]  INFO -- : Completed 200 OK in 190ms (Views: 132.7ms | ActiveRecord: 1.5ms)
+I, [2015-12-05T05:07:51.115210 #13850]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 05:07:51 +0000
+I, [2015-12-05T05:07:51.163330 #13850]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T05:07:51.180186 #13850] DEBUG -- :   [1m[36mMovies Load (8.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:07:51.250475 #13850] DEBUG -- :   [1m[35mMovies Load (1.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T05:07:51.252533 #13850] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:07:51.254097 #13850] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T05:07:51.441684 #13850]  INFO -- :   Rendered main/index.html.erb within layouts/application (3.2ms)
+I, [2015-12-05T05:07:51.443597 #13850]  INFO -- : Completed 200 OK in 278ms (Views: 188.8ms | ActiveRecord: 16.1ms)
+I, [2015-12-05T05:07:55.168856 #13850]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 05:07:55 +0000
+I, [2015-12-05T05:07:55.171136 #13850]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T05:07:55.174259 #13850] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:07:55.176278 #13850] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T05:07:55.177896 #13850] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:07:55.179562 #13850] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T05:07:55.181469 #13850]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.6ms)
+I, [2015-12-05T05:07:55.182741 #13850]  INFO -- : Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 3.8ms)
+I, [2015-12-05T05:14:08.864323 #14800]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 05:14:08 +0000
+I, [2015-12-05T05:14:08.913829 #14800]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T05:14:08.929672 #14800] DEBUG -- :   [1m[36mMovies Load (7.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:14:08.998950 #14800] DEBUG -- :   [1m[35mMovies Load (1.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T05:14:09.002303 #14800] DEBUG -- :   [1m[36mMovies Load (1.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:14:09.010917 #14800] DEBUG -- :   [1m[35mMovies Load (7.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T05:14:09.247386 #14800]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.1ms)
+I, [2015-12-05T05:14:09.253542 #14800]  INFO -- : Completed 200 OK in 339ms (Views: 240.2ms | ActiveRecord: 24.0ms)
+I, [2015-12-05T05:17:24.561523 #15706]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 05:17:24 +0000
+I, [2015-12-05T05:17:24.612808 #15706]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T05:17:24.630434 #15706] DEBUG -- :   [1m[36mMovies Load (4.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:17:24.704622 #15706] DEBUG -- :   [1m[35mMovies Load (1.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T05:17:24.707219 #15706] DEBUG -- :   [1m[36mMovies Load (1.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:17:24.710621 #15706] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T05:17:24.898206 #15706]  INFO -- :   Rendered main/index.html.erb within layouts/application (3.0ms)
+I, [2015-12-05T05:17:24.900760 #15706]  INFO -- : Completed 200 OK in 283ms (Views: 189.4ms | ActiveRecord: 12.1ms)
+I, [2015-12-05T05:22:09.314357 #16631]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 05:22:09 +0000
+I, [2015-12-05T05:22:09.379414 #16631]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T05:22:09.395651 #16631] DEBUG -- :   [1m[36mMovies Load (5.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:22:09.478246 #16631] DEBUG -- :   [1m[35mMovies Load (1.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T05:22:09.480981 #16631] DEBUG -- :   [1m[36mMovies Load (1.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T05:22:09.483241 #16631] DEBUG -- :   [1m[35mMovies Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T05:22:09.804230 #16631]  INFO -- :   Rendered main/index.html.erb within layouts/application (3.9ms)
+I, [2015-12-05T05:22:09.808165 #16631]  INFO -- : Completed 200 OK in 426ms (Views: 322.6ms | ActiveRecord: 16.2ms)
