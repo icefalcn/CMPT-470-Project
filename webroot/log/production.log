@@ -2570,3 +2570,683 @@ D, [2015-12-01T05:41:47.445683 #5534] DEBUG -- :   [1m[35mMovies Load (1.2ms)
 D, [2015-12-01T05:41:47.447764 #5534] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3[0m
 I, [2015-12-01T05:41:47.449872 #5534]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.3ms)
 I, [2015-12-01T05:41:47.451969 #5534]  INFO -- : Completed 200 OK in 14ms (Views: 3.2ms | ActiveRecord: 4.6ms)
+I, [2015-12-04T23:30:26.926797 #19571]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:30:26 +0000
+I, [2015-12-04T23:30:27.172047 #19571]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:30:27.183484 #19571] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:30:27.256392 #19571] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:30:27.257382 #19571] DEBUG -- :   [1m[36mMovies Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:30:27.258167 #19571] DEBUG -- :   [1m[35mMovies Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:30:27.314008 #19571]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-12-04T23:30:27.316290 #19571]  INFO -- : Completed 200 OK in 144ms (Views: 57.3ms | ActiveRecord: 22.7ms)
+I, [2015-12-04T23:37:09.212289 #20573]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:37:09 +0000
+I, [2015-12-04T23:37:09.243024 #20573]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:37:09.255398 #20573] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:37:09.345755 #20573] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:37:09.346809 #20573] DEBUG -- :   [1m[36mMovies Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:37:09.347518 #20573] DEBUG -- :   [1m[35mMovies Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:37:09.383451 #20573]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.4ms)
+I, [2015-12-04T23:37:09.383993 #20573]  INFO -- : Completed 500 Internal Server Error in 140ms (ActiveRecord: 37.8ms)
+F, [2015-12-04T23:37:09.385656 #20573] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.append=( link_to <a href="place holder"><img src ="<%...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...ink_to <a href="place holder"><img src ="<%= a.urlink );@out...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em;"...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...= "width:10em; height: 15em;"></a><br>, m_path(m.movieid) %> 
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:70: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:73: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected '<'
+    <div id="Comedy" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Comedy" class="posters">
+                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:76: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:78: syntax error, unexpected '<'
+@output_buffer.safe_append='        <br><li>
+                                         ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: syntax error, unexpected '<'
+...width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:84: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:85: syntax error, unexpected '<'
+    </div>
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:91: unknown regexp option - p
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+            <a href="place holder"><img sr...
+             ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...       <a href="place holder"><img src ="'.freeze;@output_bu...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em">...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...e= "width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:94: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:97: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected '<'
+    <div id="Romance" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Romance" class="posters">
+                           ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:100: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:102: syntax error, unexpected '<'
+@output_buffer.safe_append='         <br><li>
+                                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: syntax error, unexpected '<'
+...itdth:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:108: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:109: syntax error, unexpected '<'
+    </div>
+     ^
+end pattern with unmatched parenthesis: /div>
+
+
+
+    <script>
+    for(var i=0;i<5;i++){
+      var text = "ol li:nth-child("+i+")";
+      $(text).find("a").attr("href", "http:/
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: unterminated string meets end of file
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'):
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:70: unknown regexp option - l
+  app/views/main/index.html.erb:73: unknown regexp options - dv
+  app/views/main/index.html.erb:75: syntax error, unexpected '<'
+  app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:76: syntax error, unexpected '<'
+  app/views/main/index.html.erb:78: syntax error, unexpected '<'
+  app/views/main/index.html.erb:80: unknown regexp option - a
+  app/views/main/index.html.erb:80: syntax error, unexpected '<'
+  app/views/main/index.html.erb:84: unknown regexp option - l
+  app/views/main/index.html.erb:85: syntax error, unexpected '<'
+  app/views/main/index.html.erb:91: unknown regexp option - p
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:94: unknown regexp option - l
+  app/views/main/index.html.erb:97: unknown regexp options - dv
+  app/views/main/index.html.erb:99: syntax error, unexpected '<'
+  app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:100: syntax error, unexpected '<'
+  app/views/main/index.html.erb:102: syntax error, unexpected '<'
+  app/views/main/index.html.erb:104: unknown regexp option - a
+  app/views/main/index.html.erb:104: syntax error, unexpected '<'
+  app/views/main/index.html.erb:108: unknown regexp option - l
+  app/views/main/index.html.erb:109: syntax error, unexpected '<'
+  app/views/main/index.html.erb:116: unterminated string meets end of file
+  app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'
+
+
+I, [2015-12-04T23:37:12.725073 #20573]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:37:12 +0000
+I, [2015-12-04T23:37:12.726774 #20573]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:37:12.728631 #20573] DEBUG -- :   [1m[36mMovies Load (0.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:37:12.729858 #20573] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:37:12.731152 #20573] DEBUG -- :   [1m[36mMovies Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:37:12.732493 #20573] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:37:12.734046 #20573]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.7ms)
+I, [2015-12-04T23:37:12.734292 #20573]  INFO -- : Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.9ms)
+F, [2015-12-04T23:37:12.735593 #20573] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.append=( link_to <a href="place holder"><img src ="<%...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...ink_to <a href="place holder"><img src ="<%= a.urlink );@out...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em;"...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...= "width:10em; height: 15em;"></a><br>, m_path(m.movieid) %> 
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:70: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:73: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected '<'
+    <div id="Comedy" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Comedy" class="posters">
+                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:76: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:78: syntax error, unexpected '<'
+@output_buffer.safe_append='        <br><li>
+                                         ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: syntax error, unexpected '<'
+...width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:84: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:85: syntax error, unexpected '<'
+    </div>
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:91: unknown regexp option - p
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+            <a href="place holder"><img sr...
+             ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...       <a href="place holder"><img src ="'.freeze;@output_bu...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em">...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...e= "width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:94: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:97: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected '<'
+    <div id="Romance" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Romance" class="posters">
+                           ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:100: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:102: syntax error, unexpected '<'
+@output_buffer.safe_append='         <br><li>
+                                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: syntax error, unexpected '<'
+...itdth:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:108: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:109: syntax error, unexpected '<'
+    </div>
+     ^
+end pattern with unmatched parenthesis: /div>
+
+
+
+    <script>
+    for(var i=0;i<5;i++){
+      var text = "ol li:nth-child("+i+")";
+      $(text).find("a").attr("href", "http:/
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: unterminated string meets end of file
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'):
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:70: unknown regexp option - l
+  app/views/main/index.html.erb:73: unknown regexp options - dv
+  app/views/main/index.html.erb:75: syntax error, unexpected '<'
+  app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:76: syntax error, unexpected '<'
+  app/views/main/index.html.erb:78: syntax error, unexpected '<'
+  app/views/main/index.html.erb:80: unknown regexp option - a
+  app/views/main/index.html.erb:80: syntax error, unexpected '<'
+  app/views/main/index.html.erb:84: unknown regexp option - l
+  app/views/main/index.html.erb:85: syntax error, unexpected '<'
+  app/views/main/index.html.erb:91: unknown regexp option - p
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:94: unknown regexp option - l
+  app/views/main/index.html.erb:97: unknown regexp options - dv
+  app/views/main/index.html.erb:99: syntax error, unexpected '<'
+  app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:100: syntax error, unexpected '<'
+  app/views/main/index.html.erb:102: syntax error, unexpected '<'
+  app/views/main/index.html.erb:104: unknown regexp option - a
+  app/views/main/index.html.erb:104: syntax error, unexpected '<'
+  app/views/main/index.html.erb:108: unknown regexp option - l
+  app/views/main/index.html.erb:109: syntax error, unexpected '<'
+  app/views/main/index.html.erb:116: unterminated string meets end of file
+  app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'
+
+
+I, [2015-12-04T23:42:19.146884 #21491]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:42:19 +0000
+I, [2015-12-04T23:42:19.178428 #21491]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:42:19.189861 #21491] DEBUG -- :   [1m[36mMovies Load (2.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:42:19.242774 #21491] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:42:19.243773 #21491] DEBUG -- :   [1m[36mMovies Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:42:19.244490 #21491] DEBUG -- :   [1m[35mMovies Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:42:19.292084 #21491]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.9ms)
+I, [2015-12-04T23:42:19.294472 #21491]  INFO -- : Completed 200 OK in 116ms (Views: 49.4ms | ActiveRecord: 5.5ms)
+I, [2015-12-04T23:46:47.351935 #22435]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:46:47 +0000
+I, [2015-12-04T23:46:47.383517 #22435]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:46:47.399908 #22435] DEBUG -- :   [1m[36mMovies Load (1.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:46:47.453242 #22435] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:46:47.454168 #22435] DEBUG -- :   [1m[36mMovies Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:46:47.454934 #22435] DEBUG -- :   [1m[35mMovies Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:46:47.505493 #22435]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.8ms)
+I, [2015-12-04T23:46:47.508122 #22435]  INFO -- : Completed 200 OK in 124ms (Views: 52.5ms | ActiveRecord: 5.0ms)
+I, [2015-12-04T23:46:51.470737 #22435]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:46:51 +0000
+I, [2015-12-04T23:46:51.472184 #22435]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:46:51.474203 #22435] DEBUG -- :   [1m[36mMovies Load (0.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:46:51.475697 #22435] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:46:51.476831 #22435] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:46:51.477910 #22435] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:46:51.480536 #22435]  INFO -- :   Rendered main/index.html.erb within layouts/application (0.6ms)
+I, [2015-12-04T23:46:51.481763 #22435]  INFO -- : Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 1.5ms)
+I, [2015-12-04T23:46:53.779106 #22435]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-04 23:46:53 +0000
+I, [2015-12-04T23:46:53.780787 #22435]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-04T23:46:53.780998 #22435]  INFO -- :   Parameters: {"movieID"=>"1"}
+D, [2015-12-04T23:46:53.820997 #22435] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1[0m  [["movieid", 1]]
+I, [2015-12-04T23:46:53.874657 #22435]  INFO -- :   Rendered movies/show.html.erb within layouts/application (0.8ms)
+I, [2015-12-04T23:46:53.875599 #22435]  INFO -- : Completed 200 OK in 94ms (Views: 53.7ms | ActiveRecord: 0.7ms)
+I, [2015-12-04T23:51:19.636060 #23365]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-04 23:51:19 +0000
+I, [2015-12-04T23:51:19.680112 #23365]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-04T23:51:19.680358 #23365]  INFO -- :   Parameters: {"movieID"=>"1"}
+D, [2015-12-04T23:51:19.756183 #23365] DEBUG -- :   [1m[36mMovies Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1[0m  [["movieid", 1]]
+I, [2015-12-04T23:51:19.828857 #23365]  INFO -- :   Rendered movies/show.html.erb within layouts/application (1.3ms)
+I, [2015-12-04T23:51:19.831539 #23365]  INFO -- : Completed 200 OK in 151ms (Views: 63.2ms | ActiveRecord: 3.7ms)
+I, [2015-12-04T23:51:22.034594 #23365]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-04 23:51:22 +0000
+F, [2015-12-04T23:51:22.036708 #23365] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-04T23:51:22.368591 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+I, [2015-12-04T23:51:22.375085 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+I, [2015-12-04T23:51:22.379502 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+I, [2015-12-04T23:51:22.384517 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-12-04T23:51:22.384901 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (295.8ms)
+I, [2015-12-04T23:51:22.401409 #23365]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-04 23:51:22 +0000
+F, [2015-12-04T23:51:22.402630 #23365] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-04T23:51:22.444728 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.6ms)
+I, [2015-12-04T23:51:22.448752 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+I, [2015-12-04T23:51:22.452796 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-12-04T23:51:22.456415 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-04T23:51:22.457139 #23365]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.7ms)
+I, [2015-12-04T23:51:28.297016 #23365]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:51:28 +0000
+I, [2015-12-04T23:51:28.298771 #23365]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:51:28.301153 #23365] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:51:28.302339 #23365] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:51:28.303028 #23365] DEBUG -- :   [1m[35mMovies Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:51:28.303718 #23365] DEBUG -- :   [1m[36mMovies Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3[0m
+I, [2015-12-04T23:51:28.346921 #23365]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.1ms)
+I, [2015-12-04T23:51:28.347382 #23365]  INFO -- : Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.5ms)
+F, [2015-12-04T23:51:28.348967 #23365] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.append=( link_to <a href="place holder"><img src ="<%...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...ink_to <a href="place holder"><img src ="<%= a.urlink );@out...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em;"...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...= "width:10em; height: 15em;"></a><br>, m_path(a.movieid) %> 
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:70: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:73: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected '<'
+    <div id="Comedy" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Comedy" class="posters">
+                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:76: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:78: syntax error, unexpected '<'
+@output_buffer.safe_append='        <br><li>
+                                         ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: syntax error, unexpected '<'
+...width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:84: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:85: syntax error, unexpected '<'
+    </div>
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:91: unknown regexp option - p
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+            <a href="place holder"><img sr...
+             ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...       <a href="place holder"><img src ="'.freeze;@output_bu...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em">...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...e= "width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:94: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:97: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected '<'
+    <div id="Romance" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Romance" class="posters">
+                           ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:100: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:102: syntax error, unexpected '<'
+@output_buffer.safe_append='         <br><li>
+                                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: syntax error, unexpected '<'
+...itdth:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:108: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:109: syntax error, unexpected '<'
+    </div>
+     ^
+end pattern with unmatched parenthesis: /div>
+
+
+    <!--
+    <script>
+    for(var i=0;i<5;i++){
+      var text = "ol li:nth-child("+i+")";
+      $(text).find("a").attr("href", "http:/
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: unterminated string meets end of file
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'):
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:70: unknown regexp option - l
+  app/views/main/index.html.erb:73: unknown regexp options - dv
+  app/views/main/index.html.erb:75: syntax error, unexpected '<'
+  app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:76: syntax error, unexpected '<'
+  app/views/main/index.html.erb:78: syntax error, unexpected '<'
+  app/views/main/index.html.erb:80: unknown regexp option - a
+  app/views/main/index.html.erb:80: syntax error, unexpected '<'
+  app/views/main/index.html.erb:84: unknown regexp option - l
+  app/views/main/index.html.erb:85: syntax error, unexpected '<'
+  app/views/main/index.html.erb:91: unknown regexp option - p
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:94: unknown regexp option - l
+  app/views/main/index.html.erb:97: unknown regexp options - dv
+  app/views/main/index.html.erb:99: syntax error, unexpected '<'
+  app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:100: syntax error, unexpected '<'
+  app/views/main/index.html.erb:102: syntax error, unexpected '<'
+  app/views/main/index.html.erb:104: unknown regexp option - a
+  app/views/main/index.html.erb:104: syntax error, unexpected '<'
+  app/views/main/index.html.erb:108: unknown regexp option - l
+  app/views/main/index.html.erb:109: syntax error, unexpected '<'
+  app/views/main/index.html.erb:116: unterminated string meets end of file
+  app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'
+
+
+I, [2015-12-04T23:51:28.532225 #23378]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-04 23:51:28 +0000
+I, [2015-12-04T23:51:28.613607 #23378]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-04T23:51:28.644277 #23378] DEBUG -- :   [1m[36mMovies Load (7.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:51:28.776290 #23378] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-04T23:51:28.780364 #23378] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-04T23:51:28.781583 #23378] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-04T23:51:28.834599 #23378]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.2ms)
+I, [2015-12-04T23:51:28.835044 #23378]  INFO -- : Completed 500 Internal Server Error in 212ms (ActiveRecord: 11.0ms)
+F, [2015-12-04T23:51:28.836563 #23378] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...buffer.append=( link_to <a href="place holder"><img src ="<%...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...ink_to <a href="place holder"><img src ="<%= a.urlink );@out...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em;"...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:67: syntax error, unexpected '<'
+...= "width:10em; height: 15em;"></a><br>, m_path(a.movieid) %> 
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:70: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:73: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected '<'
+    <div id="Comedy" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Comedy" class="posters">
+                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:76: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:78: syntax error, unexpected '<'
+@output_buffer.safe_append='        <br><li>
+                                         ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:80: syntax error, unexpected '<'
+...width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:84: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:85: syntax error, unexpected '<'
+    </div>
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:91: unknown regexp option - p
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+            <a href="place holder"><img sr...
+             ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...       <a href="place holder"><img src ="'.freeze;@output_bu...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style= "width:10em; height: 15em">...
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:92: syntax error, unexpected '<'
+...e= "width:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:94: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:97: unknown regexp options - dv
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected '<'
+    <div id="Romance" class="posters">
+     ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+    <div id="Romance" class="posters">
+                           ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:100: syntax error, unexpected '<'
+      <ol>
+       ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:102: syntax error, unexpected '<'
+@output_buffer.safe_append='         <br><li>
+                                          ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: unknown regexp option - a
+/home/vagrant/project/webroot/app/views/main/index.html.erb:104: syntax error, unexpected '<'
+...itdth:10em; height: 15em"></a><br>
+...                               ^
+/home/vagrant/project/webroot/app/views/main/index.html.erb:108: unknown regexp option - l
+/home/vagrant/project/webroot/app/views/main/index.html.erb:109: syntax error, unexpected '<'
+    </div>
+     ^
+end pattern with unmatched parenthesis: /div>
+
+
+    <!--
+    <script>
+    for(var i=0;i<5;i++){
+      var text = "ol li:nth-child("+i+")";
+      $(text).find("a").attr("href", "http:/
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: unterminated string meets end of file
+/home/vagrant/project/webroot/app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'):
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:67: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:67: syntax error, unexpected '<'
+  app/views/main/index.html.erb:70: unknown regexp option - l
+  app/views/main/index.html.erb:73: unknown regexp options - dv
+  app/views/main/index.html.erb:75: syntax error, unexpected '<'
+  app/views/main/index.html.erb:75: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:76: syntax error, unexpected '<'
+  app/views/main/index.html.erb:78: syntax error, unexpected '<'
+  app/views/main/index.html.erb:80: unknown regexp option - a
+  app/views/main/index.html.erb:80: syntax error, unexpected '<'
+  app/views/main/index.html.erb:84: unknown regexp option - l
+  app/views/main/index.html.erb:85: syntax error, unexpected '<'
+  app/views/main/index.html.erb:91: unknown regexp option - p
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:92: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/main/index.html.erb:92: syntax error, unexpected '<'
+  app/views/main/index.html.erb:94: unknown regexp option - l
+  app/views/main/index.html.erb:97: unknown regexp options - dv
+  app/views/main/index.html.erb:99: syntax error, unexpected '<'
+  app/views/main/index.html.erb:99: syntax error, unexpected keyword_class, expecting ')'
+  app/views/main/index.html.erb:100: syntax error, unexpected '<'
+  app/views/main/index.html.erb:102: syntax error, unexpected '<'
+  app/views/main/index.html.erb:104: unknown regexp option - a
+  app/views/main/index.html.erb:104: syntax error, unexpected '<'
+  app/views/main/index.html.erb:108: unknown regexp option - l
+  app/views/main/index.html.erb:109: syntax error, unexpected '<'
+  app/views/main/index.html.erb:116: unterminated string meets end of file
+  app/views/main/index.html.erb:116: syntax error, unexpected $end, expecting ')'
+
+
+I, [2015-12-05T00:00:21.285940 #25593]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 00:00:21 +0000
+I, [2015-12-05T00:00:21.344841 #25593]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T00:00:21.356277 #25593] DEBUG -- :   [1m[36mMovies Load (1.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T00:00:21.412110 #25593] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T00:00:21.413331 #25593] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T00:00:21.414211 #25593] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T00:00:21.474915 #25593]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-12-05T00:00:21.477399 #25593]  INFO -- : Completed 200 OK in 132ms (Views: 62.5ms | ActiveRecord: 6.2ms)
+I, [2015-12-05T00:00:43.214186 #25593]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-05 00:00:43 +0000
+F, [2015-12-05T00:00:43.215019 #25593] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-05T00:00:43.256839 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-12-05T00:00:43.261865 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+I, [2015-12-05T00:00:43.265712 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+I, [2015-12-05T00:00:43.270245 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-12-05T00:00:43.270509 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.6ms)
+I, [2015-12-05T00:00:43.285376 #25593]  INFO -- : Started GET "/index" for 10.0.2.2 at 2015-12-05 00:00:43 +0000
+F, [2015-12-05T00:00:43.286864 #25593] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-05T00:00:43.297069 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+I, [2015-12-05T00:00:43.300743 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+I, [2015-12-05T00:00:43.304535 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+I, [2015-12-05T00:00:43.308226 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-12-05T00:00:43.308488 #25593]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.8ms)
+I, [2015-12-05T00:07:28.780556 #26580]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 00:07:28 +0000
+I, [2015-12-05T00:07:28.821737 #26580]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T00:07:28.836582 #26580] DEBUG -- :   [1m[36mMovies Load (2.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T00:07:28.891392 #26580] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T00:07:28.892856 #26580] DEBUG -- :   [1m[36mMovies Load (0.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T00:07:28.893841 #26580] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T00:07:28.935372 #26580]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.3ms)
+I, [2015-12-05T00:07:28.938089 #26580]  INFO -- : Completed 200 OK in 116ms (Views: 43.5ms | ActiveRecord: 6.2ms)
+I, [2015-12-05T00:07:36.266047 #26580]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-05 00:07:36 +0000
+I, [2015-12-05T00:07:36.268208 #26580]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-05T00:07:36.268486 #26580]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-05T00:07:36.317835 #26580] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-05T00:07:36.322849 #26580]  INFO -- :   Rendered movies/search.html.erb within layouts/application (7.3ms)
+I, [2015-12-05T00:07:36.324042 #26580]  INFO -- : Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 1.2ms)
+I, [2015-12-05T00:07:38.634459 #26580]  INFO -- : Started GET "/movies/30" for 10.0.2.2 at 2015-12-05 00:07:38 +0000
+I, [2015-12-05T00:07:38.635870 #26580]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-05T00:07:38.636065 #26580]  INFO -- :   Parameters: {"movieID"=>"30"}
+D, [2015-12-05T00:07:38.669252 #26580] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 30]]
+I, [2015-12-05T00:07:38.690886 #26580]  INFO -- :   Rendered movies/show.html.erb within layouts/application (0.8ms)
+I, [2015-12-05T00:07:38.692059 #26580]  INFO -- : Completed 200 OK in 56ms (Views: 21.9ms | ActiveRecord: 0.7ms)
+I, [2015-12-05T00:07:40.397520 #26580]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-05 00:07:40 +0000
+I, [2015-12-05T00:07:40.399082 #26580]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-05T00:07:40.400822 #26580] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T00:07:40.402247 #26580] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-05T00:07:40.403716 #26580] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-05T00:07:40.404817 #26580] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+I, [2015-12-05T00:07:40.427638 #26580]  INFO -- :   Rendered main/index.html.erb within layouts/application (1.5ms)
+I, [2015-12-05T00:07:40.429471 #26580]  INFO -- : Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 1.6ms)
