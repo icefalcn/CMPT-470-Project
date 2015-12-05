@@ -49,21 +49,19 @@
   </div> 
   
   <div class="lists central border_shadow" style="position:relative; height:93em;background-color: white; top: 3.85em">
-        
-    <h2>Most Popular</h2>
-
-    <ul id = "genres">
-      <li style="font-size:1.5em; margin-left:3em;">Action</li>
-      <li style="font-size:1.5em; margin-left:6.5em;">Comedy</li>
-      <li style="font-size:1.5em; margin-left:5.7em;">Animation</li>
-      <li style="font-size:1.5em; margin-left:5.4em;">Romance</li>
-    </ul>
+    <h2 style="padding-left: 3%;">Most Popular</h2>
+      <ul id = "genres">
+        <li style="font-size:1.5em; margin-left:3em;">Action</li>
+        <li style="font-size:1.5em; margin-left:6.5em;">Comedy</li>
+        <li style="font-size:1.5em; margin-left:5.7em;">Animation</li>
+        <li style="font-size:1.5em; margin-left:5.4em;">Romance</li>
+      </ul>
     
     <div id="Action" class="posters">
       <ol>
         <% @action.each do |a| %>
          <br><li>
-            <p><%= a.title %></p>          
+            <p><%= a.title %></p>  
             <a href="place holder"><img src ="<%= a.urlink %>" style= "width:10em; height: 15em;"></a><br>
             <hr> 
          </li>
