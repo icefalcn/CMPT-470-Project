@@ -130,6 +130,7 @@ body{
     color:#f44336;
 }
 .navbar{
+border-radius:0;
 width: 65em;
 margin-left: auto;
 margin-right:auto;
@@ -342,6 +343,21 @@ background-color: #666666;
 .posters img{
   width: 10em;
   height: 15em;
+}
+
+.watchlist_result img{
+  width: 14em;
+  length: 21em;
+}
+
+.search_result{
+  padding-left:3em;
+}
+
+.fake_link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .reg {

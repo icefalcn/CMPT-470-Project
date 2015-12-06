@@ -1,14 +1,22 @@
 <div> <p/ This is a sentence </p></div>
 <div class="central border_shadow">
-	<div id="Action" class="posters">
+	<div id="Action" class="watchlist_result">
 	  <ol>
 	    <% @watchlist.each do |w| %>
 	     <br><li>
 	        <p><%= w.title %></p>  
 	    	<%= link_to(image_tag(w.urlink) , m_path(w.movieid)) %>
 	        <hr> 
+	        <span class = "fake_link" id="remove_from_watchlist">remove from watchlist </span>
 	     </li>
 	    <% end %>
 	  </ol>
 	</div>
 <div class="container border_shadow">
+
+<script> 
+$(document).ready(function() {
+$('#remove_from_watchlist').on('click',function(){
+    $(this).closest('li').remove();
+})});
+</script>
