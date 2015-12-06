@@ -93,7 +93,7 @@ execute 'grab genres' do
 end
 
 execute 'reset db' do
-  command 'echo "delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
+  command 'echo "delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
 end
 
 execute 'fill db' do

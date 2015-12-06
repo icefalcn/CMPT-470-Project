@@ -4728,3 +4728,122 @@ I, [2015-12-06T00:23:22.399168 #4870]  INFO -- : Completed 200 OK in 316ms (View
 >>>>>>> bab982e207283e6be5208eed455ba0908a58a5de
 =======
 >>>>>>> bab982e207283e6be5208eed455ba0908a58a5de
+I, [2015-12-06T01:57:39.304908 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:39 +0000
+I, [2015-12-06T01:57:39.344288 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:39.447147 #7264] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T01:57:39.461074 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (71.7ms)
+I, [2015-12-06T01:57:39.463591 #7264]  INFO -- : Completed 200 OK in 119ms (Views: 104.7ms | ActiveRecord: 4.2ms)
+I, [2015-12-06T01:57:39.824539 #7264]  INFO -- : Started GET "/favicon.ico" for 10.0.2.2 at 2015-12-06 01:57:39 +0000
+F, [2015-12-06T01:57:39.826094 #7264] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-06T01:57:39.844637 #7264]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-12-06T01:57:39.851693 #7264]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+I, [2015-12-06T01:57:39.856855 #7264]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+I, [2015-12-06T01:57:39.862947 #7264]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+I, [2015-12-06T01:57:39.863247 #7264]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.9ms)
+I, [2015-12-06T01:57:44.276032 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:44 +0000
+I, [2015-12-06T01:57:44.279608 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:44.283600 #7264] DEBUG -- :   [1m[35mWatchlists Load (1.1ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T01:57:44.289102 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (7.4ms)
+I, [2015-12-06T01:57:44.290704 #7264]  INFO -- : Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.1ms)
+I, [2015-12-06T01:57:44.581960 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:44 +0000
+I, [2015-12-06T01:57:44.584411 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:44.587224 #7264] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T01:57:44.592204 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (6.5ms)
+I, [2015-12-06T01:57:44.593811 #7264]  INFO -- : Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.1ms)
+I, [2015-12-06T01:57:45.955953 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:45 +0000
+I, [2015-12-06T01:57:45.957711 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:45.961530 #7264] DEBUG -- :   [1m[35mWatchlists Load (1.1ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T01:57:45.967096 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (7.1ms)
+I, [2015-12-06T01:57:45.968635 #7264]  INFO -- : Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.1ms)
+I, [2015-12-06T01:57:46.777351 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:46 +0000
+I, [2015-12-06T01:57:46.781198 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:46.784045 #7264] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T01:57:46.789187 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (6.5ms)
+I, [2015-12-06T01:57:46.791007 #7264]  INFO -- : Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+I, [2015-12-06T01:57:47.559547 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:47 +0000
+I, [2015-12-06T01:57:47.562767 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:47.568958 #7264] DEBUG -- :   [1m[35mWatchlists Load (2.6ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T01:57:47.578167 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (12.6ms)
+I, [2015-12-06T01:57:47.579879 #7264]  INFO -- : Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 2.6ms)
+I, [2015-12-06T01:57:48.273255 #7264]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 01:57:48 +0000
+I, [2015-12-06T01:57:48.275299 #7264]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T01:57:48.278489 #7264] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T01:57:48.282995 #7264]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (6.2ms)
+I, [2015-12-06T01:57:48.283972 #7264]  INFO -- : Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.1ms)
+I, [2015-12-06T01:57:59.314515 #7264]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-06 01:57:59 +0000
+I, [2015-12-06T01:57:59.316205 #7264]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-06T01:57:59.320123 #7264] DEBUG -- :   [1m[35mMovies Load (1.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3
+D, [2015-12-06T01:57:59.329687 #7264] DEBUG -- :   [1m[36mMovies Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-06T01:57:59.330611 #7264] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3
+D, [2015-12-06T01:57:59.331093 #7264] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3[0m
+I, [2015-12-06T01:57:59.358658 #7264]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.3ms)
+I, [2015-12-06T01:57:59.359751 #7264]  INFO -- : Completed 200 OK in 43ms (Views: 28.1ms | ActiveRecord: 3.7ms)
+I, [2015-12-06T02:03:52.533502 #8336]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 02:03:52 +0000
+I, [2015-12-06T02:03:52.570960 #8336]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T02:03:52.672722 #8336] DEBUG -- :   [1m[36mWatchlists Load (1.0ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T02:03:52.689790 #8336]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (72.9ms)
+I, [2015-12-06T02:03:52.692206 #8336]  INFO -- : Completed 200 OK in 121ms (Views: 106.9ms | ActiveRecord: 4.5ms)
+I, [2015-12-06T02:08:04.211656 #9233]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 02:08:04 +0000
+I, [2015-12-06T02:08:04.252061 #9233]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T02:08:04.356830 #9233] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T02:08:04.369312 #9233]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (71.1ms)
+I, [2015-12-06T02:08:04.373391 #9233]  INFO -- : Completed 200 OK in 120ms (Views: 107.0ms | ActiveRecord: 3.7ms)
+I, [2015-12-06T02:08:17.544618 #9233]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-06 02:08:17 +0000
+I, [2015-12-06T02:08:17.547856 #9233]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-06T02:08:17.551882 #9233] DEBUG -- :   [1m[35mMovies Load (1.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3
+D, [2015-12-06T02:08:17.561902 #9233] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-06T02:08:17.562711 #9233] DEBUG -- :   [1m[35mMovies Load (0.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3
+D, [2015-12-06T02:08:17.563492 #9233] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3[0m
+I, [2015-12-06T02:08:17.592139 #9233]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.4ms)
+I, [2015-12-06T02:08:17.593512 #9233]  INFO -- : Completed 200 OK in 45ms (Views: 29.5ms | ActiveRecord: 3.2ms)
+I, [2015-12-06T02:08:31.307856 #9233]  INFO -- : Started POST "/main" for 10.0.2.2 at 2015-12-06 02:08:31 +0000
+F, [2015-12-06T02:08:31.309249 #9233] FATAL -- : 
+ActionController::RoutingError (No route matches [POST] "/main"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-06T02:08:31.325783 #9233]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+I, [2015-12-06T02:08:31.338498 #9233]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+I, [2015-12-06T02:08:31.343431 #9233]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+I, [2015-12-06T02:08:31.349475 #9233]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-12-06T02:08:31.349728 #9233]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.1ms)
