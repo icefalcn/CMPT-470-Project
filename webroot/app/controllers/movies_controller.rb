@@ -31,11 +31,7 @@ class MoviesController < ApplicationController
           format.xml  { render :xml => @movie }
           format.json { render :json => @movie }
         end 
-        if params["vote"] == "1"
-              @movie.increment!(:rating,1)
-        elsif params["vote"] == "-1"
-              @movie.increment!(:rating,-1)
-        end
+        @movie.increment!(:rating,params[:vote].to_i)
     else #update other attr
         if @movie.update(movie_params)
           redirect_to @m
