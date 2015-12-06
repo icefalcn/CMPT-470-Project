@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   
-  get '/login' => 'users#login'
-  post '/login' => 'movies#index'
-  get 'register' => 'users#register', as: :user
-  post '/register' => 'users#login'
+  devise_for :users
+  #get '/login' => 'users#login'
+  #post '/login' => 'movies#index'
+  #get 'register' => 'users#register', as: :user
+  #post '/register' => 'users#login'
 
   root 'main#index'
   get 'movies' => 'movies#index'
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
 
   #get 'main/index'
   #get '/movies' => 'movies#index'
-  get 'users/register' => 'users#register'
+  #get 'users/register' => 'users#register'
   get 'watchlist' => 'watchlist#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

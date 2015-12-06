@@ -1,8 +1,0 @@
-<%= simple_form_for @user, 
-    :url => url_for(:action => 'login'),
-    :method => 'post' do |f| %>
-		
-  <%= f.input :username %>
-  <%= f.input :password, input_html: { minlength: 8}, hint: 'Wrong password, please try again.' %>
-  <%= f.button :submit%>
-<% end %>
