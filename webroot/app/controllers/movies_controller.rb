@@ -32,11 +32,11 @@ class MoviesController < ApplicationController
           format.json { render :json => @movie }
         end 
         if params["vote"] == "1"
-              @movie.update_attribute(:title, "up voted")
-              # @movie.increment!(:rating,1)
+              #@movie.update_attribute(:title, "up voted")
+              @movie.increment!(:rating,1)
         elsif params["vote"] == "-1"
-              @movie.update_attribute(:title, "down voted")
-              # @movie.increment!(:rating,-1)
+              #@movie.update_attribute(:title, "down voted")
+              @movie.increment!(:rating,-1)
         end
     else #update other attr
         if @movie.update(movie_params)
