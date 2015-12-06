@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <title>Movie Database</title>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-
-<body>
 <div class="central border_shadow" >
 
   <div id="movie_show">
@@ -18,7 +6,6 @@
       <div id="trailer_top_panel">
         <div id="movie_info"> 
           <h3 class="movie-title"><%= @movie.title %>  </h3>
-          <h3> <%= @movie.year %>  </h3>
         </div>
         <div id="share">
           <ul id="share_list_ul">
@@ -34,10 +21,13 @@
       <div id="trailer_middle_panel">
         <div id="vote_panel">
           <div id="upvote_panel" align="center">
-          <img id="upvote_img" src="<%= asset_path 'upvote.png' %>" style="width: 70%;  height: 70%;" >
+          <img id="upvote_img" src="<%= asset_path 'upvote_g.png' %>" style="width: 70%;  height: 90%;" >
+          </div> 
+          <div id="vote_value_panel">
+          <p> <%= @number %> </p>
           </div> 
           <div id="downvote_panel" align="center">
-          <img id="downvote_img" src="<%= asset_path 'downvote.png' %>" style=" width: 70%; height: 70%;" >
+          <img id="downvote_img" src="<%= asset_path 'downvote_g.png' %>" style=" width: 70%; height: 90%;" >
           </div> 
         </div> 
         <div id="youtube_panel">
@@ -84,71 +74,60 @@
     #comment section below#   
   </div> <%# movie_show %>
     
-  
 </div>
 
 
 
-
-</body>
 <script type="text/javascript">
 
   $(document).ready(function() {
-
     $(".youtube_list_div span").hide();
     $(".youtube_list_div").on('click',function(e){
           var url = $(this).find("span").text();
-          // alert(url);
-           window.frames[0].location = url;
-           // e.preventDefault();
+          window.frames[0].location = url;
     });  
     
-    // var title = "adad";
-    // var title =  %= @movie.title %> ;
     // var url = <% request.fullpath %> ;
-    var url = "/movies/" + "<%=@movie.id%>" ;
+    var url = "/movies/" + "<%=@movie.movieID%>" ;
+
+    // var vote_status = @vote_status; //from controller
+    var vote_status = 0;
+
     $("#upvote_panel").click(function() {
-       $.ajax({
-         type: "POST",
-         url: url + "/upvote",
-         data: ''
-         });
+        if (vote_status !=1){
+          $.ajax({
+            type: "PATCH",
+            url: url,
+            data: {'vote' : '1',},
+            dataType: "json",
+            success: function() {
+            }
+          });
+          $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
+          $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
+          vote_status = 1;
+        }
     });
 
-
     $("#downvote_panel").click(function() {
-        // $.ajax({
-        // type: 'PATCH',
-        // url: url,
-        // data: 
-        //   {'title':        "ddd",
-        //   'image':        "aaaa",
-        //   'release_year': "12121" ,
-        //   'plot':         "nothing"},
-        //   dataType: "json",
-        //   success: function(msg) {
-        //     alert( "Data Saved: " + msg );
-        //   }
-          // "title=ddd&image=aaaa&release_year=12121&plot=nothing"
-                    // "title=ddd"
-                $.ajax({
-         type: "POST",
-         url: url + "/downvote",
-         data: ''
-         
-        
-
-
-
-
-                // release_year: '20111111'}
-         });
+        if (vote_status !=-1){
+          $.ajax({
+            type: "PATCH",
+            url: url,
+            data: 'vote=-1',
+            dataType: "json",
+            success: function() {
+            }
+          });
+          $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
+          $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
+          vote_status = -1;
+        }
     });
 
 
   });
 </script>
-</html>
 
 
 
