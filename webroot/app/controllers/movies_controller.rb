@@ -15,20 +15,35 @@ class MoviesController < ApplicationController
     @title = @movie.title
     @genre = @movie.genre
     @rating = @movie.rating
-    @synopsys = @movie.synopsys   
+    @synopsys = @movie.synopsys  
+    @number = @movie.rating 
   end
   
   def edit
-    @movie = Movies.find(params[:id])
+    @movie = Movies.find(params[:movieID])
   end
   
   def update
-    @movie = Movies.find(params[:id])
-      if @movie.update(movie_params)
-        redirect_to @movie
-      else
-        render 'edit'
-      end
+    @movie = Movies.find(params[:movieID])
+    if params[:vote].present? # if params.has_key?(title) #update vote attr
+        respond_to do |format|
+          format.html # show.html.erb
+          format.xml  { render :xml => @movie }
+          format.json { render :json => @movie }
+        end 
+        if params["vote"] == "1"
+              @movie.increment!(:rating,1)
+        elsif params["vote"] == "-1"
+              @movie.increment!(:rating,-1)
+        end
+    else #update other attr
+        if @movie.update(movie_params)
+          redirect_to @m
+        else
+          render 'edit'
+        end
+    end
+
   end
   
   private

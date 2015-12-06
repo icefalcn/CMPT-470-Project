@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   
-  post 'movies/:id/upvote' => 'movies#upvote'
-  post 'movies/:id/downvote' => 'movies#downvote'
-
   get '/login' => 'users#login'
   post '/login' => 'movies#index'
   get 'register' => 'users#register', as: :user
@@ -15,6 +12,9 @@ Rails.application.routes.draw do
   get 'movies/search' => 'movies#search'
   get 'movies/:movieID' => 'movies#show', as: :m
   post 'movies/search' => 'movies#search'
+  get '/movies/:movieID/edit' => 'movies#edit', as: :edit_movie
+  patch '/movies/:movieID' => 'movies#update'
+
   #get 'main/index'
   #get '/movies' => 'movies#index'
   get 'users/register' => 'users#register'
