@@ -84,6 +84,7 @@ upcoming_hash["results"].each do |movie|
 			poster = ""
 		else
 			poster = 'http://image.tmdb.org/t/p/w500' + movie["poster_path"]
+<<<<<<< HEAD
 		end
 		if movie["overview"].nil?
 			overview = ""
@@ -126,6 +127,9 @@ future_hash["results"].each do |movie|
 		else
 			poster = 'http://image.tmdb.org/t/p/w500' + movie["poster_path"]
 		end
+=======
+		end
+>>>>>>> bab982e207283e6be5208eed455ba0908a58a5de
 		if movie["overview"].nil?
 			overview = ""
 		else
@@ -154,7 +158,49 @@ future_hash["results"].each do |movie|
 	end
 end
 
+<<<<<<< HEAD
 conn.prepare('insert_watchlist', 'insert into watchlists(uid,movieid) values ($1, $2)')
 for i in 1..10
 conn.exec_prepared('insert_watchlist', [1,i ])
+=======
+future_hash["results"].each do |movie|
+	begin
+		title =movie["title"]
+		if movie["release_date"].nil?
+			release = ""
+		else
+			release = movie["release_date"]
+		end
+		if movie["poster_path"].nil?
+			poster = ""
+		else
+			poster = 'http://image.tmdb.org/t/p/w500' + movie["poster_path"]
+		end
+		if movie["overview"].nil?
+			overview = ""
+		else
+			overview = movie["overview"]
+		end
+		if movie["genre_ids"].nil?
+			genres = ""
+		else
+			temp = Array.new
+			ids = movie["genre_ids"]
+			genres
+			if ids.empty?
+				genres = ""
+			end
+			ids.each do |t|
+				if genres.nil?
+					genres = genre[t]
+				else
+					genres = genres + ", " + genre[t]
+				end
+			end
+		end
+
+		conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview])
+	rescue PGError
+	end
+>>>>>>> bab982e207283e6be5208eed455ba0908a58a5de
 end
