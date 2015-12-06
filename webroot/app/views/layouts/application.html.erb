@@ -112,6 +112,44 @@
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
           });
         </script>
+          <script>
+          $(document).ready(function(){
+            $("#search-form").submit(function(event)
+            {
+              var msg = "";
+              var error = "";
+              var Search = document.getElementById('search').value;
+
+              if (Search == "" || Search == null) {
+                msg += "Please input a valid keyword.\n";
+                event.preventDefault();
+              }
+              validateSpecialChars(Search);
+
+              function validateSpecialChars(myStringID) {
+                  var illegalChars = "!#$%^&*()+=-[]\\\;/{}|\"\':<>?";
+                  var strToSearch = myStringID;
+
+                  for (var i = 0; i < strToSearch.length; i++) {
+                      if (illegalChars.indexOf(strToSearch.charAt(i)) != -1) {
+                          error += "Please remove the special characters and try again.";
+                          event.preventDefault();
+                      }
+                      return;
+                  }
+              }
+
+              if (error != "") {
+                  alert(error);
+                  return false;
+              } else if (msg != "") {
+                  alert("Please correct the following:\n" + msg);
+
+                  return false;
+              }
+          });
+        });
+          </script>
     <%= yield %>
   </body>
 </html>
