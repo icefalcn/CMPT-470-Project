@@ -9,6 +9,7 @@ class CreateMovies < ActiveRecord::Migration
       t.integer :rating
       t.string :urlink
       t.text :synopsys
+      t.string :urlandscape
     end
   end
 end

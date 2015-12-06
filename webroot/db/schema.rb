@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20151120035107) do
     t.integer  "rating"
     t.string   "urlink"
     t.text     "synopsys"
+    t.string   "urlandscape"
   end
 
 end

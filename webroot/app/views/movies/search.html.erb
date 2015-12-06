@@ -2,17 +2,20 @@
 
   <div class="central border_shadow">
 
-
+  <div class ="search_result">
     <h2>Search results:</h2>
     <% @movies.each do |m| %>
       <div class="movie">
         <%= image_tag m.urlink %>
         <h3><%= m.title %></h3>
         <p> <%= m.year %> </p>
+        <p> <%= m.synopsys %> </p>
         <%= link_to "Learn more", m_path(m.movieid) %> 
+        <hr>  
         <!--<%= link_to "Learn more", '/movies/2' %> 
         <a href="/movies/2">Learn more</a>-->
       </div>
     <% end %>
+    </div>
   </div>
 </div>

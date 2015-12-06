@@ -24,7 +24,7 @@
           <img id="upvote_img" src="<%= asset_path 'upvote_g.png' %>" style="width: 70%;  height: 90%;" >
           </div> 
           <div id="vote_value_panel">
-          <p> <%= @number %> </p>
+          <p id="vote_value"> <%= @number %></p>
           </div> 
           <div id="downvote_panel" align="center">
           <img id="downvote_img" src="<%= asset_path 'downvote_g.png' %>" style=" width: 70%; height: 90%;" >
@@ -40,32 +40,32 @@
       <ul id="youtube_list_ul">
           <li><div  class="youtube_list_div">
             <img class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/0.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
           </div></li>
           <li><div  class="youtube_list_div">
             <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/TSm82j_MFzY/0.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/TSm82j_MFzY</span>
           </div></li>
           <li><div class="youtube_list_div">
             <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
           </div></li>
           <li><div class="youtube_list_div">
             <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
           </div></li>
           <li><div class="youtube_list_div">
             <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
           </div></li>
           <li><div class="youtube_list_div">
             <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
           </div></li>
       </ul>
@@ -89,40 +89,93 @@
     
     // var url = <% request.fullpath %> ;
     var url = "/movies/" + <%=@movie.movieid%> ;
-
     // var vote_status = @vote_status; //from controller
     var vote_status = 0;
 
     $("#upvote_panel").click(function() {
-        if (vote_status !=1){
-          $.ajax({
-            type: "PATCH",
-            url: url,
-            data: {'vote' : '1',},
-            dataType: "json",
-            success: function() {
-            }
-          });
-          $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
-          $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
-          vote_status = 1;
-        }
+      if (vote_status == -1){ //currently down voted
+        $.ajax({
+          type: "PATCH",
+          url: url,
+          data: {'vote' : '2',},
+          dataType: "json",
+          success: function() {
+              $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
+              $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
+              $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+              vote_status = 1;
+          }
+        });
+      }
+      else if (vote_status == 0){ //currently not voted
+        $.ajax({
+          type: "PATCH",
+          url: url,
+          data: {'vote' : '1',},
+          dataType: "json",
+          success: function() {
+              $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
+              $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+              vote_status = 1;
+          }
+        });
+      }
+      else{             //currently up voted
+        $.ajax({
+          type: "PATCH",
+          url: url,
+          data: {'vote' : '-1',},
+          dataType: "json",
+          success: function() {            
+              $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
+              $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+              vote_status = 0;
+          }
+        });
+      }
     });
 
     $("#downvote_panel").click(function() {
-        if (vote_status !=-1){
-          $.ajax({
-            type: "PATCH",
-            url: url,
-            data: 'vote=-1',
-            dataType: "json",
-            success: function() {
-            }
-          });
-          $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
-          $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
-          vote_status = -1;
-        }
+      if (vote_status == -1){ //currently down voted
+        $.ajax({
+          type: "PATCH",
+          url: url,
+          data: 'vote=1',
+          dataType: "json",
+          success: function() {          
+            $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
+            $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+            vote_status = 0;
+          }
+        });
+      }
+      else if (vote_status == 0){ //currently un voted
+        $.ajax({
+          type: "PATCH",
+          url: url,
+          data: 'vote=-1',
+          dataType: "json",
+          success: function() {
+            $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
+            $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+            vote_status = -1;
+          }
+        });
+      }
+      else {                //currently up voted
+        $.ajax({
+          type: "PATCH",
+          url: url,
+          data: 'vote=-2',
+          dataType: "json",
+          success: function() {
+            $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
+            $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
+            $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+            vote_status = -1;
+          }
+        });
+      }
     });
 
 

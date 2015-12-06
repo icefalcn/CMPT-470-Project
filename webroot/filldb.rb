@@ -25,7 +25,7 @@ genre_hash = JSON.parse(genreFile)
 genre = Hash.new(0)
 
 conn = PG::connect(host: "localhost", user: "vagrant", password: "vagrant", dbname: "mydb")
-conn.prepare('insert_movie', 'insert into movies(title, genre, year, rating, urlink, synopsys) values ($1, $2, $3, $4, $5, $6)')
+conn.prepare('insert_movie', 'insert into movies(title, genre, year, rating, urlink, synopsys, urlandscape) values ($1, $2, $3, $4, $5, $6, $7)')
 
 genre_hash["genres"].each do |g|
 	genre.store(g["id"], g["name"])
@@ -65,10 +65,15 @@ current_hash["results"].each do |movie|
 					genres = genres + ", " + genre[t]
 				end
 			end
-		end
-
-		conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview])
-	rescue PGError
+        end
+        if movie["backdrop_path"].nil?
+            posterlandscape = ""
+            else
+            posterlandscape = 'http://image.tmdb.org/t/p/w500' + movie["backdrop_path"]
+        end
+        
+        conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview, posterlandscape])
+    rescue PGError
 	end
 end
 
@@ -106,9 +111,13 @@ upcoming_hash["results"].each do |movie|
 					genres = genres + ", " + genre[t]
 				end
 			end
-		end
-
-		conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview])
+        end
+        if movie["backdrop_path"].nil?
+            posterlandscape = ""
+            else
+            posterlandscape = 'http://image.tmdb.org/t/p/w500' + movie["backdrop_path"]
+        end
+        conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview, posterlandscape])
 	rescue PGError
 	end
 end
@@ -147,9 +156,13 @@ future_hash["results"].each do |movie|
 					genres = genres + ", " + genre[t]
 				end
 			end
-		end
-
-		conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview])
+        end
+        if movie["backdrop_path"].nil?
+            posterlandscape = ""
+            else
+            posterlandscape = 'http://image.tmdb.org/t/p/w500' + movie["backdrop_path"]
+        end
+        conn.exec_prepared('insert_movie', [title, genres, release, 0, poster, overview, posterlandscape])
 	rescue PGError
 	end
 end

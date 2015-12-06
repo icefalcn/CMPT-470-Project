@@ -1,5 +1,8 @@
 class WatchlistController < ApplicationController
   def index
-    @watchlist = Watchlist.select("*")
+    @watchlist = Watchlists.select("*")
+  end
+  def remove
+  	#@remove = Watchlists.delete(params[:movieid])
   end
 end
