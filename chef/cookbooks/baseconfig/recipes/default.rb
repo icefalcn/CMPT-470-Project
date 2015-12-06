@@ -44,7 +44,7 @@ end
 
 #need to fix watchlist/customer table creation
 execute 'create_db' do
-  command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, email varchar, primary key(uid)); CREATE TABLE WatchLists (uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid)); insert into users(username, password, emailaddr) values ('test', 'test', 'test@test.com');\" | sudo -u vagrant psql mydb"
+  command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, email varchar unique, primary key(uid)); CREATE TABLE WatchLists (uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid)); CREATE TABLE Vote (uid int, movieid int, status int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid)); insert into users(username, password, email) values ('test', 'test', 'test@test.com');\" | sudo -u vagrant psql mydb"
 end
 
 #execute 'insert_movie' do
@@ -93,7 +93,7 @@ execute 'grab genres' do
 end
 
 execute 'reset db' do
-  command 'echo "delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
+  command 'echo "delete from vote; delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
 end
 
 execute 'fill db' do

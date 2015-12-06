@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   devise_for :users
   #get '/login' => 'users#login'
   #post '/login' => 'movies#index'
@@ -10,7 +9,7 @@ Rails.application.routes.draw do
   get 'movies' => 'movies#index'
 
   
-  get 'movies/search' => 'movies#search'
+  get 'movies/search' => 'movies#search', as: 'Search'
   get 'movies/:movieID' => 'movies#show', as: :m
   post 'movies/search' => 'movies#search'
   get '/movies/:movieID/edit' => 'movies#edit', as: :edit_movie
