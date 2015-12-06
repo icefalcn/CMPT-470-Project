@@ -270,7 +270,6 @@ background-color: #666666;
 }
 #youtube_panel {
     position  : absolute;
-
     top       : 0%;
     left      :20%;
     width     :80%;
@@ -278,18 +277,41 @@ background-color: #666666;
 }
 
 #youtube_list_ul { 
+  position  : absolute;
       margin    : 0px;
       padding   : 0px;
      width: 100%;
      height: 100%;
      overflow-x: auto; 
      white-space: nowrap;
-     }
+}
 #youtube_list_ul>li { 
-     /*width: 50%;*/
      display: inline-block;
-     /*float: left */
-     }
+     position  : relative;
+     width: auto;
+     height: 100%;
+     
+}
+.youtube_list_div{
+     position  : relative;
+     width: 100%;
+     height: 100%;
+     float: left ;
+}    
+.youtube_list_div>span{
+     position  : fixed;
+     bottom: 0px;
+     right: 50%;
+     z-index: -1;
+}   
+.yt_tn{
+}
+.yt_button{
+    position  : absolute;
+    top       : 30%;
+    left      : 35%;
+    z-index   : 1;
+}
 
 #genres li {
     display:inline;
