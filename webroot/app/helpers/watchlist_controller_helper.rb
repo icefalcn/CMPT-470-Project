@@ -1,0 +1,2 @@
+module WatchlistControllerHelper
+end

@@ -1,139 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <title>Movie Database</title>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!--
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-</head>
-
-
-<body>
 <div class="central border_shadow" >
+
   <div id="movie_show">
 
     <div id="trailer_panel">
       <div id="trailer_top_panel">
-        <div id="movie_info"> <h3 class="movie-title">
-          <%= @movie.title %>  </h3>
+        <div id="movie_info"> 
+          <h3 class="movie-title"><%= @movie.title %>  </h3>
         </div>
         <div id="share">
           <ul id="share_list_ul">
-          Share:
+         <!--  Share:
             <li>youtube</li>
             <li>FB</li>
-            <li>Twitter</li>
+            <li>Twitter</li> -->
+            <li><button>Add to Favorites</button></li>
           </ul>
+
         </div>
       </div>
       <div id="trailer_middle_panel">
         <div id="vote_panel">
           <div id="upvote_panel" align="center">
-          <img src="<%= asset_path 'upvote.png' %>" style="width: 80%;  height: 80%;" >
+          <img id="upvote_img" src="<%= asset_path 'upvote_g.png' %>" style="width: 70%;  height: 90%;" >
+          </div> 
+          <div id="vote_value_panel">
+          <p> <%= @number %> </p>
           </div> 
           <div id="downvote_panel" align="center">
-          <img src="<%= asset_path 'downvote.png' %>" style=" width: 80%; height: 80%;" >
+          <img id="downvote_img" src="<%= asset_path 'downvote_g.png' %>" style=" width: 70%; height: 90%;" >
           </div> 
         </div> 
         <div id="youtube_panel">
-          <iframe class = "youtube_list_main" height="100%" width="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
+          <iframe id = "youtube_player" height="100%" width="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
         </div>
       </div> <%# middle end%>
+
+
       <div id="trailer_bottom_panel">
-        <ul id="youtube_list_ul">
-<!-- 
-          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbb</li>
-          <li>aaaaaaaaaaaaaaaaaaaaaacvcvcvcvcvcvvccvvcaaaaaaaaaaaaaaaaa</li>
-          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-          <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-          <li>fddvsvsvdslkfjskghs</li> -->
-          <li><iframe class = "22" height="50%" src="http://img.youtube.com/vi/yQ5U8suTUw0/0.jpg"></iframe></li>
-
-
-
-<!-- 
-          ="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="1" ></iframe></li>
-          <li><iframe class = "22" height="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="2" allowfullscreen></iframe></li> -->
-          <li><iframe class="youtube_list" height="100%" src="//www.youtube.com/embed/TSm82j_MFzY" frameborder="0" allowfullscreen></iframe></li>
-          <li><iframe class="youtube_list" height="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe></li>
-          <li><iframe class = "22" height="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe></li>
-        </ul>
-        <!-- ?controls=2 -->
-
-
+      <ul id="youtube_list_ul">
+          <li><div  class="youtube_list_div">
+            <img class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/0.jpg">
+            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
+          </div></li>
+          <li><div  class="youtube_list_div">
+            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/TSm82j_MFzY/0.jpg">
+            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <span>//www.youtube.com/embed/TSm82j_MFzY</span>
+          </div></li>
+          <li><div class="youtube_list_div">
+            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
+            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
+          </div></li>
+          <li><div class="youtube_list_div">
+            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
+            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
+          </div></li>
+          <li><div class="youtube_list_div">
+            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
+            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
+          </div></li>
+          <li><div class="youtube_list_div">
+            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
+            <img class="yt_button" style="height: 40%; width:30%; " src="/images/play.png" >
+            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
+          </div></li>
+      </ul>
       </div>
-
-
-      
-    </div>
+    </div>  <%# trailer_panel %>
     #comment section below#   
-  </div>
+  </div> <%# movie_show %>
     
-  
 </div>
 
 
 
-
-</body>
 <script type="text/javascript">
 
   $(document).ready(function() {
+    $(".youtube_list_div span").hide();
+    $(".youtube_list_div").on('click',function(e){
+          var url = $(this).find("span").text();
+          window.frames[0].location = url;
+    });  
+    
+    // var url = <% request.fullpath %> ;
+    var url = "/movies/" + <%=@movie.movieid%> ;
 
-    // alert("loaded1111"); working
+    // var vote_status = @vote_status; //from controller
+    var vote_status = 0;
 
-    // $('#trailer_bottom_panel').hover(function(e) {   working
-//           alert("vals1111");
+    $("#upvote_panel").click(function() {
+        if (vote_status !=1){
+          $.ajax({
+            type: "PATCH",
+            url: url,
+            data: {'vote' : '1',},
+            dataType: "json",
+            success: function() {
+            }
+          });
+          $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
+          $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
+          vote_status = 1;
+        }
+    });
 
-//              }, function() {
-//           alert("vals2222");
-//         });
-
-
-  $(".youtube_list").on('click',function(e){
-        // var vals = $(this).html();
-        alert("vals");
-         // $(".youtube_list_main").html(vals);
-         // e.preventDefault();
-  });
-
-  $("iframe").on('click',function(e){
-        // var vals = $(this).html();
-        alert("vals");
-         // $(".youtube_list_main").html(vals);
-         // e.preventDefault();
-  });
-
-  $("iframe").click(function(){
-    alert("The paragraph was clicked.");
-  });
-
-//not working
-  $("iframe").load(function(){$(this).contents().find("body").on('mouseenter', function(event) { 
-
-
-      alert("vals2222");
-
-
-
-
-
-     });
-  });
-
-
+    $("#downvote_panel").click(function() {
+        if (vote_status !=-1){
+          $.ajax({
+            type: "PATCH",
+            url: url,
+            data: 'vote=-1',
+            dataType: "json",
+            success: function() {
+            }
+          });
+          $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
+          $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
+          vote_status = -1;
+        }
+    });
 
 
   });
 </script>
-</html>
 
 
 

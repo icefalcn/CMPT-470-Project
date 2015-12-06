@@ -44,7 +44,7 @@ end
 
 #need to fix watchlist/customer table creation
 execute 'create_db' do
-  command "echo 'CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, emailaddr varchar, primary key(uid)); CREATE TABLE WatchList (uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid));' | sudo -u vagrant psql mydb"
+  command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, emailaddr varchar, urlandscape varchar NOT NULL, primary key(uid)); CREATE TABLE WatchLists (uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid)); insert into users(username, password, emailaddr) values ('test', 'test', 'test@test.com');\" | sudo -u vagrant psql mydb"
 end
 
 #execute 'insert_movie' do
@@ -77,15 +77,15 @@ execute 'apache2_restart' do
   command 'service apache2 restart'
 end
 
-execute 'grab current' do
-  cwd '/home/vagrant/project/webroot'
-  command 'curl -o current.json http://api.themoviedb.org/3/movie/now_playing?api_key=10795773f625eb5f6b31994bf9953e09'
-end
+#execute 'grab current' do
+#  cwd '/home/vagrant/project/webroot'
+#  command 'curl -o current.json http://api.themoviedb.org/3/movie/now_playing?api_key=10795773f625eb5f6b31994bf9953e09'
+#end
 
-execute 'grab upcoming' do
-  cwd '/home/vagrant/project/webroot'
-  command 'curl -o upcoming.json http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09'
-end
+#execute 'grab upcoming' do
+#  cwd '/home/vagrant/project/webroot'
+#  command 'curl -o upcoming.json http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09'
+#end
 
 execute 'grab genres' do
   cwd '/home/vagrant/project/webroot'
@@ -93,7 +93,7 @@ execute 'grab genres' do
 end
 
 execute 'reset db' do
-  command 'echo "delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
+  command 'echo "delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
 end
 
 execute 'fill db' do
