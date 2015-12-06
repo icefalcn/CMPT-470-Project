@@ -7704,3 +7704,87 @@ D, [2015-12-06T04:52:01.148403 #31155] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  UP
 D, [2015-12-06T04:52:01.151551 #31155] DEBUG -- :   [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
 I, [2015-12-06T04:52:01.153158 #31155]  INFO -- : Completed 200 OK in 45ms (Views: 0.4ms | ActiveRecord: 20.2ms)
 >>>>>>> 1b430f8d150a78a7d195b1a080f73a8ac9f44f79
+I, [2015-12-06T06:11:20.534528 #28653]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:11:20 +0000
+I, [2015-12-06T06:11:20.583112 #28653]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:11:20.693948 #28653] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:11:20.709410 #28653]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (79.1ms)
+I, [2015-12-06T06:11:20.712536 #28653]  INFO -- : Completed 200 OK in 129ms (Views: 114.4ms | ActiveRecord: 4.8ms)
+I, [2015-12-06T06:11:38.761741 #28653]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:11:38 +0000
+I, [2015-12-06T06:11:38.765547 #28653]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:11:38.770203 #28653] DEBUG -- :   [1m[35mWatchlists Load (0.9ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T06:11:38.772930 #28653]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.5ms)
+I, [2015-12-06T06:11:38.774185 #28653]  INFO -- : Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.9ms)
+I, [2015-12-06T06:23:48.366430 #29741]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:23:48 +0000
+I, [2015-12-06T06:23:48.427879 #29741]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:23:48.557684 #29741] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:23:48.595626 #29741]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (118.1ms)
+I, [2015-12-06T06:23:48.599848 #29741]  INFO -- : Completed 200 OK in 172ms (Views: 140.1ms | ActiveRecord: 20.6ms)
+I, [2015-12-06T06:27:16.054330 #29741]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:27:16 +0000
+I, [2015-12-06T06:27:16.057418 #29741]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:27:16.061512 #29741] DEBUG -- :   [1m[35mWatchlists Load (1.0ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T06:27:16.063884 #29741]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.3ms)
+I, [2015-12-06T06:27:16.064954 #29741]  INFO -- : Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.0ms)
+I, [2015-12-06T06:33:38.219968 #30862]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:33:38 +0000
+I, [2015-12-06T06:33:38.264098 #30862]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:33:38.382211 #30862] DEBUG -- :   [1m[36mWatchlists Load (1.0ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:33:38.396727 #30862]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (83.8ms)
+I, [2015-12-06T06:33:38.400402 #30862]  INFO -- : Completed 200 OK in 136ms (Views: 118.9ms | ActiveRecord: 5.6ms)
+I, [2015-12-06T06:34:10.917370 #30862]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:34:10 +0000
+I, [2015-12-06T06:34:10.921612 #30862]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:34:10.931311 #30862] DEBUG -- :   [1m[35mWatchlists Load (1.5ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T06:34:10.935453 #30862]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (7.3ms)
+I, [2015-12-06T06:34:10.936810 #30862]  INFO -- : Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 1.5ms)
+I, [2015-12-06T06:34:21.105299 #30862]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:34:21 +0000
+I, [2015-12-06T06:34:21.108783 #30862]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:34:21.111682 #30862] DEBUG -- :   [1m[36mWatchlists Load (1.0ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:34:21.114677 #30862]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.5ms)
+I, [2015-12-06T06:34:21.115825 #30862]  INFO -- : Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.0ms)
+I, [2015-12-06T06:37:58.699015 #30862]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:37:58 +0000
+I, [2015-12-06T06:37:58.701140 #30862]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:37:58.715341 #30862] DEBUG -- :   [1m[35mWatchlists Load (11.0ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T06:37:58.717610 #30862]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (13.9ms)
+I, [2015-12-06T06:37:58.720469 #30862]  INFO -- : Completed 200 OK in 18ms (Views: 6.0ms | ActiveRecord: 11.0ms)
+I, [2015-12-06T06:38:14.293153 #31786]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:38:14 +0000
+I, [2015-12-06T06:38:14.339999 #31786]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:38:14.478721 #31786] DEBUG -- :   [1m[36mWatchlists Load (2.5ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:38:14.501386 #31786]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (96.8ms)
+I, [2015-12-06T06:38:14.504562 #31786]  INFO -- : Completed 200 OK in 164ms (Views: 141.0ms | ActiveRecord: 10.3ms)
+I, [2015-12-06T06:38:17.500395 #31786]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:38:17 +0000
+I, [2015-12-06T06:38:17.502151 #31786]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:38:17.506648 #31786] DEBUG -- :   [1m[35mWatchlists Load (1.2ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T06:38:17.510535 #31786]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (6.2ms)
+I, [2015-12-06T06:38:17.514373 #31786]  INFO -- : Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 1.2ms)
+I, [2015-12-06T06:41:37.025854 #32674]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:41:37 +0000
+I, [2015-12-06T06:41:37.065393 #32674]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:41:37.183275 #32674] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:41:37.203894 #32674]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (80.1ms)
+I, [2015-12-06T06:41:37.207977 #32674]  INFO -- : Completed 200 OK in 142ms (Views: 123.9ms | ActiveRecord: 8.0ms)
+I, [2015-12-06T06:44:16.544706 #32674]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:44:16 +0000
+I, [2015-12-06T06:44:16.547317 #32674]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:44:16.552609 #32674] DEBUG -- :   [1m[35mWatchlists Load (1.0ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-06T06:44:16.572056 #32674]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (21.7ms)
+I, [2015-12-06T06:44:16.572659 #32674]  INFO -- : Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms)
+F, [2015-12-06T06:44:16.574378 #32674] FATAL -- : 
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "watchlists" does not exist
+LINE 1: SELECT * FROM "watchlists" INNER JOIN movies on watchlists.m...
+                      ^
+: SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid):
+    2: <div class="central border_shadow">
+    3: 	<div id="Action" class="watchlist_result">
+    4: 	  <ol>
+    5: 	    <% @watchlist.each do |w| %>
+    6: 	     <br><li>
+    7: 	        <p><%= w.title %></p>  
+    8: 	    	<%= link_to(image_tag(w.urlink) , m_path(w.movieid)) %>
+  app/views/watchlist/index.html.erb:5:in `_app_views_watchlist_index_html_erb__302041029126156707_43108180'
+
+
+I, [2015-12-06T06:44:16.847030 #32674]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.3ms)
+I, [2015-12-06T06:44:16.855385 #32674]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+I, [2015-12-06T06:44:16.861465 #32674]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2015-12-06T06:44:16.861823 #32674]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+I, [2015-12-06T06:46:47.170295 #1205]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-06 06:46:47 +0000
+I, [2015-12-06T06:46:47.215367 #1205]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-06T06:46:47.326931 #1205] DEBUG -- :   [1m[36mWatchlists Load (1.8ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-06T06:46:47.340750 #1205]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (80.6ms)
+I, [2015-12-06T06:46:47.342940 #1205]  INFO -- : Completed 200 OK in 127ms (Views: 112.9ms | ActiveRecord: 5.8ms)
