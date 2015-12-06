@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'movies/search' => 'movies#search'
   get 'movies/:movieID' => 'movies#show', as: :m
   post 'movies/search' => 'movies#search'
+  get '/movies/:movieID/edit' => 'movies#edit', as: :edit_movie
   patch '/movies/:movieID' => 'movies#update'
 
   #get 'main/index'
