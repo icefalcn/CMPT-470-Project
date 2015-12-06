@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get '/login' => 'users#login'
+  get '/login' => 'users#login' 
   post '/login' => 'movies#index'
   get 'register' => 'users#register', as: :user
   post '/register' => 'users#login'
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'movies' => 'movies#index'
 
   
-  get 'movies/search' => 'movies#search'
+  get 'movies/search' => 'movies#search', as: 'Search'
   get 'movies/:movieID' => 'movies#show', as: :m
   post 'movies/search' => 'movies#search'
   get '/movies/:movieID/edit' => 'movies#edit', as: :edit_movie
