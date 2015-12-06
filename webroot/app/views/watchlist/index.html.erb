@@ -1,0 +1,14 @@
+<div> <p/ This is a sentence </p></div>
+<div class="central border_shadow">
+	<div id="Action" class="posters">
+	  <ol>
+	    <% @watchlist.each do |w| %>
+	     <br><li>
+	        <p><%= w.title %></p>  
+	    	<%= link_to(image_tag(w.urlink) , m_path(w.movieid)) %>
+	        <hr> 
+	     </li>
+	    <% end %>
+	  </ol>
+	</div>
+<div class="container border_shadow">

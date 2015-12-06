@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   #get 'main/index'
   #get '/movies' => 'movies#index'
   get 'users/register' => 'users#register'
+  get 'watchlist' => 'watchlist#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

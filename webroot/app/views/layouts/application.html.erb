@@ -74,37 +74,44 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genres <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Comedy</a></li>
-                            <li><a href="#">Romance</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Trash</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav ">
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </li>
-                </ul>
-		<ul class="nav navbar-nav">
-		    <li><a href="#">Login</a></li>
-		</ul>
+              <ul class="nav navbar-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li class="dropdown">
+                      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genres <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Comedy</a></li>
+                          <li><a href="#">Romance</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Trash</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <ul class="nav navbar-nav ">
+                  <li class="dropdown">
+                      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Settings</a></li>
+                      </ul>
+                  </li>
+              </ul>
+		          <ul class="nav navbar-nav">
+		            <li><a href="#">Login</a></li>
+		          </ul>
             </div><!-- /.navbar-collapse -->
-        </div>
-    </nav>
+          </div>
+        </nav>
+        <script>
+          $('ul.nav li.dropdown').hover(function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+          }, function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+          });
+        </script>
     <%= yield %>
   </body>
 </html>
