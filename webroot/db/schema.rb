@@ -11,17 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120035107) do
+ActiveRecord::Schema.define(version: 20151207013424) do
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "producer"
-    t.string   "genre"
-    t.string   "year"
-    t.integer  "rating"
-    t.string   "urlink"
-    t.text     "synopsys"
-    t.string   "urlandscape"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "movies", primary_key: "movieid", force: :cascade do |t|
+    t.string  "title",       null: false
+    t.string  "genre",       null: false
+    t.date    "year",        null: false
+    t.integer "rating",      null: false
+    t.string  "urlink",      null: false
+    t.string  "synopsys",    null: false
+    t.string  "urlandscape", null: false
   end
 
+  add_index "movies", ["title"], name: "movies_title_key", unique: true, using: :btree
+
+  create_table "users", primary_key: "uid", force: :cascade do |t|
+    t.string   "username",                            null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "vote", id: false, force: :cascade do |t|
+    t.integer "uid"
+    t.integer "movieid"
+    t.integer "status"
+  end
+
+  create_table "watchlists", id: false, force: :cascade do |t|
+    t.integer "uid"
+    t.integer "movieid"
+  end
+
+  add_foreign_key "vote", "movies", column: "movieid", primary_key: "movieid", name: "vote_movieid_fkey"
+  add_foreign_key "vote", "users", column: "uid", primary_key: "uid", name: "vote_uid_fkey"
+  add_foreign_key "watchlists", "movies", column: "movieid", primary_key: "movieid", name: "watchlists_movieid_fkey"
+  add_foreign_key "watchlists", "users", column: "uid", primary_key: "uid", name: "watchlists_uid_fkey"
 end
