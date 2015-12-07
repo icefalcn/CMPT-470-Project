@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <div class="central border_shadow" >
 
   <div id="movie_show">
@@ -80,13 +81,7 @@
 
 <script type="text/javascript">
 
-  // $(document).ready(function() {
-    $(".youtube_list_div span").hide();
-    $(".youtube_list_div").on('click',function(e){
-          var url = $(this).find("span").text();
-          window.frames[0].location = url;
-    });  
-    
+  $(document).ready(function() { 
     // var url = <% request.fullpath %> ;
     var url = "/movies/" + <%=@movie.movieid%> ;
     // var vote_status = @vote_status; //from controller
