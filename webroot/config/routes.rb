@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  
-  get '/login' => 'users#login'
-  post '/login' => 'movies#index'
-  get 'register' => 'users#register', as: :user
-  post '/register' => 'users#login'
+  devise_for :users
+  #get '/login' => 'users#login'
+  #post '/login' => 'movies#index'
+  #get 'register' => 'users#register', as: :user
+  #post '/register' => 'users#login'
 
   root 'main#index'
   get 'movies' => 'movies#index'
 
   
-  get 'movies/search' => 'movies#search'
+  get 'movies/search' => 'movies#search', as: 'Search'
   get 'movies/:movieID' => 'movies#show', as: :m
   post 'movies/search' => 'movies#search'
   get '/movies/:movieID/edit' => 'movies#edit', as: :edit_movie
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   #get 'main/index'
   #get '/movies' => 'movies#index'
-  get 'users/register' => 'users#register'
+  #get 'users/register' => 'users#register'
   get 'watchlist' => 'watchlist#index'
   post 'watchlist' => 'watchlist#remove'
 
