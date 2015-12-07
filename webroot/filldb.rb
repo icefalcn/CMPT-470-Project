@@ -13,14 +13,15 @@ File.write('/home/vagrant/project/webroot/current.json', open("http://api.themov
 
 File.write('/home/vagrant/project/webroot/upcoming.json', open("http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09").read)
 
+File.write('/home/vagrant/project/webroot/genre.json', open("http://api.themoviedb.org/3/genre/movie/list?api_key=10795773f625eb5f6b31994bf9953e09").read)
 
-upcomingFile = File.read('/home/vagrant/project/webroot/upcoming.json')
+upcomingFile = File.read('/home/vagrant/project/webroot/upcoming.json', :encoding => 'UTF-8')
 upcoming_hash = JSON.parse(upcomingFile)
-currentFile = File.read('/home/vagrant/project/webroot/current.json')
+currentFile = File.read('/home/vagrant/project/webroot/current.json', :encoding => 'UTF-8')
 current_hash = JSON.parse(currentFile)
-futureFile = File.read('/home/vagrant/project/webroot/future.json')
+futureFile = File.read('/home/vagrant/project/webroot/future.json', :encoding => 'UTF-8')
 future_hash = JSON.parse(futureFile)
-genreFile = File.read('/home/vagrant/project/webroot/genre.json')
+genreFile = File.read('/home/vagrant/project/webroot/genre.json', :encoding => 'UTF-8')
 genre_hash = JSON.parse(genreFile)
 genre = Hash.new(0)
 

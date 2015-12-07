@@ -87,10 +87,10 @@ end
 #  command 'curl -o upcoming.json http://api.themoviedb.org/3/movie/upcoming?api_key=10795773f625eb5f6b31994bf9953e09'
 #end
 
-execute 'grab genres' do
-  cwd '/home/vagrant/project/webroot'
-  command 'curl -o genre.json http://api.themoviedb.org/3/genre/movie/list?api_key=10795773f625eb5f6b31994bf9953e09'
-end
+#execute 'grab genres' do
+#  cwd '/home/vagrant/project/webroot'
+#  command 'curl -o genre.json http://api.themoviedb.org/3/genre/movie/list?api_key=10795773f625eb5f6b31994bf9953e09'
+#end
 
 execute 'reset db' do
   command 'echo "delete from vote; delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
