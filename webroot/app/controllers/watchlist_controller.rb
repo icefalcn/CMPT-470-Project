@@ -4,7 +4,7 @@ class WatchlistController < ApplicationController
   end
   def delete
   	# Watchlists.where(:movieid => params[:m_id]).destroy_all
-  	  	Watchlists.where("movieid" => 1).destroy_all
+  	  	Watchlists.where("movieid" => params[:m_id] ).destroy_all
 
   	respond_to do |format|
   			format.html

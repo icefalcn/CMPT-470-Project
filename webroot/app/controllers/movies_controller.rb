@@ -27,9 +27,9 @@ class MoviesController < ApplicationController
     @movie = Movies.find(params[:movieID])
     if params[:vote].present? # if params.has_key?(title) #update vote attr
         respond_to do |format|
-          format.html # show.html.erb
-          format.xml  { render :xml => @movie }
-          format.json { render :json => @movie }
+          format.html 
+          format.xml  { render :xml => '' }
+          format.json { render :json => '' }
         end 
         @movie.increment!(:rating,params[:vote].to_i)
     else #update other attr
