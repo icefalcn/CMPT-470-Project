@@ -1,21 +1,39 @@
+<script> 
+$(document).ready(function() {
+$('.remove_from_watchlist').on('click',function(){
+	var id = $(this).attr("data-val");
+	var url = "/watchlist/"+id+"/delete";
+	$.ajax({
+		type: "POST",
+		url:   url,
+		data: {"_method":"delete", "m_id" : id},
+		dataType: "json"
+
+	});
+
+
+
+
+
+    $(this).closest('li').remove();
+});});
+</script>
+
+
 <div class="central border_shadow">
 	<div id="Action" class="watchlist_result">
 	  <ol>
 	    <% @watchlist.each do |w| %>
-	     <br><li>
+	     <li>
+	     <br>
 	        <p><%= w.title %></p>  
 	    	<%= link_to(image_tag(w.urlink) , m_path(w.movieid)) %>
 	        <hr> 
-	        <span class = "fake_link" id="remove_from_watchlist"> remove from watchlist </span>
+	        <span data-val="<%= w.movieid %>" class = "fake_link remove_from_watchlist"> remove from watchlist 
+	        </span>
 	     </li>
 	    <% end %>
 	  </ol>
 	</div>
 </div>
 
-<script> 
-$(document).ready(function() {
-$('#remove_from_watchlist').on('click',function(){
-    $(this).closest('li').remove();
-})});
-</script>
