@@ -6,7 +6,7 @@ require 'pg'
 require 'open-uri'
 
 date = Time.now.strftime("%Y-%m-%d")
-url = "http://api.themoviedb.org/3/discover/movie?release_date.gte="+date+"&api_key=10795773f625eb5f6b31994bf9953e09"
+url = "http://api.themoviedb.org/3/discover/movie?primary_release_date.gte="+date+"&api_key=10795773f625eb5f6b31994bf9953e09"
 File.write('/home/vagrant/project/webroot/future.json', open(url).read)
 
 File.write('/home/vagrant/project/webroot/current.json', open("http://api.themoviedb.org/3/movie/now_playing?api_key=10795773f625eb5f6b31994bf9953e09").read)
