@@ -56,6 +56,10 @@ cookbook_file "000-default.conf" do
   path "/etc/apache2/sites-enabled/000-default.conf"
 end
 
+execute 'reset db' do
+  command 'echo "drop table vote, users, movies, WatchLists cascade;"|sudo -u vagrant psql mydb'
+end
+
 execute 'migrate' do
     cwd '/home/vagrant/project/webroot/bin'
     command 'rake db:migrate RAILS_ENV=production'
@@ -91,10 +95,6 @@ end
 #  cwd '/home/vagrant/project/webroot'
 #  command 'curl -o genre.json http://api.themoviedb.org/3/genre/movie/list?api_key=10795773f625eb5f6b31994bf9953e09'
 #end
-
-execute 'reset db' do
-  command 'echo "delete from vote; delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1;alter sequence watchlists_wid_seq restart with 1;alter sequence vote_vid_seq restart with 1"|sudo -u vagrant psql mydb'
-end
 
 execute 'fill db' do
   command 'ruby /home/vagrant/project/webroot/filldb.rb'

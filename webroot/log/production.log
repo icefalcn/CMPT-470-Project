@@ -1,0 +1,182 @@
+D, [2015-12-08T05:29:31.633675 #20812] DEBUG -- :   [1m[36m (4.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+D, [2015-12-08T05:29:31.638490 #20812] DEBUG -- :   [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+D, [2015-12-08T05:29:31.640735 #20812] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-12-08T05:29:31.647611 #20812]  INFO -- : Migrating to AddDeviseToUsers (20151207013424)
+D, [2015-12-08T05:29:31.650980 #20812] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-12-08T05:29:31.659635 #20812] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet) [0m
+D, [2015-12-08T05:29:31.660117 #20812] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2015-12-08T05:32:34.413084 #21402] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-12-08T05:32:34.419635 #21402]  INFO -- : Migrating to AddDeviseToUsers (20151207013424)
+D, [2015-12-08T05:32:34.422942 #21402] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-12-08T05:32:34.432293 #21402] DEBUG -- :   [1m[36m (2.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet) [0m
+D, [2015-12-08T05:32:34.432856 #21402] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2015-12-08T05:36:59.849085 #22146] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-12-08T05:36:59.860006 #22146]  INFO -- : Migrating to AddDeviseToUsers (20151207013424)
+D, [2015-12-08T05:36:59.864316 #22146] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-12-08T05:36:59.875251 #22146] DEBUG -- :   [1m[36m (2.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet) [0m
+D, [2015-12-08T05:36:59.875709 #22146] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2015-12-08T05:40:04.043977 #22809] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-12-08T05:40:04.050750 #22809]  INFO -- : Migrating to AddDeviseToUsers (20151207013424)
+D, [2015-12-08T05:40:04.053880 #22809] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-12-08T05:40:04.067603 #22809] DEBUG -- :   [1m[36m (6.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet) [0m
+D, [2015-12-08T05:40:04.071483 #22809] DEBUG -- :   [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+D, [2015-12-08T05:40:04.074225 #22809] DEBUG -- :   [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+D, [2015-12-08T05:40:04.113099 #22809] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151207013424"]]
+D, [2015-12-08T05:40:04.114670 #22809] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T05:40:04.114732 #22809]  INFO -- : Migrating to AddUsernameToUsers (20151207224438)
+D, [2015-12-08T05:40:04.118106 #22809] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-12-08T05:40:04.119004 #22809] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "username" character varying[0m
+D, [2015-12-08T05:40:04.121648 #22809] DEBUG -- :   [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")
+D, [2015-12-08T05:40:04.123990 #22809] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151207224438"]]
+D, [2015-12-08T05:40:04.124831 #22809] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+I, [2015-12-08T05:40:43.616638 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:40:43 +0000
+I, [2015-12-08T05:40:43.652868 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:40:43.701252 #23022]  INFO -- : Completed 401 Unauthorized in 48ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:40:44.354497 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:40:44 +0000
+I, [2015-12-08T05:40:44.357004 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:40:44.449375 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (9.0ms)
+I, [2015-12-08T05:40:44.449480 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (27.2ms)
+I, [2015-12-08T05:40:44.452322 #23022]  INFO -- : Completed 200 OK in 95ms (Views: 73.3ms | ActiveRecord: 4.3ms)
+I, [2015-12-08T05:40:58.021466 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:40:58 +0000
+I, [2015-12-08T05:40:58.022936 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:40:58.023790 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:40:58.041793 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:40:58 +0000
+I, [2015-12-08T05:40:58.043176 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:40:58.053750 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (4.4ms)
+I, [2015-12-08T05:40:58.054068 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (9.1ms)
+I, [2015-12-08T05:40:58.055206 #23022]  INFO -- : Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:01.202787 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:01 +0000
+I, [2015-12-08T05:41:01.204328 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:01.205260 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:01.217776 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:01 +0000
+I, [2015-12-08T05:41:01.219182 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:01.228815 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.7ms)
+I, [2015-12-08T05:41:01.229254 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.4ms)
+I, [2015-12-08T05:41:01.230580 #23022]  INFO -- : Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:01.901568 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:01 +0000
+I, [2015-12-08T05:41:01.903046 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:01.903943 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:01.916128 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:01 +0000
+I, [2015-12-08T05:41:01.917533 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:01.928967 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (4.1ms)
+I, [2015-12-08T05:41:01.929310 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (10.1ms)
+I, [2015-12-08T05:41:01.930666 #23022]  INFO -- : Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:02.325810 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:02 +0000
+I, [2015-12-08T05:41:02.327257 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:02.328288 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:02.339696 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:02 +0000
+I, [2015-12-08T05:41:02.341074 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:02.351049 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.8ms)
+I, [2015-12-08T05:41:02.351398 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.6ms)
+I, [2015-12-08T05:41:02.352582 #23022]  INFO -- : Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:11.982160 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:11 +0000
+I, [2015-12-08T05:41:11.983992 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:11.985328 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:12.007931 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:12 +0000
+I, [2015-12-08T05:41:12.009469 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:12.018450 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.5ms)
+I, [2015-12-08T05:41:12.018780 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (7.7ms)
+I, [2015-12-08T05:41:12.019976 #23022]  INFO -- : Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:13.191781 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:13 +0000
+I, [2015-12-08T05:41:13.192943 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:13.193819 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:13.207237 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:13 +0000
+I, [2015-12-08T05:41:13.208702 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:13.218454 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (4.2ms)
+I, [2015-12-08T05:41:13.218903 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.5ms)
+I, [2015-12-08T05:41:13.220528 #23022]  INFO -- : Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:15.871422 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:15 +0000
+I, [2015-12-08T05:41:15.873209 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:15.874131 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:15.888456 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:15 +0000
+I, [2015-12-08T05:41:15.889669 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:15.899031 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.3ms)
+I, [2015-12-08T05:41:15.899359 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.0ms)
+I, [2015-12-08T05:41:15.900510 #23022]  INFO -- : Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:20.492586 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:20 +0000
+I, [2015-12-08T05:41:20.493675 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:20.505170 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.8ms)
+I, [2015-12-08T05:41:20.505765 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (10.4ms)
+I, [2015-12-08T05:41:20.507008 #23022]  INFO -- : Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:24.145934 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:24 +0000
+I, [2015-12-08T05:41:24.147952 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:24.149515 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:24.335618 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:24 +0000
+I, [2015-12-08T05:41:24.336714 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:24.338071 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:24.351530 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:24 +0000
+I, [2015-12-08T05:41:24.352976 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:24.363137 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.8ms)
+I, [2015-12-08T05:41:24.363471 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.5ms)
+I, [2015-12-08T05:41:24.399332 #23022]  INFO -- : Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:40.497020 #23022]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-08 05:41:40 +0000
+I, [2015-12-08T05:41:40.498292 #23022]  INFO -- : Processing by MainController#index as HTML
+I, [2015-12-08T05:41:40.499164 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:40.511752 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:40 +0000
+I, [2015-12-08T05:41:40.513177 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:40.523344 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (4.3ms)
+I, [2015-12-08T05:41:40.523682 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.9ms)
+I, [2015-12-08T05:41:40.524894 #23022]  INFO -- : Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:44.890453 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Action" for 10.0.2.2 at 2015-12-08 05:41:44 +0000
+I, [2015-12-08T05:41:44.893091 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:44.893329 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Action"}
+I, [2015-12-08T05:41:44.894279 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:44.907975 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:44 +0000
+I, [2015-12-08T05:41:44.909400 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:44.919065 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.3ms)
+I, [2015-12-08T05:41:44.919389 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.4ms)
+I, [2015-12-08T05:41:44.920519 #23022]  INFO -- : Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:46.167308 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Adventure" for 10.0.2.2 at 2015-12-08 05:41:46 +0000
+I, [2015-12-08T05:41:46.168782 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:46.168984 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Adventure"}
+I, [2015-12-08T05:41:46.169797 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:46.182169 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:46 +0000
+I, [2015-12-08T05:41:46.183543 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:46.193767 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.9ms)
+I, [2015-12-08T05:41:46.194387 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (9.2ms)
+I, [2015-12-08T05:41:46.195706 #23022]  INFO -- : Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:47.111236 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Animation" for 10.0.2.2 at 2015-12-08 05:41:47 +0000
+I, [2015-12-08T05:41:47.112664 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:47.112875 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Animation"}
+I, [2015-12-08T05:41:47.113743 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:47.143625 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:47 +0000
+I, [2015-12-08T05:41:47.145107 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:47.155633 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.7ms)
+I, [2015-12-08T05:41:47.156122 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (9.2ms)
+I, [2015-12-08T05:41:47.157332 #23022]  INFO -- : Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:47.779954 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Comedy" for 10.0.2.2 at 2015-12-08 05:41:47 +0000
+I, [2015-12-08T05:41:47.781225 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:47.781430 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Comedy"}
+I, [2015-12-08T05:41:47.782850 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:47.795164 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:47 +0000
+I, [2015-12-08T05:41:47.797450 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:47.809091 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (5.1ms)
+I, [2015-12-08T05:41:47.809433 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (9.9ms)
+I, [2015-12-08T05:41:47.810741 #23022]  INFO -- : Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:48.393555 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Family" for 10.0.2.2 at 2015-12-08 05:41:48 +0000
+I, [2015-12-08T05:41:48.394957 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:48.395148 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Family"}
+I, [2015-12-08T05:41:48.395974 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:48.442678 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:48 +0000
+I, [2015-12-08T05:41:48.444018 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:48.453687 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (3.7ms)
+I, [2015-12-08T05:41:48.454162 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (9.0ms)
+I, [2015-12-08T05:41:48.455558 #23022]  INFO -- : Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:49.087349 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Horror" for 10.0.2.2 at 2015-12-08 05:41:49 +0000
+I, [2015-12-08T05:41:49.088939 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:49.089120 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Horror"}
+I, [2015-12-08T05:41:49.090015 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:49.122335 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:49 +0000
+I, [2015-12-08T05:41:49.123929 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:49.171243 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (5.6ms)
+I, [2015-12-08T05:41:49.171573 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (45.6ms)
+I, [2015-12-08T05:41:49.172856 #23022]  INFO -- : Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:49.649742 #23022]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=Romance" for 10.0.2.2 at 2015-12-08 05:41:49 +0000
+I, [2015-12-08T05:41:49.651164 #23022]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T05:41:49.651338 #23022]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"Romance"}
+I, [2015-12-08T05:41:49.652157 #23022]  INFO -- : Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+I, [2015-12-08T05:41:49.687178 #23022]  INFO -- : Started GET "/users/sign_in" for 10.0.2.2 at 2015-12-08 05:41:49 +0000
+I, [2015-12-08T05:41:49.688755 #23022]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2015-12-08T05:41:49.699353 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (4.9ms)
+I, [2015-12-08T05:41:49.699659 #23022]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (9.3ms)
+I, [2015-12-08T05:41:49.700804 #23022]  INFO -- : Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
