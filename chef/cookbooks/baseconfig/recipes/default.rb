@@ -68,7 +68,7 @@ end
 
 #need to fix watchlist/customer table creation
 execute 'create_db' do
-    command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, ytlink varchar NOT NULL, PRIMARY KEY(movieID)); REATE TABLE WatchLists (id int, movieid int, foreign key(id) references users(id), foreign key(movieid) references movies(movieid)); CREATE TABLE Vote (id int, movieid int, status int, foreign key(uid) references users(id), foreign key(movieid) references movies(movieid));\" | sudo -u vagrant psql mydb"
+    command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, ytlink varchar NOT NULL, PRIMARY KEY(movieID)); CREATE TABLE WatchLists (id int, movieid int, foreign key(id) references users(id), foreign key(movieid) references movies(movieid)); CREATE TABLE Vote (id int, movieid int, status int, foreign key(uid) references users(id), foreign key(movieid) references movies(movieid));\" | sudo -u vagrant psql mydb"
 end
 
 execute 'assests' do
