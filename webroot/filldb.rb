@@ -218,7 +218,6 @@ target.write(tempJson.to_json)
 #	end
 #end
 
-conn.prepare('insert_watchlist', 'insert into watchlists(uid,movieid) values ($1, $2)')
-for i in 1..10
-conn.exec_prepared('insert_watchlist', [1,i ])
-end
+#conn.prepare('insert_watchlist', 'insert into watchlists(uid,movieid) values ($1, $2)')
+#for i in 1..10
+#conn.exec_prepared('insert_watchlist', [1,i ])
