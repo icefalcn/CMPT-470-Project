@@ -41,6 +41,18 @@ class MoviesController < ApplicationController
     end
 
   end
+
+  def add_watchlist
+    # Watchlists.where(:movieid => params[:m_id]).destroy_all
+    #Watchlists.create("movieid" => params[:m_id],"")
+    Watchlists.create(movieid: params[:m_id],uid: "1")
+
+    respond_to do |format|
+        format.html
+        format.xml {render :xml => ''}
+        format.json {render :json => ''}
+      end
+  end
   
   private
   def movie_params

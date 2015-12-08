@@ -241,7 +241,8 @@ background-color: #666666;
 
 #share_list_ul >li{
           display : inline;
-
+          padding-right:3em;
+          float:right;
         /*  margin    : 5;
           padding   : 5;*/
 }
@@ -357,10 +358,26 @@ background-color: #666666;
   padding-left:3em;
 }
 
+.add_watchlist{
+  background-color: yellow;
+}
+
 .fake_link {
     color: blue;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.float_left{
+  float:left;
+}
+
+.watchlist_result ul li reject_parent{
+  width: 60em
+}
+
+ul#results li{
+  display:inline;
 }
 
 .reg {

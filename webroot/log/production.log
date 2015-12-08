@@ -729,3 +729,950 @@ I, [2015-12-07T03:58:40.667682 #24022]  INFO -- : Processing by WatchlistControl
 D, [2015-12-07T03:58:40.670618 #24022] DEBUG -- :   [1m[36mWatchlists Load (0.8ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
 I, [2015-12-07T03:58:40.673909 #24022]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.6ms)
 I, [2015-12-07T03:58:40.675026 #24022]  INFO -- : Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+I, [2015-12-07T08:14:57.365604 #2451]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 08:14:57 +0000
+I, [2015-12-07T08:14:57.536150 #2451]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T08:14:57.701933 #2451] DEBUG -- :   [1m[36mWatchlists Load (3.6ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T08:14:57.765947 #2451]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (108.3ms)
+I, [2015-12-07T08:14:57.768557 #2451]  INFO -- : Completed 200 OK in 232ms (Views: 160.3ms | ActiveRecord: 62.5ms)
+I, [2015-12-07T08:14:59.665473 #2451]  INFO -- : Started GET "/favicon.ico" for 10.0.2.2 at 2015-12-07 08:14:59 +0000
+F, [2015-12-07T08:14:59.667259 #2451] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-07T08:14:59.705707 #2451]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+I, [2015-12-07T08:14:59.725067 #2451]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+I, [2015-12-07T08:14:59.733444 #2451]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+I, [2015-12-07T08:14:59.740217 #2451]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+I, [2015-12-07T08:14:59.740469 #2451]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.2ms)
+I, [2015-12-07T19:45:08.195655 #8100]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-07 19:45:08 +0000
+I, [2015-12-07T19:45:08.236757 #8100]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-07T19:45:08.249996 #8100] DEBUG -- :   [1m[36mMovies Load (1.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T19:45:08.308862 #8100] DEBUG -- :   [1m[35mMovies Load (0.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T19:45:08.309978 #8100] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T19:45:08.311461 #8100] DEBUG -- :   [1m[35mMovies Load (0.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T19:45:08.312454 #8100] DEBUG -- :   [1m[36mMovies Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY rating LIMIT 5[0m
+I, [2015-12-07T19:45:08.376216 #8100]  INFO -- :   Rendered main/index.html.erb within layouts/application (3.5ms)
+I, [2015-12-07T19:45:08.378569 #8100]  INFO -- : Completed 200 OK in 141ms (Views: 65.4ms | ActiveRecord: 7.1ms)
+I, [2015-12-07T19:45:10.810088 #8100]  INFO -- : Started GET "/movies/2" for 10.0.2.2 at 2015-12-07 19:45:10 +0000
+I, [2015-12-07T19:45:10.820873 #8100]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-07T19:45:10.822022 #8100]  INFO -- :   Parameters: {"movieID"=>"2"}
+D, [2015-12-07T19:45:10.839500 #8100] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 2]]
+I, [2015-12-07T19:45:10.874917 #8100]  INFO -- :   Rendered movies/show.html.erb within layouts/application (1.3ms)
+I, [2015-12-07T19:45:10.875983 #8100]  INFO -- : Completed 200 OK in 53ms (Views: 35.7ms | ActiveRecord: 0.7ms)
+I, [2015-12-07T19:46:02.512579 #8100]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 19:46:02 +0000
+I, [2015-12-07T19:46:02.517626 #8100]  INFO -- : Processing by WatchlistController#index as HTML
+I, [2015-12-07T19:46:02.575497 #8100]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (1.1ms)
+I, [2015-12-07T19:46:02.576020 #8100]  INFO -- : Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+F, [2015-12-07T19:46:02.577730 #8100] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/watchlist/index.html.erb:30: syntax error, unexpected ':', expecting ')'
+....urlink) , m_path(w.movieid)) :class => "float_left");@outpu...
+...                               ^):
+  app/views/watchlist/index.html.erb:30: syntax error, unexpected ':', expecting ')'
+
+
+I, [2015-12-07T19:46:02.741835 #8100]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+I, [2015-12-07T19:46:02.748523 #8100]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+I, [2015-12-07T19:46:02.752712 #8100]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+I, [2015-12-07T19:46:02.752984 #8100]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+I, [2015-12-07T20:35:59.431245 #12777]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 20:35:59 +0000
+I, [2015-12-07T20:35:59.471709 #12777]  INFO -- : Processing by WatchlistController#index as HTML
+I, [2015-12-07T20:35:59.564603 #12777]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (0.7ms)
+I, [2015-12-07T20:35:59.569506 #12777]  INFO -- : Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+F, [2015-12-07T20:35:59.570830 #12777] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/watchlist/index.html.erb:30: syntax error, unexpected ',', expecting ')'
+...w.urlink) , m_path(w.movieid)), :class => "float_left");@out...
+...                               ^):
+  app/views/watchlist/index.html.erb:30: syntax error, unexpected ',', expecting ')'
+
+
+I, [2015-12-07T20:35:59.731868 #12777]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+I, [2015-12-07T20:35:59.737950 #12777]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+I, [2015-12-07T20:35:59.742278 #12777]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2015-12-07T20:35:59.742479 #12777]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.7ms)
+I, [2015-12-07T20:50:14.577372 #13850]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 20:50:14 +0000
+I, [2015-12-07T20:50:14.616834 #13850]  INFO -- : Processing by WatchlistController#index as HTML
+I, [2015-12-07T20:50:14.704332 #13850]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (1.0ms)
+I, [2015-12-07T20:50:14.704779 #13850]  INFO -- : Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+F, [2015-12-07T20:50:14.706235 #13850] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/watchlist/index.html.erb:30: syntax error, unexpected ',', expecting ')'
+...w.urlink) , m_path(w.movieid)), :class => "float_left");@out...
+...                               ^):
+  app/views/watchlist/index.html.erb:30: syntax error, unexpected ',', expecting ')'
+
+
+I, [2015-12-07T20:50:14.869298 #13850]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+I, [2015-12-07T20:50:14.875936 #13850]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+I, [2015-12-07T20:50:14.881161 #13850]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-07T20:50:14.881603 #13850]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+I, [2015-12-07T20:59:36.365826 #14796]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 20:59:36 +0000
+I, [2015-12-07T20:59:36.406824 #14796]  INFO -- : Processing by WatchlistController#index as HTML
+I, [2015-12-07T20:59:36.497100 #14796]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (1.2ms)
+I, [2015-12-07T20:59:36.497572 #14796]  INFO -- : Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+F, [2015-12-07T20:59:36.498814 #14796] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/watchlist/index.html.erb:30: syntax error, unexpected ',', expecting ')'
+...w.urlink) , m_path(w.movieid)), {:class => 'float_left'});@o...
+...                               ^):
+  app/views/watchlist/index.html.erb:30: syntax error, unexpected ',', expecting ')'
+
+
+I, [2015-12-07T20:59:36.665783 #14796]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+I, [2015-12-07T20:59:36.672630 #14796]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+I, [2015-12-07T20:59:36.677396 #14796]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-07T20:59:36.677648 #14796]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+I, [2015-12-07T21:18:49.872007 #16613]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 21:18:49 +0000
+I, [2015-12-07T21:18:49.914954 #16613]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T21:18:50.030351 #16613] DEBUG -- :   [1m[36mWatchlists Load (1.3ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T21:18:50.045641 #16613]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (29.7ms)
+I, [2015-12-07T21:18:50.048221 #16613]  INFO -- : Completed 200 OK in 133ms (Views: 116.7ms | ActiveRecord: 6.4ms)
+I, [2015-12-07T21:18:57.051126 #16613]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-07 21:18:57 +0000
+I, [2015-12-07T21:18:57.057876 #16613]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T21:18:57.058971 #16613]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-07T21:18:57.104840 #16613] DEBUG -- :   [1m[35mWatchlists Load (0.7ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+D, [2015-12-07T21:18:57.105673 #16613] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T21:18:57.107161 #16613] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 1]]
+D, [2015-12-07T21:18:57.108039 #16613] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T21:18:57.108836 #16613]  INFO -- : Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+I, [2015-12-07T21:18:59.031459 #16613]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-07 21:18:59 +0000
+I, [2015-12-07T21:18:59.033868 #16613]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T21:18:59.034276 #16613]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-07T21:18:59.037694 #16613] DEBUG -- :   [1m[35mWatchlists Load (1.0ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+D, [2015-12-07T21:18:59.039893 #16613] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T21:18:59.042305 #16613] DEBUG -- :   [1m[35mSQL (1.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 2]]
+D, [2015-12-07T21:18:59.044809 #16613] DEBUG -- :   [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T21:18:59.046539 #16613]  INFO -- : Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 5.0ms)
+I, [2015-12-07T21:19:00.268653 #16613]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-07 21:19:00 +0000
+I, [2015-12-07T21:19:00.273310 #16613]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T21:19:00.274309 #16613]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-07T21:19:00.278532 #16613] DEBUG -- :   [1m[35mWatchlists Load (0.6ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 3]]
+D, [2015-12-07T21:19:00.279454 #16613] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T21:19:00.280442 #16613] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 3]]
+D, [2015-12-07T21:19:00.281285 #16613] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T21:19:00.281996 #16613]  INFO -- : Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+I, [2015-12-07T21:19:00.748081 #16613]  INFO -- : Started DELETE "/watchlist/4/delete" for 10.0.2.2 at 2015-12-07 21:19:00 +0000
+I, [2015-12-07T21:19:00.749260 #16613]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T21:19:00.749411 #16613]  INFO -- :   Parameters: {"m_id"=>"4", "mid"=>"4"}
+D, [2015-12-07T21:19:00.751319 #16613] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 4]]
+D, [2015-12-07T21:19:00.751917 #16613] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T21:19:00.752627 #16613] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 4]]
+D, [2015-12-07T21:19:00.753470 #16613] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T21:19:00.754175 #16613]  INFO -- : Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+I, [2015-12-07T21:19:05.384336 #16613]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 21:19:05 +0000
+I, [2015-12-07T21:19:05.387694 #16613]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T21:19:05.394232 #16613] DEBUG -- :   [1m[35mWatchlists Load (1.8ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-07T21:19:05.401100 #16613]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (9.9ms)
+I, [2015-12-07T21:19:05.402506 #16613]  INFO -- : Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 1.8ms)
+I, [2015-12-07T21:19:07.280386 #16613]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-07 21:19:07 +0000
+I, [2015-12-07T21:19:07.286386 #16613]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-07T21:19:07.289390 #16613] DEBUG -- :   [1m[36mMovies Load (0.9ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T21:19:07.299317 #16613] DEBUG -- :   [1m[35mMovies Load (0.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T21:19:07.300324 #16613] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T21:19:07.301182 #16613] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T21:19:07.301986 #16613] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY rating LIMIT 5[0m
+I, [2015-12-07T21:19:07.334678 #16613]  INFO -- :   Rendered main/index.html.erb within layouts/application (5.1ms)
+I, [2015-12-07T21:19:07.335779 #16613]  INFO -- : Completed 200 OK in 49ms (Views: 33.2ms | ActiveRecord: 3.5ms)
+I, [2015-12-07T21:19:10.111539 #16613]  INFO -- : Started GET "/movies/5" for 10.0.2.2 at 2015-12-07 21:19:10 +0000
+I, [2015-12-07T21:19:10.115476 #16613]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-07T21:19:10.115844 #16613]  INFO -- :   Parameters: {"movieID"=>"5"}
+D, [2015-12-07T21:19:10.124261 #16613] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 5]]
+I, [2015-12-07T21:19:10.154007 #16613]  INFO -- :   Rendered movies/show.html.erb within layouts/application (1.7ms)
+I, [2015-12-07T21:19:10.155092 #16613]  INFO -- : Completed 200 OK in 39ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+I, [2015-12-07T21:19:23.714454 #16613]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-07 21:19:23 +0000
+I, [2015-12-07T21:19:23.716381 #16613]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-07T21:19:23.718717 #16613] DEBUG -- :   [1m[36mMovies Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T21:19:23.720150 #16613] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T21:19:23.721668 #16613] DEBUG -- :   [1m[36mMovies Load (0.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T21:19:23.722973 #16613] DEBUG -- :   [1m[35mMovies Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T21:19:23.724241 #16613] DEBUG -- :   [1m[36mMovies Load (0.5ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY rating LIMIT 5[0m
+I, [2015-12-07T21:19:23.727891 #16613]  INFO -- :   Rendered main/index.html.erb within layouts/application (2.4ms)
+I, [2015-12-07T21:19:23.728848 #16613]  INFO -- : Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 2.9ms)
+I, [2015-12-07T21:19:31.433824 #16613]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-07 21:19:31 +0000
+I, [2015-12-07T21:19:31.436441 #16613]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-07T21:19:31.436766 #16613]  INFO -- :   Parameters: {"movieID"=>"1"}
+D, [2015-12-07T21:19:31.439913 #16613] DEBUG -- :   [1m[35mMovies Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 1]]
+I, [2015-12-07T21:19:31.442272 #16613]  INFO -- :   Rendered movies/show.html.erb within layouts/application (0.6ms)
+I, [2015-12-07T21:19:31.443931 #16613]  INFO -- : Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+I, [2015-12-07T21:19:38.413305 #16613]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 21:19:38 +0000
+I, [2015-12-07T21:19:38.415686 #16613]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T21:19:38.419798 #16613] DEBUG -- :   [1m[36mWatchlists Load (1.2ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T21:19:38.425594 #16613]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (7.8ms)
+I, [2015-12-07T21:19:38.427074 #16613]  INFO -- : Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.2ms)
+I, [2015-12-07T21:33:05.524765 #17680]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 21:33:05 +0000
+I, [2015-12-07T21:33:05.567484 #17680]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T21:33:05.670985 #17680] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T21:33:05.685760 #17680]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.9ms)
+I, [2015-12-07T21:33:05.688595 #17680]  INFO -- : Completed 200 OK in 121ms (Views: 107.1ms | ActiveRecord: 4.9ms)
+I, [2015-12-07T21:36:19.859215 #17680]  INFO -- : Started GET "/" for 10.0.2.2 at 2015-12-07 21:36:19 +0000
+I, [2015-12-07T21:36:19.862704 #17680]  INFO -- : Processing by MainController#index as HTML
+D, [2015-12-07T21:36:19.872794 #17680] DEBUG -- :   [1m[35mMovies Load (6.7ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Action%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T21:36:19.885395 #17680] DEBUG -- :   [1m[36mMovies Load (1.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Comedy%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T21:36:19.886542 #17680] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE (genre like '%Animation%')  ORDER BY rating LIMIT 3
+D, [2015-12-07T21:36:19.887170 #17680] DEBUG -- :   [1m[36mMovies Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (genre like '%Romance%')  ORDER BY rating LIMIT 3[0m
+D, [2015-12-07T21:36:19.887992 #17680] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY rating LIMIT 5
+I, [2015-12-07T21:36:19.923195 #17680]  INFO -- :   Rendered main/index.html.erb within layouts/application (3.3ms)
+I, [2015-12-07T21:36:19.924467 #17680]  INFO -- : Completed 200 OK in 61ms (Views: 35.9ms | ActiveRecord: 10.7ms)
+I, [2015-12-07T21:36:21.293662 #17680]  INFO -- : Started GET "/movies/57" for 10.0.2.2 at 2015-12-07 21:36:21 +0000
+I, [2015-12-07T21:36:21.297083 #17680]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-07T21:36:21.297432 #17680]  INFO -- :   Parameters: {"movieID"=>"57"}
+D, [2015-12-07T21:36:21.361915 #17680] DEBUG -- :   [1m[36mMovies Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1[0m  [["movieid", 57]]
+I, [2015-12-07T21:36:21.398123 #17680]  INFO -- :   Rendered movies/show.html.erb within layouts/application (2.5ms)
+I, [2015-12-07T21:36:21.399478 #17680]  INFO -- : Completed 200 OK in 102ms (Views: 36.5ms | ActiveRecord: 1.9ms)
+I, [2015-12-07T21:42:40.628714 #18779]  INFO -- : Started GET "/movies/57" for 10.0.2.2 at 2015-12-07 21:42:40 +0000
+I, [2015-12-07T21:42:40.666745 #18779]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-07T21:42:40.666987 #18779]  INFO -- :   Parameters: {"movieID"=>"57"}
+D, [2015-12-07T21:42:40.740607 #18779] DEBUG -- :   [1m[36mMovies Load (0.7ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1[0m  [["movieid", 57]]
+I, [2015-12-07T21:42:40.795638 #18779]  INFO -- :   Rendered movies/show.html.erb within layouts/application (2.3ms)
+I, [2015-12-07T21:42:40.797736 #18779]  INFO -- : Completed 200 OK in 130ms (Views: 42.5ms | ActiveRecord: 5.8ms)
+I, [2015-12-07T21:42:45.482031 #18779]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 21:42:45 +0000
+I, [2015-12-07T21:42:45.487243 #18779]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T21:42:45.558674 #18779] DEBUG -- :   [1m[35mWatchlists Load (1.0ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-07T21:42:45.565525 #18779]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (49.8ms)
+I, [2015-12-07T21:42:45.568169 #18779]  INFO -- : Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 2.4ms)
+I, [2015-12-07T22:02:27.683416 #19997]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 22:02:27 +0000
+I, [2015-12-07T22:02:27.726218 #19997]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T22:02:27.830842 #19997] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T22:02:27.843802 #19997]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.1ms)
+I, [2015-12-07T22:02:27.846099 #19997]  INFO -- : Completed 200 OK in 119ms (Views: 104.1ms | ActiveRecord: 5.2ms)
+I, [2015-12-07T22:04:25.380997 #19997]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-07 22:04:25 +0000
+I, [2015-12-07T22:04:25.386924 #19997]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-07T22:04:25.391107 #19997]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+I, [2015-12-07T22:04:25.404452 #19997]  INFO -- : Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+F, [2015-12-07T22:04:25.407519 #19997] FATAL -- : 
+NoMethodError (undefined method `er' for #<MoviesController:0x00000005d57668>):
+  app/controllers/movies_controller.rb:9:in `search'
+
+
+I, [2015-12-07T22:04:25.681202 #19997]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+I, [2015-12-07T22:04:25.692600 #19997]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+I, [2015-12-07T22:04:25.706314 #19997]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-07T22:04:25.706949 #19997]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+I, [2015-12-07T22:11:40.814968 #20899]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-07 22:11:40 +0000
+I, [2015-12-07T22:11:40.857098 #20899]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-07T22:11:40.857496 #20899]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-07T22:11:40.951566 #20899] DEBUG -- :   [1m[36mMovies Load (2.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-07T22:11:40.976286 #20899]  INFO -- :   Rendered movies/search.html.erb within layouts/application (28.7ms)
+I, [2015-12-07T22:11:40.979134 #20899]  INFO -- : Completed 200 OK in 121ms (Views: 107.1ms | ActiveRecord: 6.0ms)
+I, [2015-12-07T22:11:49.976500 #20899]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 22:11:49 +0000
+I, [2015-12-07T22:11:49.982137 #20899]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T22:11:50.039117 #20899] DEBUG -- :   [1m[35mWatchlists Load (0.8ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-07T22:11:50.045889 #20899]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (25.1ms)
+I, [2015-12-07T22:11:50.047906 #20899]  INFO -- : Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 2.3ms)
+I, [2015-12-07T22:22:00.749802 #21979]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 22:22:00 +0000
+I, [2015-12-07T22:22:00.791308 #21979]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T22:22:00.894825 #21979] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T22:22:00.909608 #21979]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.2ms)
+I, [2015-12-07T22:22:00.912602 #21979]  INFO -- : Completed 200 OK in 121ms (Views: 106.8ms | ActiveRecord: 4.7ms)
+I, [2015-12-07T22:24:48.322977 #21979]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-07 22:24:48 +0000
+I, [2015-12-07T22:24:48.326458 #21979]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T22:24:48.326875 #21979]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-07T22:24:48.368489 #21979] DEBUG -- :   [1m[35mWatchlists Load (0.7ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+D, [2015-12-07T22:24:48.369314 #21979] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T22:24:48.370575 #21979] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 1]]
+D, [2015-12-07T22:24:48.371391 #21979] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T22:24:48.372196 #21979]  INFO -- : Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+I, [2015-12-07T22:24:53.852558 #21979]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-07 22:24:53 +0000
+I, [2015-12-07T22:24:53.855833 #21979]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T22:24:53.856251 #21979]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-07T22:24:53.859307 #21979] DEBUG -- :   [1m[35mWatchlists Load (0.6ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+D, [2015-12-07T22:24:53.860191 #21979] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T22:24:53.861373 #21979] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 2]]
+D, [2015-12-07T22:24:53.862545 #21979] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T22:24:53.863457 #21979]  INFO -- : Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+I, [2015-12-07T22:24:55.178545 #21979]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-07 22:24:55 +0000
+I, [2015-12-07T22:24:55.180385 #21979]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T22:24:55.180694 #21979]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-07T22:24:55.182527 #21979] DEBUG -- :   [1m[35mWatchlists Load (0.5ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 3]]
+D, [2015-12-07T22:24:55.183120 #21979] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T22:24:55.184109 #21979] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 3]]
+D, [2015-12-07T22:24:55.184809 #21979] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T22:24:55.185545 #21979]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+I, [2015-12-07T22:24:56.246461 #21979]  INFO -- : Started DELETE "/watchlist/4/delete" for 10.0.2.2 at 2015-12-07 22:24:56 +0000
+I, [2015-12-07T22:24:56.249357 #21979]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T22:24:56.249862 #21979]  INFO -- :   Parameters: {"m_id"=>"4", "mid"=>"4"}
+D, [2015-12-07T22:24:56.253303 #21979] DEBUG -- :   [1m[35mWatchlists Load (0.5ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 4]]
+D, [2015-12-07T22:24:56.254308 #21979] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-07T22:24:56.255218 #21979] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 4]]
+D, [2015-12-07T22:24:56.256275 #21979] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+I, [2015-12-07T22:24:56.257268 #21979]  INFO -- : Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+I, [2015-12-07T22:37:48.235135 #23085]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 22:37:48 +0000
+I, [2015-12-07T22:37:48.278466 #23085]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T22:37:48.381769 #23085] DEBUG -- :   [1m[36mWatchlists Load (1.2ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T22:37:48.397050 #23085]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (30.1ms)
+I, [2015-12-07T22:37:48.399761 #23085]  INFO -- : Completed 200 OK in 121ms (Views: 107.9ms | ActiveRecord: 4.8ms)
+I, [2015-12-07T22:50:15.772753 #24241]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 22:50:15 +0000
+I, [2015-12-07T22:50:15.815398 #24241]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T22:50:15.919009 #24241] DEBUG -- :   [1m[36mWatchlists Load (1.2ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T22:50:15.934470 #24241]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (31.1ms)
+I, [2015-12-07T22:50:15.936856 #24241]  INFO -- : Completed 200 OK in 121ms (Views: 106.4ms | ActiveRecord: 4.8ms)
+I, [2015-12-07T22:59:02.380008 #24241]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 22:59:02 +0000
+I, [2015-12-07T22:59:02.381548 #24241]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T22:59:02.384001 #24241] DEBUG -- :   [1m[35mWatchlists Load (0.6ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-07T22:59:02.386826 #24241]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.0ms)
+I, [2015-12-07T22:59:02.387929 #24241]  INFO -- : Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+I, [2015-12-07T22:59:13.942175 #24241]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-07 22:59:13 +0000
+I, [2015-12-07T22:59:13.945604 #24241]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-07T22:59:13.950881 #24241]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-07T22:59:14.036496 #24241] DEBUG -- :   [1m[36mWatchlists Load (3.8ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 1]]
+D, [2015-12-07T22:59:14.039080 #24241] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-12-07T22:59:14.041200 #24241] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "watchlists" WHERE "watchlists"."wid" = $1[0m  [["wid", 1]]
+D, [2015-12-07T22:59:14.042928 #24241] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+I, [2015-12-07T22:59:14.045240 #24241]  INFO -- : Completed 200 OK in 93ms (Views: 0.2ms | ActiveRecord: 4.9ms)
+I, [2015-12-07T23:22:07.392696 #2480]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 23:22:07 +0000
+I, [2015-12-07T23:22:07.578976 #2480]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T23:22:07.765221 #2480] DEBUG -- :   [1m[36mWatchlists Load (31.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T23:22:07.822322 #2480]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (135.6ms)
+I, [2015-12-07T23:22:07.824720 #2480]  INFO -- : Completed 200 OK in 246ms (Views: 145.5ms | ActiveRecord: 91.2ms)
+I, [2015-12-07T23:22:08.123235 #2480]  INFO -- : Started GET "/favicon.ico" for 10.0.2.2 at 2015-12-07 23:22:08 +0000
+F, [2015-12-07T23:22:08.124614 #2480] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-07T23:22:08.165013 #2480]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+I, [2015-12-07T23:22:08.180822 #2480]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+I, [2015-12-07T23:22:08.186194 #2480]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+I, [2015-12-07T23:22:08.192537 #2480]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+I, [2015-12-07T23:22:08.192855 #2480]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.0ms)
+I, [2015-12-07T23:42:37.023089 #3708]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 23:42:37 +0000
+I, [2015-12-07T23:42:37.061603 #3708]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T23:42:37.165065 #3708] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T23:42:37.180345 #3708]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (29.3ms)
+I, [2015-12-07T23:42:37.182975 #3708]  INFO -- : Completed 200 OK in 120ms (Views: 105.0ms | ActiveRecord: 5.7ms)
+I, [2015-12-07T23:43:40.322224 #3708]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 23:43:40 +0000
+I, [2015-12-07T23:43:40.327392 #3708]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T23:43:40.329826 #3708] DEBUG -- :   [1m[35mWatchlists Load (0.7ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-07T23:43:40.332356 #3708]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (3.7ms)
+I, [2015-12-07T23:43:40.333243 #3708]  INFO -- : Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+I, [2015-12-07T23:51:47.398747 #4807]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-07 23:51:47 +0000
+I, [2015-12-07T23:51:47.440527 #4807]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-07T23:51:47.548420 #4807] DEBUG -- :   [1m[36mWatchlists Load (1.0ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-07T23:51:47.563934 #4807]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (31.5ms)
+I, [2015-12-07T23:51:47.566497 #4807]  INFO -- : Completed 200 OK in 125ms (Views: 111.8ms | ActiveRecord: 4.9ms)
+I, [2015-12-08T00:00:01.449869 #5986]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:00:01 +0000
+I, [2015-12-08T00:00:01.488624 #5986]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:00:01.591466 #5986] DEBUG -- :   [1m[36mWatchlists Load (1.5ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:00:01.605687 #5986]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (29.1ms)
+I, [2015-12-08T00:00:01.608327 #5986]  INFO -- : Completed 200 OK in 119ms (Views: 103.3ms | ActiveRecord: 6.1ms)
+I, [2015-12-08T00:00:05.071102 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:05 +0000
+I, [2015-12-08T00:00:05.073650 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:05.075645 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:05.115646 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+D, [2015-12-08T00:00:05.116965 #5986] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:00:05.118495 #5986] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 1]]
+D, [2015-12-08T00:00:05.119282 #5986] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:00:05.120074 #5986]  INFO -- : Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+I, [2015-12-08T00:00:05.910248 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:05 +0000
+I, [2015-12-08T00:00:05.913126 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:05.913551 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:05.917280 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.6ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+I, [2015-12-08T00:00:05.918404 #5986]  INFO -- : Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+I, [2015-12-08T00:00:06.094395 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:06 +0000
+I, [2015-12-08T00:00:06.095868 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:06.096463 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:06.097712 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.4ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 1]]
+I, [2015-12-08T00:00:06.098344 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+I, [2015-12-08T00:00:06.254277 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:06 +0000
+I, [2015-12-08T00:00:06.256789 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:06.257431 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:06.259086 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+I, [2015-12-08T00:00:06.259739 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+I, [2015-12-08T00:00:06.409812 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:06 +0000
+I, [2015-12-08T00:00:06.411218 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:06.411646 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:06.414678 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.5ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 1]]
+I, [2015-12-08T00:00:06.415640 #5986]  INFO -- : Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+I, [2015-12-08T00:00:06.582515 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:06 +0000
+I, [2015-12-08T00:00:06.594083 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:06.595675 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:06.597528 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+I, [2015-12-08T00:00:06.598172 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+I, [2015-12-08T00:00:06.752879 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:06 +0000
+I, [2015-12-08T00:00:06.755760 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:06.756199 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:06.760362 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.7ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 1]]
+I, [2015-12-08T00:00:06.761671 #5986]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+I, [2015-12-08T00:00:06.922326 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:06 +0000
+I, [2015-12-08T00:00:06.924474 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:06.925632 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:06.929952 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.7ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+I, [2015-12-08T00:00:06.930599 #5986]  INFO -- : Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+I, [2015-12-08T00:00:08.221794 #5986]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:00:08 +0000
+I, [2015-12-08T00:00:08.223404 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:08.223664 #5986]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:00:08.226087 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.4ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 1]]
+I, [2015-12-08T00:00:08.226777 #5986]  INFO -- : Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+I, [2015-12-08T00:00:11.536929 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:11 +0000
+I, [2015-12-08T00:00:11.538857 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:11.539025 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:11.540275 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.2ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+D, [2015-12-08T00:00:11.540713 #5986] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:00:11.541301 #5986] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 2]]
+D, [2015-12-08T00:00:11.542047 #5986] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:00:11.542494 #5986]  INFO -- : Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+I, [2015-12-08T00:00:11.955964 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:11 +0000
+I, [2015-12-08T00:00:11.958096 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:11.958940 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:11.963558 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.7ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+I, [2015-12-08T00:00:11.964982 #5986]  INFO -- : Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+I, [2015-12-08T00:00:12.164595 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:12 +0000
+I, [2015-12-08T00:00:12.166009 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:12.166184 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:12.167907 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.4ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 2]]
+I, [2015-12-08T00:00:12.168317 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+I, [2015-12-08T00:00:12.338506 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:12 +0000
+I, [2015-12-08T00:00:12.341828 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:12.342371 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:12.344699 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+I, [2015-12-08T00:00:12.345383 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+I, [2015-12-08T00:00:12.503470 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:12 +0000
+I, [2015-12-08T00:00:12.504955 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:12.505283 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:12.508563 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.8ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 2]]
+I, [2015-12-08T00:00:12.510643 #5986]  INFO -- : Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+I, [2015-12-08T00:00:12.641847 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:12 +0000
+I, [2015-12-08T00:00:12.643687 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:12.643913 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:12.645651 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+I, [2015-12-08T00:00:12.646238 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+I, [2015-12-08T00:00:12.808424 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:12 +0000
+I, [2015-12-08T00:00:12.811210 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:12.811424 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:12.813104 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.2ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 2]]
+I, [2015-12-08T00:00:12.813685 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+I, [2015-12-08T00:00:12.952341 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:12 +0000
+I, [2015-12-08T00:00:12.954169 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:12.954430 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:12.956679 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+I, [2015-12-08T00:00:12.957368 #5986]  INFO -- : Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+I, [2015-12-08T00:00:13.123666 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:13 +0000
+I, [2015-12-08T00:00:13.126117 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:13.126451 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:13.129475 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.4ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 2]]
+I, [2015-12-08T00:00:13.130922 #5986]  INFO -- : Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+I, [2015-12-08T00:00:13.296446 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:13 +0000
+I, [2015-12-08T00:00:13.300702 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:13.301330 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:13.304046 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.2ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+I, [2015-12-08T00:00:13.304421 #5986]  INFO -- : Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+I, [2015-12-08T00:00:13.451997 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:13 +0000
+I, [2015-12-08T00:00:13.453925 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:13.459156 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:13.460463 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.2ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 2]]
+I, [2015-12-08T00:00:13.463231 #5986]  INFO -- : Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+I, [2015-12-08T00:00:13.653691 #5986]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:00:13 +0000
+I, [2015-12-08T00:00:13.656006 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:13.656352 #5986]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:00:13.658807 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.5ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+I, [2015-12-08T00:00:13.659849 #5986]  INFO -- : Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+I, [2015-12-08T00:00:17.138485 #5986]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-08 00:00:17 +0000
+I, [2015-12-08T00:00:17.140242 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:17.140416 #5986]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-08T00:00:17.141761 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.2ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 3]]
+D, [2015-12-08T00:00:17.142198 #5986] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2015-12-08T00:00:17.145270 #5986] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "watchlists" WHERE "watchlists"."wid" = $1[0m  [["wid", 3]]
+D, [2015-12-08T00:00:17.147629 #5986] DEBUG -- :   [1m[35m (1.8ms)[0m  COMMIT
+I, [2015-12-08T00:00:17.148210 #5986]  INFO -- : Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+I, [2015-12-08T00:00:17.295160 #5986]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-08 00:00:17 +0000
+I, [2015-12-08T00:00:17.298283 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:17.298807 #5986]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-08T00:00:17.300931 #5986] DEBUG -- :   [1m[36mWatchlists Load (0.2ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 3]]
+I, [2015-12-08T00:00:17.301611 #5986]  INFO -- : Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+I, [2015-12-08T00:00:17.490291 #5986]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-08 00:00:17 +0000
+I, [2015-12-08T00:00:17.493524 #5986]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:00:17.493776 #5986]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-08T00:00:17.495907 #5986] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 3]]
+I, [2015-12-08T00:00:17.496817 #5986]  INFO -- : Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+I, [2015-12-08T00:06:20.195885 #6553]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:06:20 +0000
+I, [2015-12-08T00:06:20.236275 #6553]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:06:20.338418 #6553] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:06:20.353547 #6553]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (30.3ms)
+I, [2015-12-08T00:06:20.355811 #6553]  INFO -- : Completed 200 OK in 119ms (Views: 105.3ms | ActiveRecord: 5.1ms)
+I, [2015-12-08T00:06:34.770238 #6553]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:06:34 +0000
+I, [2015-12-08T00:06:34.772666 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:34.773479 #6553]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:06:34.810819 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.7ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+D, [2015-12-08T00:06:34.811669 #6553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:34.812889 #6553] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 1]]
+D, [2015-12-08T00:06:34.813628 #6553] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:34.814348 #6553]  INFO -- : Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+I, [2015-12-08T00:06:36.077823 #6553]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:06:36 +0000
+I, [2015-12-08T00:06:36.080758 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:36.081060 #6553]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:06:36.083852 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.5ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+D, [2015-12-08T00:06:36.085251 #6553] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:36.086243 #6553] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 2]]
+D, [2015-12-08T00:06:36.087124 #6553] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:36.087824 #6553]  INFO -- : Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+I, [2015-12-08T00:06:37.298476 #6553]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-08 00:06:37 +0000
+I, [2015-12-08T00:06:37.300675 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:37.301077 #6553]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-08T00:06:37.303256 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 3]]
+D, [2015-12-08T00:06:37.303904 #6553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:37.304767 #6553] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 3]]
+D, [2015-12-08T00:06:37.306050 #6553] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:37.306893 #6553]  INFO -- : Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+I, [2015-12-08T00:06:38.653625 #6553]  INFO -- : Started DELETE "/watchlist/4/delete" for 10.0.2.2 at 2015-12-08 00:06:38 +0000
+I, [2015-12-08T00:06:38.654958 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:38.655173 #6553]  INFO -- :   Parameters: {"m_id"=>"4", "mid"=>"4"}
+D, [2015-12-08T00:06:38.656649 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 4]]
+D, [2015-12-08T00:06:38.657152 #6553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:38.657785 #6553] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 4]]
+D, [2015-12-08T00:06:38.658426 #6553] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:38.658879 #6553]  INFO -- : Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+I, [2015-12-08T00:06:42.933886 #6553]  INFO -- : Started DELETE "/watchlist/5/delete" for 10.0.2.2 at 2015-12-08 00:06:42 +0000
+I, [2015-12-08T00:06:42.936807 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:42.938091 #6553]  INFO -- :   Parameters: {"m_id"=>"5", "mid"=>"5"}
+D, [2015-12-08T00:06:42.941033 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.5ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 5]]
+D, [2015-12-08T00:06:42.941939 #6553] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:42.943122 #6553] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 5]]
+D, [2015-12-08T00:06:42.944196 #6553] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:42.945035 #6553]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+I, [2015-12-08T00:06:44.532477 #6553]  INFO -- : Started DELETE "/watchlist/6/delete" for 10.0.2.2 at 2015-12-08 00:06:44 +0000
+I, [2015-12-08T00:06:44.534921 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:44.535202 #6553]  INFO -- :   Parameters: {"m_id"=>"6", "mid"=>"6"}
+D, [2015-12-08T00:06:44.537691 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 6]]
+D, [2015-12-08T00:06:44.538264 #6553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:44.539038 #6553] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 6]]
+D, [2015-12-08T00:06:44.539877 #6553] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:44.540343 #6553]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+I, [2015-12-08T00:06:45.551426 #6553]  INFO -- : Started DELETE "/watchlist/7/delete" for 10.0.2.2 at 2015-12-08 00:06:45 +0000
+I, [2015-12-08T00:06:45.552998 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:45.553221 #6553]  INFO -- :   Parameters: {"m_id"=>"7", "mid"=>"7"}
+D, [2015-12-08T00:06:45.555424 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 7]]
+D, [2015-12-08T00:06:45.556137 #6553] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:45.557040 #6553] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 7]]
+D, [2015-12-08T00:06:45.557857 #6553] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:45.558563 #6553]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+I, [2015-12-08T00:06:47.974380 #6553]  INFO -- : Started DELETE "/watchlist/8/delete" for 10.0.2.2 at 2015-12-08 00:06:47 +0000
+I, [2015-12-08T00:06:47.975947 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:47.976017 #6553]  INFO -- :   Parameters: {"m_id"=>"8", "mid"=>"8"}
+D, [2015-12-08T00:06:47.977757 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 8]]
+D, [2015-12-08T00:06:47.978678 #6553] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:47.979548 #6553] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 8]]
+D, [2015-12-08T00:06:47.981378 #6553] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:47.982062 #6553]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+I, [2015-12-08T00:06:49.108760 #6553]  INFO -- : Started DELETE "/watchlist/9/delete" for 10.0.2.2 at 2015-12-08 00:06:49 +0000
+I, [2015-12-08T00:06:49.110264 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:49.110470 #6553]  INFO -- :   Parameters: {"m_id"=>"9", "mid"=>"9"}
+D, [2015-12-08T00:06:49.112498 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 9]]
+D, [2015-12-08T00:06:49.113161 #6553] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:49.113993 #6553] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 9]]
+D, [2015-12-08T00:06:49.114763 #6553] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:49.115465 #6553]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+I, [2015-12-08T00:06:52.258230 #6553]  INFO -- : Started DELETE "/watchlist/10/delete" for 10.0.2.2 at 2015-12-08 00:06:52 +0000
+I, [2015-12-08T00:06:52.259805 #6553]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:06:52.260047 #6553]  INFO -- :   Parameters: {"m_id"=>"10", "mid"=>"10"}
+D, [2015-12-08T00:06:52.262060 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 10]]
+D, [2015-12-08T00:06:52.263036 #6553] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:06:52.264727 #6553] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 10]]
+D, [2015-12-08T00:06:52.265615 #6553] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:06:52.266228 #6553]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.3ms)
+I, [2015-12-08T00:07:29.712561 #6553]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:07:29 +0000
+I, [2015-12-08T00:07:29.713679 #6553]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:07:29.716487 #6553] DEBUG -- :   [1m[35mWatchlists Load (0.9ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T00:07:29.717093 #6553]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (2.1ms)
+I, [2015-12-08T00:07:29.718477 #6553]  INFO -- : Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.9ms)
+I, [2015-12-08T00:08:51.247017 #6553]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:08:51 +0000
+I, [2015-12-08T00:08:51.250017 #6553]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:08:51.252885 #6553] DEBUG -- :   [1m[36mWatchlists Load (1.3ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:08:51.254627 #6553]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (3.6ms)
+I, [2015-12-08T00:08:51.255545 #6553]  INFO -- : Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+I, [2015-12-08T00:18:15.030925 #6553]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-08 00:18:15 +0000
+I, [2015-12-08T00:18:15.035014 #6553]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-08T00:18:15.035310 #6553]  INFO -- :   Parameters: {"movieID"=>"1"}
+D, [2015-12-08T00:18:15.060697 #6553] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 1]]
+I, [2015-12-08T00:18:15.096489 #6553]  INFO -- :   Rendered movies/show.html.erb within layouts/application (1.6ms)
+I, [2015-12-08T00:18:15.097523 #6553]  INFO -- : Completed 200 OK in 62ms (Views: 28.8ms | ActiveRecord: 6.2ms)
+I, [2015-12-08T00:20:25.201634 #7769]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-08 00:20:25 +0000
+I, [2015-12-08T00:20:25.208315 #7776]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:20:25 +0000
+I, [2015-12-08T00:20:25.265078 #7769]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-08T00:20:25.265957 #7769]  INFO -- :   Parameters: {"movieID"=>"1"}
+I, [2015-12-08T00:20:25.322655 #7776]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:20:25.408019 #7769] DEBUG -- :   [1m[36mMovies Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1[0m  [["movieid", 1]]
+D, [2015-12-08T00:20:25.490085 #7776] DEBUG -- :   [1m[36mWatchlists Load (3.4ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:20:25.507466 #7769]  INFO -- :   Rendered movies/show.html.erb within layouts/application (2.5ms)
+I, [2015-12-08T00:20:25.513967 #7769]  INFO -- : Completed 200 OK in 246ms (Views: 72.2ms | ActiveRecord: 10.7ms)
+I, [2015-12-08T00:20:25.524199 #7776]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (68.7ms)
+I, [2015-12-08T00:20:25.526688 #7776]  INFO -- : Completed 200 OK in 202ms (Views: 170.9ms | ActiveRecord: 8.2ms)
+I, [2015-12-08T00:20:26.888172 #7776]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:20:26 +0000
+I, [2015-12-08T00:20:26.890078 #7776]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:20:26.894070 #7776] DEBUG -- :   [1m[35mWatchlists Load (1.0ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T00:20:26.900181 #7776]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (8.2ms)
+I, [2015-12-08T00:20:26.902513 #7776]  INFO -- : Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+I, [2015-12-08T00:21:48.691157 #7776]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:21:48 +0000
+I, [2015-12-08T00:21:48.693342 #7776]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:21:48.694337 #7776]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:21:48.732179 #7776] DEBUG -- :   [1m[36mWatchlists Load (0.5ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 1]]
+D, [2015-12-08T00:21:48.732928 #7776] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2015-12-08T00:21:48.734073 #7776] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "watchlists" WHERE "watchlists"."wid" = $1[0m  [["wid", 1]]
+D, [2015-12-08T00:21:48.734999 #7776] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+I, [2015-12-08T00:21:48.735721 #7776]  INFO -- : Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+I, [2015-12-08T00:21:49.883682 #7776]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:21:49 +0000
+I, [2015-12-08T00:21:49.886898 #7776]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:21:49.887204 #7776]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:21:49.890269 #7776] DEBUG -- :   [1m[36mWatchlists Load (0.3ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 2]]
+D, [2015-12-08T00:21:49.891455 #7776] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2015-12-08T00:21:49.893013 #7776] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "watchlists" WHERE "watchlists"."wid" = $1[0m  [["wid", 2]]
+D, [2015-12-08T00:21:49.894223 #7776] DEBUG -- :   [1m[35m (0.9ms)[0m  COMMIT
+I, [2015-12-08T00:21:49.895140 #7776]  INFO -- : Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+I, [2015-12-08T00:21:51.352113 #7776]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-08 00:21:51 +0000
+I, [2015-12-08T00:21:51.353397 #7776]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:21:51.353662 #7776]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-08T00:21:51.355446 #7776] DEBUG -- :   [1m[36mWatchlists Load (0.4ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 3]]
+D, [2015-12-08T00:21:51.356015 #7776] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2015-12-08T00:21:51.357400 #7776] DEBUG -- :   [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "watchlists" WHERE "watchlists"."wid" = $1[0m  [["wid", 3]]
+D, [2015-12-08T00:21:51.358343 #7776] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+I, [2015-12-08T00:21:51.359010 #7776]  INFO -- : Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+I, [2015-12-08T00:21:52.646155 #7776]  INFO -- : Started DELETE "/watchlist/4/delete" for 10.0.2.2 at 2015-12-08 00:21:52 +0000
+I, [2015-12-08T00:21:52.648221 #7776]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:21:52.648479 #7776]  INFO -- :   Parameters: {"m_id"=>"4", "mid"=>"4"}
+D, [2015-12-08T00:21:52.650359 #7776] DEBUG -- :   [1m[36mWatchlists Load (0.4ms)[0m  [1mSELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1[0m  [["movieid", 4]]
+D, [2015-12-08T00:21:52.651076 #7776] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2015-12-08T00:21:52.652078 #7776] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "watchlists" WHERE "watchlists"."wid" = $1[0m  [["wid", 4]]
+D, [2015-12-08T00:21:52.652709 #7776] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+I, [2015-12-08T00:21:52.653294 #7776]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+I, [2015-12-08T00:33:30.738825 #8768]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:33:30 +0000
+I, [2015-12-08T00:33:30.778314 #8768]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:33:30.877643 #8768] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:33:30.892537 #8768]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.5ms)
+I, [2015-12-08T00:33:30.894869 #8768]  INFO -- : Completed 200 OK in 116ms (Views: 104.6ms | ActiveRecord: 4.7ms)
+I, [2015-12-08T00:33:34.877604 #8768]  INFO -- : Started DELETE "/watchlist/1/delete" for 10.0.2.2 at 2015-12-08 00:33:34 +0000
+I, [2015-12-08T00:33:34.879627 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:34.879839 #8768]  INFO -- :   Parameters: {"m_id"=>"1", "mid"=>"1"}
+D, [2015-12-08T00:33:34.926505 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 1]]
+D, [2015-12-08T00:33:34.927275 #8768] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:34.928476 #8768] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 1]]
+D, [2015-12-08T00:33:34.929252 #8768] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:34.930023 #8768]  INFO -- : Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+I, [2015-12-08T00:33:36.770209 #8768]  INFO -- : Started DELETE "/watchlist/2/delete" for 10.0.2.2 at 2015-12-08 00:33:36 +0000
+I, [2015-12-08T00:33:36.772656 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:36.773031 #8768]  INFO -- :   Parameters: {"m_id"=>"2", "mid"=>"2"}
+D, [2015-12-08T00:33:36.775711 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 2]]
+D, [2015-12-08T00:33:36.776265 #8768] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:36.777257 #8768] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 2]]
+D, [2015-12-08T00:33:36.778094 #8768] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:36.779392 #8768]  INFO -- : Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+I, [2015-12-08T00:33:38.023819 #8768]  INFO -- : Started DELETE "/watchlist/3/delete" for 10.0.2.2 at 2015-12-08 00:33:38 +0000
+I, [2015-12-08T00:33:38.025729 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:38.025994 #8768]  INFO -- :   Parameters: {"m_id"=>"3", "mid"=>"3"}
+D, [2015-12-08T00:33:38.028122 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 3]]
+D, [2015-12-08T00:33:38.028917 #8768] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:38.030028 #8768] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 3]]
+D, [2015-12-08T00:33:38.030988 #8768] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:38.031707 #8768]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+I, [2015-12-08T00:33:38.818761 #8768]  INFO -- : Started DELETE "/watchlist/4/delete" for 10.0.2.2 at 2015-12-08 00:33:38 +0000
+I, [2015-12-08T00:33:38.821949 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:38.822681 #8768]  INFO -- :   Parameters: {"m_id"=>"4", "mid"=>"4"}
+D, [2015-12-08T00:33:38.826346 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.4ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 4]]
+D, [2015-12-08T00:33:38.827047 #8768] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:38.827939 #8768] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 4]]
+D, [2015-12-08T00:33:38.828670 #8768] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:38.829419 #8768]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+I, [2015-12-08T00:33:42.263587 #8768]  INFO -- : Started DELETE "/watchlist/5/delete" for 10.0.2.2 at 2015-12-08 00:33:42 +0000
+I, [2015-12-08T00:33:42.265802 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:42.266134 #8768]  INFO -- :   Parameters: {"m_id"=>"5", "mid"=>"5"}
+D, [2015-12-08T00:33:42.270868 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 5]]
+D, [2015-12-08T00:33:42.271433 #8768] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:42.272085 #8768] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 5]]
+D, [2015-12-08T00:33:42.272731 #8768] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:42.273239 #8768]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+I, [2015-12-08T00:33:43.298970 #8768]  INFO -- : Started DELETE "/watchlist/6/delete" for 10.0.2.2 at 2015-12-08 00:33:43 +0000
+I, [2015-12-08T00:33:43.300999 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:43.301267 #8768]  INFO -- :   Parameters: {"m_id"=>"6", "mid"=>"6"}
+D, [2015-12-08T00:33:43.303760 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 6]]
+D, [2015-12-08T00:33:43.304252 #8768] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:43.304895 #8768] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 6]]
+D, [2015-12-08T00:33:43.305459 #8768] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:43.305990 #8768]  INFO -- : Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+I, [2015-12-08T00:33:44.283767 #8768]  INFO -- : Started DELETE "/watchlist/7/delete" for 10.0.2.2 at 2015-12-08 00:33:44 +0000
+I, [2015-12-08T00:33:44.287333 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:44.287530 #8768]  INFO -- :   Parameters: {"m_id"=>"7", "mid"=>"7"}
+D, [2015-12-08T00:33:44.289427 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 7]]
+D, [2015-12-08T00:33:44.290284 #8768] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:44.291163 #8768] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 7]]
+D, [2015-12-08T00:33:44.292062 #8768] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:44.292765 #8768]  INFO -- : Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+I, [2015-12-08T00:33:47.218698 #8768]  INFO -- : Started DELETE "/watchlist/8/delete" for 10.0.2.2 at 2015-12-08 00:33:47 +0000
+I, [2015-12-08T00:33:47.220173 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:47.220362 #8768]  INFO -- :   Parameters: {"m_id"=>"8", "mid"=>"8"}
+D, [2015-12-08T00:33:47.221950 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.3ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 8]]
+D, [2015-12-08T00:33:47.222685 #8768] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:47.223542 #8768] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 8]]
+D, [2015-12-08T00:33:47.224305 #8768] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:47.224952 #8768]  INFO -- : Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+I, [2015-12-08T00:33:49.056143 #8768]  INFO -- : Started DELETE "/watchlist/9/delete" for 10.0.2.2 at 2015-12-08 00:33:49 +0000
+I, [2015-12-08T00:33:49.058539 #8768]  INFO -- : Processing by WatchlistController#delete as JSON
+I, [2015-12-08T00:33:49.059033 #8768]  INFO -- :   Parameters: {"m_id"=>"9", "mid"=>"9"}
+D, [2015-12-08T00:33:49.063121 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.6ms)[0m  SELECT "watchlists".* FROM "watchlists" WHERE "watchlists"."movieid" = $1  [["movieid", 9]]
+D, [2015-12-08T00:33:49.064189 #8768] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2015-12-08T00:33:49.064795 #8768] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "watchlists" WHERE "watchlists"."wid" = $1  [["wid", 9]]
+D, [2015-12-08T00:33:49.065580 #8768] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+I, [2015-12-08T00:33:49.065957 #8768]  INFO -- : Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+I, [2015-12-08T00:34:59.795759 #8768]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:34:59 +0000
+I, [2015-12-08T00:34:59.796893 #8768]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:34:59.800394 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.8ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T00:34:59.802125 #8768]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (3.0ms)
+I, [2015-12-08T00:34:59.803248 #8768]  INFO -- : Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.8ms)
+I, [2015-12-08T00:35:48.792917 #8768]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:35:48 +0000
+I, [2015-12-08T00:35:48.796276 #8768]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:35:48.800915 #8768] DEBUG -- :   [1m[36mWatchlists Load (1.3ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:35:48.802611 #8768]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.0ms)
+I, [2015-12-08T00:35:48.803918 #8768]  INFO -- : Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.3ms)
+I, [2015-12-08T00:36:27.755155 #8768]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:36:27 +0000
+I, [2015-12-08T00:36:27.756988 #8768]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:36:27.760213 #8768] DEBUG -- :   [1m[35mWatchlists Load (0.9ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T00:36:27.762674 #8768]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (3.9ms)
+I, [2015-12-08T00:36:27.763801 #8768]  INFO -- : Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+I, [2015-12-08T00:40:32.317370 #9653]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:40:32 +0000
+I, [2015-12-08T00:40:32.356503 #9653]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:40:32.457111 #9653] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:40:32.472324 #9653]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.1ms)
+I, [2015-12-08T00:40:32.474483 #9653]  INFO -- : Completed 200 OK in 118ms (Views: 105.5ms | ActiveRecord: 4.4ms)
+I, [2015-12-08T00:51:11.658140 #10708]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:51:11 +0000
+I, [2015-12-08T00:51:11.697749 #10708]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:51:11.803040 #10708] DEBUG -- :   [1m[36mWatchlists Load (1.3ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:51:11.816915 #10708]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (29.0ms)
+I, [2015-12-08T00:51:11.819621 #10708]  INFO -- : Completed 200 OK in 122ms (Views: 107.0ms | ActiveRecord: 4.8ms)
+I, [2015-12-08T00:57:29.674913 #11571]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 00:57:29 +0000
+I, [2015-12-08T00:57:29.714856 #11571]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T00:57:29.815467 #11571] DEBUG -- :   [1m[36mWatchlists Load (0.8ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T00:57:29.830478 #11571]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.1ms)
+I, [2015-12-08T00:57:29.833008 #11571]  INFO -- : Completed 200 OK in 118ms (Views: 105.9ms | ActiveRecord: 4.2ms)
+I, [2015-12-08T01:04:45.277236 #12964]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:04:45 +0000
+I, [2015-12-08T01:04:45.316874 #12964]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:04:45.417507 #12964] DEBUG -- :   [1m[36mWatchlists Load (1.2ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T01:04:45.430966 #12964]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (28.2ms)
+I, [2015-12-08T01:04:45.433297 #12964]  INFO -- : Completed 200 OK in 116ms (Views: 101.5ms | ActiveRecord: 4.4ms)
+I, [2015-12-08T01:24:56.448320 #14334]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:24:56 +0000
+I, [2015-12-08T01:24:56.487787 #14334]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:24:56.586797 #14334] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T01:24:56.601150 #14334]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (27.4ms)
+I, [2015-12-08T01:24:56.603877 #14334]  INFO -- : Completed 200 OK in 116ms (Views: 99.9ms | ActiveRecord: 5.9ms)
+I, [2015-12-08T01:28:02.328620 #14334]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=movie" for 10.0.2.2 at 2015-12-08 01:28:02 +0000
+I, [2015-12-08T01:28:02.333208 #14334]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T01:28:02.338797 #14334]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"movie"}
+D, [2015-12-08T01:28:02.444972 #14334] DEBUG -- :   [1m[35mMovies Load (11.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (title like '%movie%')  ORDER BY title ASC
+I, [2015-12-08T01:28:02.447890 #14334]  INFO -- :   Rendered movies/search.html.erb within layouts/application (16.7ms)
+I, [2015-12-08T01:28:02.459470 #14334]  INFO -- : Completed 200 OK in 118ms (Views: 102.5ms | ActiveRecord: 13.3ms)
+I, [2015-12-08T01:28:06.919807 #14334]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-08 01:28:06 +0000
+I, [2015-12-08T01:28:06.921842 #14334]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T01:28:06.921987 #14334]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-08T01:28:06.928024 #14334] DEBUG -- :   [1m[36mMovies Load (4.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-08T01:28:06.950770 #14334]  INFO -- :   Rendered movies/search.html.erb within layouts/application (25.2ms)
+I, [2015-12-08T01:28:06.959859 #14334]  INFO -- : Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 5.1ms)
+I, [2015-12-08T01:34:43.698397 #15759]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-08 01:34:43 +0000
+I, [2015-12-08T01:34:43.739908 #15759]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T01:34:43.740325 #15759]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-08T01:34:43.833372 #15759] DEBUG -- :   [1m[36mMovies Load (1.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-08T01:34:43.858091 #15759]  INFO -- :   Rendered movies/search.html.erb within layouts/application (27.9ms)
+I, [2015-12-08T01:34:43.861193 #15759]  INFO -- : Completed 200 OK in 121ms (Views: 106.9ms | ActiveRecord: 4.6ms)
+I, [2015-12-08T01:34:50.623659 #15759]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:34:50 +0000
+I, [2015-12-08T01:34:50.625793 #15759]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:34:50.659893 #15759] DEBUG -- :   [1m[35mWatchlists Load (1.4ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T01:34:50.666072 #15759]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (17.3ms)
+I, [2015-12-08T01:34:50.667337 #15759]  INFO -- : Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 2.9ms)
+I, [2015-12-08T01:34:51.298454 #15759]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:34:51 +0000
+I, [2015-12-08T01:34:51.300179 #15759]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:34:51.303300 #15759] DEBUG -- :   [1m[36mWatchlists Load (0.9ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T01:34:51.306808 #15759]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.8ms)
+I, [2015-12-08T01:34:51.307815 #15759]  INFO -- : Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.9ms)
+I, [2015-12-08T01:37:57.787558 #15759]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:37:57 +0000
+I, [2015-12-08T01:37:57.790409 #15759]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:37:57.796313 #15759] DEBUG -- :   [1m[35mWatchlists Load (1.7ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T01:37:57.804958 #15759]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (11.1ms)
+I, [2015-12-08T01:37:57.808484 #15759]  INFO -- : Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 1.7ms)
+I, [2015-12-08T01:43:41.186136 #16693]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:43:41 +0000
+I, [2015-12-08T01:43:41.228335 #16693]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:43:41.326253 #16693] DEBUG -- :   [1m[36mWatchlists Load (0.8ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T01:43:41.340062 #16693]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (27.3ms)
+I, [2015-12-08T01:43:41.342419 #16693]  INFO -- : Completed 200 OK in 113ms (Views: 100.4ms | ActiveRecord: 4.2ms)
+I, [2015-12-08T01:46:57.032776 #16693]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:46:57 +0000
+I, [2015-12-08T01:46:57.035443 #16693]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:46:57.039987 #16693] DEBUG -- :   [1m[35mWatchlists Load (1.0ms)[0m  SELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid
+I, [2015-12-08T01:46:57.044630 #16693]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (6.9ms)
+I, [2015-12-08T01:46:57.046778 #16693]  INFO -- : Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.0ms)
+I, [2015-12-08T01:47:06.140776 #16693]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:47:06 +0000
+I, [2015-12-08T01:47:06.142520 #16693]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:47:06.146185 #16693] DEBUG -- :   [1m[36mWatchlists Load (0.7ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T01:47:06.149041 #16693]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.4ms)
+I, [2015-12-08T01:47:06.150041 #16693]  INFO -- : Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+I, [2015-12-08T01:49:42.072511 #17559]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:49:42 +0000
+I, [2015-12-08T01:49:42.114669 #17559]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T01:49:42.215072 #17559] DEBUG -- :   [1m[36mWatchlists Load (1.0ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T01:49:42.228545 #17559]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (27.9ms)
+I, [2015-12-08T01:49:42.230748 #17559]  INFO -- : Completed 200 OK in 116ms (Views: 100.1ms | ActiveRecord: 4.9ms)
+I, [2015-12-08T01:59:29.303607 #18629]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 01:59:29 +0000
+I, [2015-12-08T01:59:29.344078 #18629]  INFO -- : Processing by WatchlistController#index as HTML
+I, [2015-12-08T01:59:29.433254 #18629]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (1.0ms)
+I, [2015-12-08T01:59:29.433673 #18629]  INFO -- : Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+F, [2015-12-08T01:59:29.435106 #18629] FATAL -- : 
+SyntaxError (/home/vagrant/project/webroot/app/views/watchlist/index.html.erb:26: syntax error, unexpected ',', expecting ')'
+...fer.append=( link_to(w.title) , m_path(w.movieid)));@output_...
+...                               ^
+/home/vagrant/project/webroot/app/views/watchlist/index.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+...(w.title) , m_path(w.movieid)));@output_buffer.safe_append='...
+...                               ^):
+  app/views/watchlist/index.html.erb:26: syntax error, unexpected ',', expecting ')'
+  app/views/watchlist/index.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+
+
+I, [2015-12-08T01:59:29.610100 #18629]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+I, [2015-12-08T01:59:29.616887 #18629]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+I, [2015-12-08T01:59:29.621242 #18629]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2015-12-08T01:59:29.621467 #18629]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+I, [2015-12-08T02:05:12.469403 #19979]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 02:05:12 +0000
+I, [2015-12-08T02:05:12.511037 #19979]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T02:05:12.620787 #19979] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T02:05:12.634927 #19979]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (31.6ms)
+I, [2015-12-08T02:05:12.637539 #19979]  INFO -- : Completed 200 OK in 126ms (Views: 112.1ms | ActiveRecord: 4.5ms)
+I, [2015-12-08T02:05:12.743847 #19979]  INFO -- : Started GET "/w.urlink" for 10.0.2.2 at 2015-12-08 02:05:12 +0000
+F, [2015-12-08T02:05:12.745183 #19979] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/w.urlink"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-08T02:05:12.762038 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+I, [2015-12-08T02:05:12.772432 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+I, [2015-12-08T02:05:12.777731 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+I, [2015-12-08T02:05:12.783260 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-12-08T02:05:12.783523 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.8ms)
+I, [2015-12-08T02:05:12.981730 #19979]  INFO -- : Started GET "/w.urlink" for 10.0.2.2 at 2015-12-08 02:05:12 +0000
+F, [2015-12-08T02:05:12.983491 #19979] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/w.urlink"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-08T02:05:13.008602 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+I, [2015-12-08T02:05:13.028458 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+I, [2015-12-08T02:05:13.035321 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+I, [2015-12-08T02:05:13.042000 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+I, [2015-12-08T02:05:13.042277 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.3ms)
+I, [2015-12-08T02:05:20.208640 #19979]  INFO -- : Started GET "/movies/1" for 10.0.2.2 at 2015-12-08 02:05:20 +0000
+I, [2015-12-08T02:05:20.211656 #19979]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-08T02:05:20.211864 #19979]  INFO -- :   Parameters: {"movieID"=>"1"}
+D, [2015-12-08T02:05:20.257609 #19979] DEBUG -- :   [1m[35mMovies Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 1]]
+I, [2015-12-08T02:05:20.292764 #19979]  INFO -- :   Rendered movies/show.html.erb within layouts/application (1.7ms)
+I, [2015-12-08T02:05:20.293916 #19979]  INFO -- : Completed 200 OK in 82ms (Views: 29.4ms | ActiveRecord: 2.6ms)
+I, [2015-12-08T02:05:21.856087 #19979]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 02:05:21 +0000
+I, [2015-12-08T02:05:21.859572 #19979]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T02:05:21.881167 #19979] DEBUG -- :   [1m[36mWatchlists Load (0.7ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T02:05:21.883808 #19979]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (4.5ms)
+I, [2015-12-08T02:05:21.885066 #19979]  INFO -- : Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.7ms)
+I, [2015-12-08T02:05:21.911033 #19979]  INFO -- : Started GET "/w.urlink" for 10.0.2.2 at 2015-12-08 02:05:21 +0000
+F, [2015-12-08T02:05:21.912303 #19979] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/w.urlink"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:142:in `accept_and_process_next_request'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+  /usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:448:in `block (3 levels) in start_threads'
+
+
+I, [2015-12-08T02:05:21.930974 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+I, [2015-12-08T02:05:21.941023 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+I, [2015-12-08T02:05:21.946338 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+I, [2015-12-08T02:05:21.951161 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+I, [2015-12-08T02:05:21.951757 #19979]  INFO -- :   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.3ms)
+I, [2015-12-08T02:13:19.982737 #21880]  INFO -- : Started GET "/watchlist" for 10.0.2.2 at 2015-12-08 02:13:19 +0000
+I, [2015-12-08T02:13:20.022619 #21880]  INFO -- : Processing by WatchlistController#index as HTML
+D, [2015-12-08T02:13:20.128432 #21880] DEBUG -- :   [1m[36mWatchlists Load (1.1ms)[0m  [1mSELECT * FROM "watchlists" INNER JOIN movies on watchlists.movieid = movies.movieid[0m
+I, [2015-12-08T02:13:20.143034 #21880]  INFO -- :   Rendered watchlist/index.html.erb within layouts/application (30.9ms)
+I, [2015-12-08T02:13:20.146343 #21880]  INFO -- : Completed 200 OK in 123ms (Views: 107.3ms | ActiveRecord: 5.2ms)
+I, [2015-12-08T02:20:17.275347 #22772]  INFO -- : Started GET "/movies/search?utf8=%E2%9C%93&search=a" for 10.0.2.2 at 2015-12-08 02:20:17 +0000
+I, [2015-12-08T02:20:17.315304 #22772]  INFO -- : Processing by MoviesController#search as HTML
+I, [2015-12-08T02:20:17.315581 #22772]  INFO -- :   Parameters: {"utf8"=>"✓", "search"=>"a"}
+D, [2015-12-08T02:20:17.414344 #22772] DEBUG -- :   [1m[36mMovies Load (2.0ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (title like '%a%')  ORDER BY title ASC[0m
+I, [2015-12-08T02:20:17.437482 #22772]  INFO -- :   Rendered movies/search.html.erb within layouts/application (27.1ms)
+I, [2015-12-08T02:20:17.441442 #22772]  INFO -- : Completed 200 OK in 126ms (Views: 108.6ms | ActiveRecord: 5.7ms)
+I, [2015-12-08T02:20:25.218830 #22772]  INFO -- : Started GET "/movies/57" for 10.0.2.2 at 2015-12-08 02:20:25 +0000
+I, [2015-12-08T02:20:25.220963 #22772]  INFO -- : Processing by MoviesController#show as HTML
+I, [2015-12-08T02:20:25.221148 #22772]  INFO -- :   Parameters: {"movieID"=>"57"}
+D, [2015-12-08T02:20:25.236036 #22772] DEBUG -- :   [1m[35mMovies Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."movieid" = $1 LIMIT 1  [["movieid", 57]]
+I, [2015-12-08T02:20:25.254796 #22772]  INFO -- :   Rendered movies/show.html.erb within layouts/application (2.5ms)
+I, [2015-12-08T02:20:25.255875 #22772]  INFO -- : Completed 200 OK in 34ms (Views: 19.0ms | ActiveRecord: 0.7ms)
