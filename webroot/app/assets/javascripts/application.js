@@ -21,8 +21,7 @@
         $(".menu_btn2").slideToggle();
     });
 
-    $("#search-form").submit(function(event)
-            {
+    $("#search-form").submit(function(event) {
               var msg = "";
               var error = "";
               var Search = document.getElementById('search').value;
@@ -45,13 +44,11 @@
                       return;
                   }
               }
-
               if (error != "") {
                   alert(error);
                   return false;
               } else if (msg != "") {
                   alert("Please correct the following:\n" + msg);
-
                   return false;
               }
     });
