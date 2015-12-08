@@ -73,12 +73,6 @@
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
           });
         </script>
-        <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-        <% end %>
     <%= yield %>
   </body>
 </html>
