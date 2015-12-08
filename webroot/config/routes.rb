@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   #get 'users/register' => 'users#register'
   get 'watchlist' => 'watchlist#index'
   post 'watchlist' => 'watchlist#remove'
+  post '/watchlist/create' => 'watchlist#create'
 
   delete'/watchlist/:mid/delete' =>'watchlist#delete'
   # The priority is based upon order of creation: first created -> highest priority.

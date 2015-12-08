@@ -13,7 +13,15 @@ class WatchlistController < ApplicationController
   		end
   end
 
-
+  def create
+    @watchlist = Watchlists.new(watchlists_params)
+    @watchlist.save
+    respond_to do |format|
+        format.html 
+        format.xml  { render :xml => '' }
+        format.json { render :json => '' }
+      end
+  end
 
 private
   def watchlists_params
