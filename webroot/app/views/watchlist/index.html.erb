@@ -1,24 +1,18 @@
 <script> 
 $(document).ready(function() {
-$('.remove_from_watchlist').on('click',function(){
-	var id = $(this).attr("data-val");
-	var url = "/watchlist/"+id+"/delete";
-	$.ajax({
-		type: "POST",
-		url:   url,
-		data: {"_method":"delete", "m_id" : id},
-		dataType: "json"
-
+	$('.remove_from_watchlist').on('click',function(){
+		var id = $(this).attr("data-val");
+		var url = "/watchlist/"+id+"/delete";
+		$.ajax({
+			type: "POST",
+			url:   url,
+			data: {"_method":"delete", "m_id" : id},
+			dataType: "json"
+		});
+    	$(this).closest('li').remove();
 	});
-
-
-
-
-
-    $(this).closest('li').remove();
-});});
+});
 </script>
-
 
 <div class="central border_shadow">
 	<div id="Action" class="watchlist_result">

@@ -39,9 +39,11 @@ class MoviesController < ApplicationController
           render 'edit'
         end
     end
-
   end
   
+  def category
+    @action = Movies.where("genre like ?", "%Action%").order("rating").first(3)
+  end
   private
   def movie_params
     params.requires(:movie).permit(:title, :producer, :genre, :year, :rating, :urlink, :synopsys, :urlandscape)

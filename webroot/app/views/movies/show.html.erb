@@ -5,18 +5,9 @@
 
     <div id="trailer_panel">
       <div id="trailer_top_panel">
+      <button style="margin:2em;float:right;">Add to Watchlist</button>
         <div id="movie_info"> 
-          <h3 class="movie-title"><%= @movie.title %>  </h3>
-        </div>
-        <div id="share">
-          <ul id="share_list_ul">
-         <!--  Share:
-            <li>youtube</li>
-            <li>FB</li>
-            <li>Twitter</li> -->
-            <li><button>Add to Favorites</button></li>
-          </ul>
-
+          <h2 class="movie-title"><%= @movie.title %></h2>
         </div>
       </div>
       <div id="trailer_middle_panel">
@@ -32,7 +23,7 @@
           </div> 
         </div> 
         <div id="youtube_panel">
-          <iframe id = "youtube_player" height="100%" width="100%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
+          <iframe id = "youtube_player" height="100%" width="95%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
         </div>
       </div> <%# middle end%>
 
@@ -49,25 +40,10 @@
             <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
             <span>//www.youtube.com/embed/TSm82j_MFzY</span>
           </div></li>
-          <li><div class="youtube_list_div">
-            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
+          <li><div  class="youtube_list_div">
+            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/TSm82j_MFzY/0.jpg">
             <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
-            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
-          </div></li>
-          <li><div class="youtube_list_div">
-            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
-            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
-          </div></li>
-          <li><div class="youtube_list_div">
-            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
-            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
-          </div></li>
-          <li><div class="youtube_list_div">
-            <img  class="yt_tn" style=" height: 100%;" src="http://img.youtube.com/vi/yQ5U8suTUw0/2.jpg">
-            <img class="yt_button" style="height: 40%; width:30%; " src="<%= asset_path 'play.png' %>" >
-            <span>//www.youtube.com/embed/yQ5U8suTUw0</span>
+            <span>//www.youtube.com/embed/TSm82j_MFzY</span>
           </div></li>
       </ul>
       </div>

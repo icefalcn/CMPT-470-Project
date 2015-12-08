@@ -12,9 +12,7 @@ class WatchlistController < ApplicationController
   			format.json {render :json => ''}
   		end
   end
-
-
-
+  
 private
   def watchlists_params
     params.require(:watchlists).permit(:uid, :movieid)
