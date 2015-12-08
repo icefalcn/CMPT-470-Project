@@ -56,18 +56,15 @@ cookbook_file "000-default.conf" do
   path "/etc/apache2/sites-enabled/000-default.conf"
 end
 
-#need to fix watchlist/customer table creation
-execute 'create_db' do
-    command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, PRIMARY KEY(movieID)); 
-    create table users (uid serial, email varchar, encrypted_password varchar, primary key(uid));
-    CREATE TABLE WatchLists (uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid)); 
-    CREATE TABLE Vote (uid int, movieid int, status int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid));\" | sudo -u vagrant psql mydb"
+execute 'migrate' do
+    cwd '/home/vagrant/project/webroot/bin'
+    command 'rake db:migrate RAILS_ENV=production'
+    user 'vagrant'
 end
 
-execute 'migrate' do
-  cwd '/home/vagrant/project/webroot/bin'
-  command 'rake db:migrate RAILS_ENV=production'
-  user 'vagrant'
+#need to fix watchlist/customer table creation
+execute 'create_db' do
+    command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, ytlink varchar NOT NULL PRIMARY KEY(movieID)); REATE TABLE WatchLists (id int, movieid int, foreign key(id) references users(id), foreign key(movieid) references movies(movieid)); CREATE TABLE Vote (id int, movieid int, status int, foreign key(uid) references users(id), foreign key(movieid) references movies(movieid));\" | sudo -u vagrant psql mydb"
 end
 
 execute 'assests' do
@@ -96,7 +93,7 @@ end
 #end
 
 execute 'reset db' do
-  command 'echo "delete from vote; delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1"|sudo -u vagrant psql mydb'
+  command 'echo "delete from vote; delete from watchlists; delete from movies; alter sequence movies_movieID_seq restart with 1;alter sequence watchlists_wid_seq restart with 1;alter sequence vote_vid_seq restart with 1"|sudo -u vagrant psql mydb'
 end
 
 execute 'fill db' do
