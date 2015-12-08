@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  
   resources :users
   #get '/login' => 'users#login'
   #post '/login' => 'movies#index'
