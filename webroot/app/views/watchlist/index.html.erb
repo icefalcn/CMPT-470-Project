@@ -15,19 +15,20 @@ $(document).ready(function() {
 </script>
 
 <div class="central border_shadow">
+	<h2 style="padding-left:2em;padding-top: 1em">Your Watchlist </h2>
+	<hr width="85%">
 	<div id="Action" class="watchlist_result">
-	  <ol>
+	  <ul style="list-style-type: none;">
 	    <% @watchlist.each do |w| %>
 	     <li>
-	     <br>
-	        <p><%= w.title %></p>  
-	    	<%= link_to(image_tag(w.urlink) , m_path(w.movieid)) %>
-	        <hr> 
-	        <span data-val="<%= w.movieid %>" class = "fake_link remove_from_watchlist"> remove from watchlist 
-	        </span>
+	    	<div style="float: left"><%= image_tag(w.urlink)%></div>
+	    	<div style="margin-left:16em;width:40em"><h4><%= link_to(w.title , m_path(w.movieid))%></h4>(<%=w.year%>)<br><br><p><%=w.synopsys%></p></div>
+	    	<br>
+        	<span data-val="<%= w.movieid %>" class = "fake_link remove_from_watchlist"> remove from watchlist </span>
+	     	<hr width="770em">
 	     </li>
 	    <% end %>
-	  </ol>
+	  </ul>
 	</div>
 </div>
 

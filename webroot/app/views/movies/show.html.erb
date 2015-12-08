@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <div class="central border_shadow" >
 
@@ -23,7 +32,7 @@
           </div> 
         </div> 
         <div id="youtube_panel">
-          <iframe id = "youtube_player" height="100%" width="95%" src="//www.youtube.com/embed/yQ5U8suTUw0" frameborder="0" allowfullscreen></iframe>
+          <iframe id = "youtube_player" height="100%" width="95%" src="<%= @movie.ytlink %>" frameborder="0" allowfullscreen></iframe>
         </div>
       </div> <%# middle end%>
 
@@ -48,9 +57,9 @@
       </ul>
       </div>
     </div>  <%# trailer_panel %>
-    #comment section below#   
+
   </div> <%# movie_show %>
-    
+    <div class="fb-comments" data-href=<%=@link %> data-width="600" data-numposts="5"></div>
 </div>
 
 
@@ -62,6 +71,17 @@
     var url = "/movies/" + <%=@movie.movieid%> ;
     // var vote_status = @vote_status; //from controller
     var vote_status = 0;
+
+    $('.add_watchlist').on('click',function(){
+    var id = $(this).attr("data-val");
+    var url2 = "/watchlist/"+id+"/add";
+    $.ajax({
+      type: "POST",
+      url:   url2,
+      data: {"method":"POST", "m_id" : id},
+      dataType: "json"
+    });});
+
 
     $("#upvote_panel").click(function() {
       if (vote_status == -1){ //currently down voted
@@ -148,9 +168,7 @@
         });
       }
     });
-
-
-  // });
+});
 </script>
 
 

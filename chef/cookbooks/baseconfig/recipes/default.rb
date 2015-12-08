@@ -42,14 +42,6 @@ execute 'postgres_user' do
   command "echo \"CREATE DATABASE mydb; CREATE USER vagrant WITH PASSWORD 'vagrant'; GRANT ALL PRIVILEGES ON DATABASE mydb TO vagrant;\" | sudo -u postgres psql"
 end
 
-#need to fix watchlist/customer table creation
-execute 'create_db' do
-  command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, PRIMARY KEY(movieID));
-   CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, emailaddr varchar, primary key(uid));
-   CREATE TABLE WatchLists (wid serial not null, uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid), primary key(wid)); CREATE TABLE Vote (vid serial not null,uid int, movieid int, status int,primary key(vid), foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid));insert into users(username, password, emailaddr) values ('test', 'test', 'test@test.com');\" | sudo -u vagrant psql mydb"
-
-end
-
 #execute 'insert_movie' do
 #    command "echo \"INSERT INTO movie (movieid, title, author, genre, year, rating, urlink, synopsys) VALUES ('1', 'Star Wars: The Force Awakens', 'J.J. Abrams', 'Adventure', '12-18-2015','10','http://schmoesknow.com/wp-content/uploads/2015/07/Star_Wars.png','Lucasfilm and visionary director J.J. Abrams join forces to take you back again to a galaxy far, far away as Star Wars returns to the big screen with Star Wars: The Force Awakens.');  INSERT INTO movie (movieid, title, author, genre, year, rating, urlink,synopsys) VALUES ('2', 'Spectre','Sam Mendes', 'Action', '11-06-2015', '6', 'http://ia.media-imdb.com/images/M/MV5BMjM2Nzg4MzkwOF5BMl5BanBnXkFtZTgwNzA0OTE3NjE@._V1_SX214_AL_.jpg', 'A cryptic message from the past sends James Bond on a rogue mission to Mexico City and eventually Rome, where he meets Lucia Sciarra (Monica Bellucci), the beautiful and forbidden widow of an infamous criminal. Bond infiltrates a secret meeting and uncovers the existence of the sinister organisation known as SPECTRE. Meanwhile back in London, Max Denbigh (Andrew Scott), the new head of the Centre for National Security, questions Bonds actions and challenges the relevance of MI6, led by M (Ralph Fiennes). Bond covertly enlists Moneypenny (Naomie Harris) and Q (Ben Whishaw) to help him seek out Madeleine Swann (Lea Seydoux), the daughter of his old nemesis Mr White (Jesper Christensen), who may hold the clue to untangling the web of SPECTRE. As the daughter of an assassin, she understands Bond in a way most others cannot. As Bond ventures towards the heart of SPECTRE, he learns of a chilling connection between himself and the enemy he seeks, played by Christoph Waltz.'); \" | sudo -u vagrant psql mydb"
 #end
@@ -64,11 +56,16 @@ cookbook_file "000-default.conf" do
   path "/etc/apache2/sites-enabled/000-default.conf"
 end
 
-#execute 'migrate' do
-#  cwd '/home/vagrant/project/webroot/bin'
-#  command 'rake db:migrate RAILS_ENV=production'
-#  user 'vagrant'
-#end
+execute 'migrate' do
+    cwd '/home/vagrant/project/webroot/bin'
+    command 'rake db:migrate RAILS_ENV=production'
+    user 'vagrant'
+end
+
+#need to fix watchlist/customer table creation
+execute 'create_db' do
+    command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, ytlink varchar NOT NULL, PRIMARY KEY(movieID)); REATE TABLE WatchLists (id int, movieid int, foreign key(id) references users(id), foreign key(movieid) references movies(movieid)); CREATE TABLE Vote (id int, movieid int, status int, foreign key(uid) references users(id), foreign key(movieid) references movies(movieid));\" | sudo -u vagrant psql mydb"
+end
 
 execute 'assests' do
   cwd '/home/vagrant/project/webroot'
