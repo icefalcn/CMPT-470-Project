@@ -87,6 +87,17 @@
     // var vote_status = @vote_status; //from controller
     var vote_status = 0;
 
+    $('.add_watchlist').on('click',function(){
+    var id = $(this).attr("data-val");
+    var url2 = "/watchlist/"+id+"/add";
+    $.ajax({
+      type: "POST",
+      url:   url2,
+      data: {"method":"POST", "m_id" : id},
+      dataType: "json"
+    });});
+
+
     $("#upvote_panel").click(function() {
       if (vote_status == -1){ //currently down voted
         $.ajax({

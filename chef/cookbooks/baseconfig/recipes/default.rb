@@ -46,7 +46,8 @@ end
 execute 'create_db' do
   command "echo \"CREATE TABLE Movies (movieID serial NOT NULL, title varchar NOT NULL unique, genre varchar NOT NULL, year date NOT NULL, rating int NOT NULL, urlink varchar NOT NULL, synopsys varchar NOT NULL, urlandscape varchar NOT NULL, ytlink varchar NOT NULL, PRIMARY KEY(movieID));
    CREATE TABLE Users (uid serial not null, username varchar unique, password varchar, emailaddr varchar, primary key(uid));
-   CREATE TABLE WatchLists (wid serial not null, uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid), primary key(wid)); CREATE TABLE Vote (vid serial not null,uid int, movieid int, status int,primary key(vid), foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid));insert into users(username, password, emailaddr) values ('test', 'test', 'test@test.com');\" | sudo -u vagrant psql mydb"
+   CREATE TABLE WatchLists (wid serial not null, uid int, movieid int, foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid), primary key(wid)); 
+   CREATE TABLE Vote (vid serial not null,uid int, movieid int, status int,primary key(vid), foreign key(uid) references users(uid), foreign key(movieid) references movies(movieid));insert into users(username, password, emailaddr) values ('test', 'test', 'test@test.com');\" | sudo -u vagrant psql mydb"
 
 end
 

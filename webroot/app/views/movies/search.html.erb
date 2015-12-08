@@ -2,20 +2,19 @@
 
   <div class="central border_shadow">
 
-  <div class ="search_result">
-    <h2>Search results:</h2>
-    <% @movies.each do |m| %>
-      <div class="movie">
-        <%= image_tag m.urlink %>
-        <h3><%= m.title %></h3>
-        <p> <%= m.year %> </p>
-        <p> <%= m.synopsys %> </p>
-        <%= link_to "Learn more", m_path(m.movieid) %> 
-        <hr>  
-        <!--<%= link_to "Learn more", '/movies/2' %> 
-        <a href="/movies/2">Learn more</a>-->
-      </div>
-    <% end %>
+    <h2 style="padding-left:2em;padding-top: 1em">Search Results </h2>
+    <hr width="85%">
+    <div id="Action" class="watchlist_result">
+      <ul style="list-style-type: none;">
+        <% @movies.each do |m| %>
+        <li>
+          <div style="float: left"><%= image_tag(m.urlink)%></div>
+          <div style="margin-left:16em;width:40em"><h4><%= link_to(m.title , m_path(m.movieid))%></h4>(<%=m.year%>)<br><br><p><%=m.synopsys%></p></div>
+        <br>
+          <hr width="770em">
+       </li>
+      <% end %>
+      </ul>
     </div>
   </div>
-</div>
+
