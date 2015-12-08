@@ -17,6 +17,7 @@ class MoviesController < ApplicationController
     @rating = @movie.rating
     @synopsys = @movie.synopsys  
     @number = @movie.rating 
+    @link = "http://localhost:8080/movies/"+@movie.id.to_s
   end
   
   def edit
