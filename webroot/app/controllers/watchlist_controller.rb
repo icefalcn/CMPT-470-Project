@@ -12,10 +12,20 @@ class WatchlistController < ApplicationController
   			format.json {render :json => ''}
   		end
   end
-  
+
+  def create
+    @watchlist = Watchlists.new(watchlists_params)
+    @watchlist.save
+    respond_to do |format|
+        format.html 
+        format.xml  { render :xml => '' }
+        format.json { render :json => '' }
+      end
+  end
+
 private
   def watchlists_params
-    params.require(:watchlists).permit(:uid, :movieid)
+    params.require(:watchlists).permit(:id, :movieid)
   end
 
 

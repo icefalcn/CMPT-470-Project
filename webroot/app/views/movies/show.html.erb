@@ -14,9 +14,18 @@
 
     <div id="trailer_panel">
       <div id="trailer_top_panel">
-      <button style="margin:2em;float:right;">Add to Watchlist</button>
+      <button style="margin:2em;float:right;"id="add_watchlist">Add to Watchlist</button>
         <div id="movie_info"> 
-          <h2 class="movie-title"><%= @movie.title %></h2>
+          <h3 class="movie-title"><%= @movie.title %> &emsp; </h3>
+        </div>
+        <div id="share">
+          <ul id="share_list_ul">
+         <!--  Share:
+            <li>youtube</li>
+            <li>FB</li>
+            <li>Twitter</li> -->
+            <li></li>
+          </ul>
         </div>
       </div>
       <div id="trailer_middle_panel">
@@ -68,35 +77,42 @@
 
   $(document).ready(function() { 
     // var url = <% request.fullpath %> ;
-    var url = "/movies/" + <%=@movie.movieid%> ;
-    // var vote_status = @vote_status; //from controller
+    // var url = "/movies/" + <%=@movie.movieid%> ;
+    // // var vote_status = @vote_status; //from controller
     var vote_status = 0;
 
-    $('.add_watchlist').on('click',function(){
-    var id = $(this).attr("data-val");
-    var url2 = "/watchlist/"+id+"/add";
-    $.ajax({
-      type: "POST",
-      url:   url2,
-      data: {"method":"POST", "m_id" : id},
-      dataType: "json"
-    });});
-
-
+    // $('.add_watchlist').on('click',function(){
+    // var id = $(this).attr("data-val");
+    // var url2 = "/watchlist/"+id+"/add";
+    // $.ajax({
+    //   type: "POST",
+    //   url:   url2,
+    //   data: {"method":"POST", "m_id" : id},
+    //   dataType: "json"
+    // });});
+    var vote_val = <%= @number %>;
+    $("#vote_value").text(vote_val);
     $("#upvote_panel").click(function() {
+      var href = window.location.href;
+      var mid = href.substring(href.lastIndexOf('/')+1);
+      var url = "/movies/"+ mid;
       if (vote_status == -1){ //currently down voted
         $.ajax({
           type: "PATCH",
           url: url,
           data: {'vote' : '2',},
           dataType: "json",
-          success: function() {
-              $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
-              $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
-              $("#vote_value").load("<%= @movie.movieid %> #vote_value");
-              vote_status = 1;
-          }
+          // success: function() {
+              
+          // }
         });
+        $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
+              $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
+              vote_val = vote_val +2;
+                  $("#vote_value").text(vote_val);
+
+              //$("#vote_value").load("<%= @movie.movieid %> #vote_value");
+              vote_status = 1;
       }
       else if (vote_status == 0){ //currently not voted
         $.ajax({
@@ -104,12 +120,17 @@
           url: url,
           data: {'vote' : '1',},
           dataType: "json",
-          success: function() {
-              $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
-              $("#vote_value").load("<%= @movie.movieid %> #vote_value");
-              vote_status = 1;
-          }
+          // success: function() {
+          
+          // }
         });
+            $('#upvote_img').attr("src", "<%= asset_path 'upvote.png' %>");
+              // $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+              vote_status = 1;
+                            vote_val = vote_val +1;
+    $("#vote_value").text(vote_val);
+
+              // alert("hihi");
       }
       else{             //currently up voted
         $.ajax({
@@ -117,28 +138,40 @@
           url: url,
           data: {'vote' : '-1',},
           dataType: "json",
-          success: function() {            
-              $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
-              $("#vote_value").load("<%= @movie.movieid %> #vote_value");
-              vote_status = 0;
-          }
+          // success: function() {            
+          
+          // }
         });
+            $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
+              // $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+                            vote_val = vote_val -1;
+    $("#vote_value").text(vote_val);
+
+              vote_status = 0;
       }
     });
 
     $("#downvote_panel").click(function() {
+      var href = window.location.href;
+      var mid = href.substring(href.lastIndexOf('/')+1);
+      var url = "/movies/"+ mid;
       if (vote_status == -1){ //currently down voted
         $.ajax({
           type: "PATCH",
           url: url,
           data: 'vote=1',
           dataType: "json",
-          success: function() {          
-            $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
-            $("#vote_value").load("<%= @movie.movieid %> #vote_value");
-            vote_status = 0;
-          }
+          // success: function() {          
+           
+          // }
+           
         });
+        $('#downvote_img').attr("src", "<%= asset_path 'downvote_g.png' %>");
+            // $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+                          vote_val = vote_val +1;
+    $("#vote_value").text(vote_val);
+
+            vote_status = 0;
       }
       else if (vote_status == 0){ //currently un voted
         $.ajax({
@@ -146,12 +179,17 @@
           url: url,
           data: 'vote=-1',
           dataType: "json",
-          success: function() {
-            $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
-            $("#vote_value").load("<%= @movie.movieid %> #vote_value");
-            vote_status = -1;
-          }
+          // success: function() {
+            
+          // }
+         
         });
+         $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
+            // $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+                          vote_val = vote_val -1;
+    $("#vote_value").text(vote_val);
+
+            vote_status = -1;
       }
       else {                //currently up voted
         $.ajax({
@@ -159,15 +197,36 @@
           url: url,
           data: 'vote=-2',
           dataType: "json",
-          success: function() {
-            $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
-            $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
-            $("#vote_value").load("<%= @movie.movieid %> #vote_value");
-            vote_status = -1;
-          }
+          // success: function() {
+            
+          // }
         });
+        $('#upvote_img').attr("src", "<%= asset_path 'upvote_g.png' %>");
+            $('#downvote_img').attr("src", "<%= asset_path 'downvote.png' %>");
+            // $("#vote_value").load("<%= @movie.movieid %> #vote_value");
+                          vote_val = vote_val -2;
+    $("#vote_value").text(vote_val);
+
+            vote_status = -1;
       }
     });
+  $("#add_watchlist").click(function(){
+    // alert("clciked");
+    var href = window.location.href;
+      var mid = href.substring(href.lastIndexOf('/')+1);
+      var url = "/watchlist/create";
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: { 'watchlists[id]' : "1",
+                'watchlists[movieid]' : mid,
+              },
+        dataType: "json",
+
+      });
+      $(this).text("In watchlist");
+      $(this).prop('disabled',true);
+  });
 });
 </script>
 
